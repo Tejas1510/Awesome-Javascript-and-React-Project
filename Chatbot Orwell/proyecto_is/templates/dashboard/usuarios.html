@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<h1 class="center" data-aos="fade-up">Usuarios</h1>
+<div class="row container">
+    {% for cliente in clientes %}
+    {% if cliente.is_active %}
+        <div class="col s12 m6">
+            <h2 class="header">{{ cliente.first_name }} {{ cliente.last_name }}</h2>
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img class="responsive" src="{% static 'images/userProfile.png' %}">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>{{ cliente.email }}</h5>
+                        <h5>{% if cliente.is_superuser %}Administrador{% else %}Tecnico{% endif %}</h5>
+                        <a class="waves-effect waves-light btn" href="{% url 'dashboard:deleteUser' identificador=cliente.id %}">Eliminar cuenta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

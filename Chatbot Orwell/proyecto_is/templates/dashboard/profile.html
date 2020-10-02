@@ -1,0 +1,79 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+{% if user.is_admin  %}
+<div class="slider">
+        <ul class="slides" style="position: relative!important;
+        max-width:100% auto!important;
+        height:auto!important;
+        filter: brightness(80%) saturate(140%)!important;">
+            <li>
+                <img class="imageCarousel" src="{% static 'images/background3.png' %}">
+                <div class="caption center-align">
+                    <h1 class="black-text title" style="font-weight: 600;">ORWELL </h1>
+                    <h3 class="black-text" style="font-weight: 600;">Bienvenido administrador</h3>
+                    <h3 class="black-text" style="font-weight: 600;">{{ user.first_name }}</h3>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+<div class="container">
+    <div>
+        <h2><span class="g-color">Resumen</span> del día</h2>
+        <div class="row">
+            <div class="col s12 m4">
+                <h4 class="center">Total de consultas</h4>
+                <h5 class="homeH5 center">{{ todayConsultas }}</h5>
+            </div>
+            <div class="col s12 m4">
+                <h4 class="center">Reparaciones nuevas</h4>
+                <h5 class="homeH5 center">{{ todayReportes }}</h5>
+            </div>
+            <div class="col s12 m4">
+                <h4 class="center">Reparaciones pendientes</h4>
+                <h5 class="homeH5 center">{{ todayPendientes }}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+{% elif user.is_staff %}
+<div class="slider">
+        <ul class="slides" style="position: relative!important;
+        max-width:100% auto!important;
+        height:auto!important;
+        filter: brightness(80%) saturate(140%)!important;">
+            <li>
+                <img class="imageCarousel" src="{% static 'images/background3.png' %}">
+                <div class="caption center-align">
+                    <h1 class="black-text title" style="font-weight: 600;">ORWELL </h1>
+                    <h3 class="black-text" style="font-weight: 600;">Bienvenido técnico </h3>
+                    <h3 class="black-text" style="font-weight: 600;">{{ user.first_name }}</h3>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div>
+            <h2><span class="g-color">Resumen</span> del día</h2>
+            <div class="row">
+                <div class="col s12 m4">
+                    <h4 class="center">Total de consultas</h4>
+                    <h5 class="homeH5 center">{{ todayConsultas }}</h5>
+                </div>
+                <div class="col s12 m4">
+                    <h4 class="center">Reparaciones nuevas</h4>
+                    <h5 class="homeH5 center">{{ todayReportes }}</h5>
+                </div>
+                <div class="col s12 m4">
+                    <h4 class="center">Reparaciones pendientes</h4>
+                    <h5 class="homeH5 center">{{ todayPendientes }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+{% endif %}
+{% endblock %}

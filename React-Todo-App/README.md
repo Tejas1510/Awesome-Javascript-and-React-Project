@@ -1,3 +1,7 @@
+## 2Do
+This is a ToDo List app developed in React, check it out live on this link: https://todolistbyjaagrav.netlify.app/
+
+<br>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

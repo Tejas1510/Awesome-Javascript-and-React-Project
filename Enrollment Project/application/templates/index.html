@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to Universal Tech Academy.</h1>
+
+            {% if session['username'] %}
+                <h3>Let's get started.</h3>
+            {% else %}
+                <p>Already registered? <a href="{{url_for('login') }}">Login</a></p>
+            {% endif %}
+
+            <div style="text-align:left;">
+                <h2>What Is HTML All About?</h2> 
+                
+                <p>HTML is the acronym for Hypertext Markup Language. Hypertext refers to the ability to create links to other Web pages.  Markup means it's used for creating pages of formatted text, images, and other resources embedded in the page.  HTML was created by Tim Berners-Lee in 1990.  He also invented the term "World Wide Web" and the first Web browser, and went on to found the World Wide Web Consortium, also known as the W3C. Among other things, the W3C acts as a shepherd watching over the development of Web technologies. It provides guidelines, standards, recommendations, and education on many aspects of Web-related technology. You can find out more about the W3C at www.w3c.org. </p>
+
+                <p>Perhaps the most fundamental guideline that the W3C produces is the HTML specifications found at www.w3.org/TR/2014/PR-html5-20140916/. This document provides information on the HTML language and recommendations as to its correct usage. While these guidelines in no way prevent developers from coding any way they like, it is wise to be aware of them. As the language continues to evolve, changes could make the code obsolete in Web pages you have written. For example, the W3C guidelines indicate which HTML language elements are deprecated. Deprecated features remain in the standard, but with the understanding that they might be removed in the future. At the very least, their use is discouraged. Since many existing pages contain these deprecated elements, we'll cover them here. Review the W3C guidelines for clear documentation on this issue.</p> 
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

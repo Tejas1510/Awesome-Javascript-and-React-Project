@@ -1,0 +1,26 @@
+
+    <html>
+    <head>
+        <title>Friends Quiz</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="page-header">
+           
+            <h1><a href="/">Friends quiz app</a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2></h2>
+    <form action="{% url 'blog-home' %}" method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .card-title {
+        padding: 10px;
+    }
+
+    .card-title {
+        min-height: 57px;
+    }
+
+    .message-content {
+        border: 1px solid #dcdada;
+        background: #f9f9f9;
+    }
+
+    .message {
+        background: #f1f0f0;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .message-support {
+        background: #448AFF;
+        color: #fff;
+        margin-left: 580px;
+    }
+
+    p.message-title {
+        font-size: 18px;
+    }
+
+    h5 {
+        display: inline-block;
+    }
+
+    .message-left {
+        margin-right: 580px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #ddd;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #002a38;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+</style>
+<br>
+<h1 class="center">Conversación</h1>
+<div class="container">
+    <div class="row">
+        {% with conversacion.0 as fecha %}
+        <h4>Fecha: {{ fecha.create }}</h4>
+        <h4>Problema solucionado {% if fecha.solucionado %}<i class="small material-icons">check</i>{% else %}<i
+                class="small material-icons">close</i>{% endif %}</h4>
+        {% endwith %}
+        <div class="container">
+            <div class="container">
+                <div class="container">
+                    <div class="card message-card">
+                        <div class="card-title">
+                            <h5>CHATBOT</h5>
+                        </div>
+                        <div class="card-content message-content" id="content_messages"
+                            style="max-height: 500px; overflow-y: scroll;">
+                            {% for mensaje in conversacion %}
+                                {% if mensaje.response == 'USER' %}
+                                    <div class="message message-support"><p class="message-title"><span>Usuario</span><p class="message-text">{{ mensaje.texto }}</p></p></div>
+                                {% else %}
+                                <div class="message message-left"><p class="message-title"><span>ORWELL</span><p class="message-text">{{ mensaje.texto }}</p></p></div>
+                                {% endif %}
+                            {% endfor %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

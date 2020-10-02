@@ -1,0 +1,134 @@
+{% load static %}
+<html>
+
+<head>
+    <title>ORWELL</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    {% block extra_head %}{% endblock %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    {% if user.is_authenticated and user.is_admin %}
+    <header>
+        <div class="navbar-fixed ">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="{% url 'dashboard:profile' %}" class="brand-logo"><img class="logo hide-on-med-and-down"
+                            src="{% static 'images/logo.png' %}"><span class="logo hide-on-med-and-up">ORWELL</span>
+                    </a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+                            class="material-icons navbarIcon">menu</i></a>
+                    <ul class="right hide-on-med-and-down elementsRight">
+                        <li><a class="menuItem" href="{% url 'dashboard:trainbot' %}">ENTRENAR AL BOT</a></li>
+                        <li><a class="menuItem" href="{% url 'dashboard:perfil' %}">PERFIL</a></li>
+                        <li><a class="menuItem" href="{% url 'dashboard:users' %}">USUARIOS</a></li>
+                        <li><a class="menuItem" href="{% url 'dashboard:reportes' %}">REPARACIONES</a></li>
+                        <li><a class="menuItem" href="{% url 'dashboard:conversaciones' %}">CONVERSACIONES</a></li>
+                        <li><a class="menuItem" href="{% url 'account:logout' %}">CERRAR SESION</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a class="menuItem" href="{% url 'index' %}">Inicio</a></li>
+            <li><a class="menuItem" href="{% url 'dashboard:trainbot' %}">ENTRENAR AL BOT</a></li>
+            <li><a class="menuItem" href="{% url 'dashboard:perfil' %}">PERFIL</a></li>
+            <li><a class="menuItem" href="{% url 'dashboard:users' %}">USUARIOS</a></li>
+            <li><a class="menuItem" href="{% url 'dashboard:reportes' %}">REPARACIONES</a></li>
+            <li><a class="menuItem" href="{% url 'dashboard:conversaciones' %}">CONVERSACIONES</a></li>
+            <li><a class="menuItem" href="{% url 'account:logout' %}">CERRAR SESION</a></li>
+        </ul>
+        <!-- <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+    </header>
+    {% elif user.is_authenticated and user.is_staff %}
+    <header>
+        <div class="navbar-fixed ">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="{% url 'dashboard:profile' %}" class="brand-logo"><img class="logo hide-on-med-and-down"
+                            src="{% static 'images/logo.png' %}"><span class="logo hide-on-med-and-up">ORWELL</span>
+                    </a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+                            class="material-icons navbarIcon">menu</i></a>
+                    <ul class="right hide-on-med-and-down elementsRight">
+                        <li><a class="menuItem" href="{% url 'dashboard:perfil' %}">PERFIL</a></li>
+                        <li><a class="menuItem" href="{% url 'dashboard:reportes' %}">REPARACIONES</a></li>
+                        <li><a class="menuItem" href="{% url 'dashboard:conversaciones' %}">CONVERSACIONES</a></li>
+                        <li><a class="menuItem" href="{% url 'account:logout' %}">CERRAR SESION</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a class="menuItem" href="{% url 'index' %}">Inicio</a></li>
+            <li><a class="menuItem" href="{% url 'dashboard:perfil' %}">PERFIL</a></li>
+            <li><a class="menuItem" href="{% url 'dashboard:reportes' %}">REPARACIONES</a></li>
+            <li><a class="menuItem" href="{% url 'dashboard:conversaciones' %}">CONVERSACIONES</a></li>
+            <li><a class="menuItem" href="{% url 'account:logout' %}">CERRAR SESION</a></li>
+        </ul>
+        <!-- <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+    </header>
+    {% else %}
+    <header>
+        <div class="navbar-fixed ">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="{% url 'index' %}" class="brand-logo"><img class="logo hide-on-med-and-down"
+                            src="{% static 'images/logo.png' %}"><span class="logo hide-on-med-and-up">ORWELL</span>
+                    </a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+                            class="material-icons navbarIcon">menu</i></a>
+                    <ul class="right hide-on-med-and-down elementsRight">
+                        <li><a class="menuItem" href="{% url 'chatear' %}">CHAT CON ORWELL</a></li>
+                        <li><a class="menuItem" href="{% url 'equipo' %}">EQUIPO</a></li>
+                        <li><a class="menuItem" href="{% url 'contactanos' %}">CONTACTANOS</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a class="menuItem" href="{% url 'index' %}">Inicio</a></li>
+            <li><a class="menuItem" href="{% url 'chatear' %}">CHAT CON ORWELL</a></li>
+            <li><a class="menuItem" href="{% url 'equipo' %}">EQUIPO</a></li>
+            <li><a class="menuItem" href="{% url 'contactanos' %}">CONTACTANOS</a></li>
+        </ul>
+    </header>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.slider');
+            var instances = M.Slider.init(elems, { indicators: false, height: 500 });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var options = { fullWidth: true, indicators: true }
+            var instances = M.Carousel.init(elems, options);
+        });
+        var collapsibles = document.querySelectorAll('.collapsible')
+        for (var i = 0; i < collapsibles.length; i++) {
+            M.Collapsible.init(collapsibles[i]);
+        }
+        var elems = document.querySelectorAll('.datepicker');
+        var instances = M.Datepicker.init(elems, { format: 'mm/dd/yyyy', yearRange: 100 });
+    </script>
+</body>
+
+</html>

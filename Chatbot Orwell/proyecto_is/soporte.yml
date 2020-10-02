@@ -1,0 +1,117 @@
+categories:
+- technicalSupport
+conversations:
+- - Hola 
+  - Hola soy ORWELL. ¿En qué puedo ayudarte? 
+  - Que tal soy ORWELL ¿Que necesitas?
+- - Mi computadora se descompuso 
+  - Que mal, ¿Quieres agendar una cita de reparación? 
+- - Mi computadora ya no funciona 
+  - Que mal, ¿Quieres agendar una cita de reparación? 
+- - Agendar cita para reparación 
+  - Ok ¿En qué día la necesitas? 
+  - Entendido ¿Para qué día? 
+- - Necesito una cita para reparar mi computadora 
+  - Ok ¿En qué día la necesitas? 
+  - Entendido ¿Para qué día? 
+- - Ya no sirve mi pc 
+  - ¿Quieres agendar una cita? 
+- - Quiero agendar una cita de reparación para mi computadora 
+  - Ok ¿Para qué día? 
+- - Necesito una cita para reparar mi laptop 
+  - Entendido ¿Para qué día? 
+- - Quiero agendar una cita de reparación para mi laptop 
+  - Ok ¿Para qué día? 
+- - Necesito una cita para reparar mi lap 
+  - Ok ¿En qué día la necesitas? 
+- - Quiero agendar una cita de reparación para mi lap 
+  - Ok ¿Para qué día? 
+- - Necesito ayuda con mi computadora 
+  - Ok, ¿Qué problema presenta tu computadora? 
+  - ¿Cuál es el problema que tienes? 
+- - ¿Cuánto tarda en actualizarse mi computadora?  
+  - El tiempo necesario para actualizar a Windows depende de factores como la antigüedad del dispositivo y el modo en que esté configurado. Algunos dispositivos de alto rendimiento más recientes pueden actualizarse con mayor rapidez.  
+- - ¿Cuánto tarda en actualizarse mi laptop?  
+  - El tiempo necesario para actualizar a Windows depende de factores como la antigüedad del dispositivo y el modo en que esté configurado. Algunos dispositivos de alto rendimiento más recientes pueden actualizarse con mayor rapidez.  
+- - Mi computadora está muy lenta 
+  - Intenta con lo siguiente \n 1.- Windows + R \n 2.- En el recuadro de Windows escribe "%temp%" \n 3.- Se abrirá una ventana con una lista de archivos temporales, elimínalos todos. \n ¿Funciono? 
+- - Si funciono 
+  - Ok :) 
+- - No funciono 
+  - Lo siento. ¿Quieres agendar una cita de reparación o intentar otro método? 
+- - Intentar otro método 
+  - Puedes repetir el problema de tu equipo de computo 
+- - No enciende 
+  - Entendido. Podrías indicar el modelo de tu equipo de computo 
+- - Mi computadora no reconoce mi USB 
+  - Cambia el puerto de la USB. ¿Funcionó? 
+- - Si funciono 
+  - Ok :) 
+- - No funciono 
+  - Lo siento. ¿Quieres agendar una cita de reparación o intentar otro método? 
+- - Intentar otro método 
+  - Puedes repetir el problema de tu equipo de computo 
+- - Mi computadora no reconoce mi USB 
+  - Intenta lo Siguiente \n 1.-Presione Windows y escriba “Administrador de dispositivos”.\n 2.-Seleccione la opción "Controladores de bus serie universal". \n 3.-A cada una de las secciones selecciónela y presione el botón derecho y seleccione "Actualizar controlador". \n 4.-Desconecte y vuelva a conectar la USB. ¿Funcionó?  
+- - Mi computadora no reconoce mi USB 
+  - Intenta lo Siguiente \n 1.-Presione Windows y escriba “Administrador de dispositivos”.\n 2.-Busque la opción "Dispositivo Desconocido" \n 3.-Seleccionelo y presione el botón derecho y seleccione "Desinstalar". \n 4.-Reinicie la computadora. ¿Funcionó? 
+- - No Existe 
+  - Lo siento. ¿Quieres agendar una cita de reparación o intentar otro método? 
+- - Mi computadora no reconoce mi USB 
+  - Intenta lo Siguiente \n 1.-Abra el Navegador y busque "Microsoft Fix It" \n 2.-Descarguelo e Instálelo. \n 3.-Ejecute la Aplicación. \n ¿Funcionó? 
+- - Mi computadora se tarda en encender 
+  - Intenta lo Siguiente \n 1.-Presione Windows y escriba "Administrador de Tareas". \n 2.-De la segunda barra de Opciones Seleccione "Inicio" y busque los que tienen "Impacto de Inicio" "Alto" y "Medio". \n 3.-Seleccione uno y presione el botón derecho y seleccione "Deshabilitar". \n 4.-Haga lo mismo con todos los que tienen "Impacto de Inicio" "Alto" y "Medio". \n 5.-Reinicie su Equipo. ¿Funciono? 
+- - Si funciono 
+  - Ok :) 
+- - No funciono 
+  - Lo siento. ¿Quieres agendar una cita de reparación? 
+- - Si 
+  - Ok ¿En qué día la necesitas? 
+  - Entendido ¿Para qué día? 
+- - Necesito una cita para reparar mi computadora 
+  - Ok ¿En qué día la necesitas? 
+  - Entendido ¿Para qué día? 
+- - Mi computadora no sale del modo Suspender 
+  - Lo siento la solución es compleja. \n ¿Quieres agendar una cita de reparación? 
+- - Si 
+  - Ok ¿En qué día la necesitas? 
+  - Entendido ¿Para qué día? 
+- - Necesito una cita para reparar mi computadora 
+  - Ok ¿En qué día la necesitas? 
+  - Entendido ¿Para qué día? 
+- - Mi computadora no enciende 
+  - Lo siento la solución es compleja. \n ¿Quieres agendar una cita de reparación? 
+- - Si 
+  - Ok ¿En qué día la necesitas? 
+  - Entendido ¿Para qué día? 
+- - Necesito una cita para reparar mi computadora 
+  - Ok ¿En qué día la necesitas? 
+  - Entendido ¿Para qué día? 
+- - La RAM se llena 
+  - Intenta lo Siguiente \n 1.-Presione Windows y escriba "Configuración". \n 2.-Seleccione "Sistema". \n 3.-De la Barra Lateral Seleccione "Notificación y Acción". \n 4.-Desactive el que diga "Obtener Sugerencias de Windows" o algo parecido. \n ¿Funciono? 
+- - Si funciono 
+  - Ok :) 
+- - No funciono 
+  - Lo siento. ¿Quieres agendar una cita de reparación? 
+- - Si 
+  - Ok ¿En qué día la necesitas? 
+  - Entendido ¿Para qué día? 
+- - Necesito una cita para reparar mi computadora 
+  - Ok ¿En qué día la necesitas? 
+  - Entendido ¿Para qué día? 
+- - Mi CPU se sobrecalienta 
+  - Intenta lo Siguiente \n 1.-Presione Windows y escriba "Configuración". \n 2.-Seleccione "Sistema". \n 3.-De la Barra Lateral Seleccione "Notificación y Acción". \n 4.-Desactive el que diga "Obtener Sugerencias de Windows" o algo parecido.\n ¿Funciono? 
+- - Si funciono 
+  - Ok :) 
+- - No funciono 
+  - Lo siento. \n ¿Quieres agendar una cita de reparación? 
+- - Si 
+  - Ok ¿En qué día la necesitas? 
+  - Entendido ¿Para qué día? 
+- - Necesito una cita para reparar mi computadora 
+  - Ok ¿En qué día la necesitas? 
+  - Entendido ¿Para qué día? 
+- - Gracias si funciono 
+  - De nada para eso fui creado 
+- - Se soluciono el problema  
+  - Ok :) 

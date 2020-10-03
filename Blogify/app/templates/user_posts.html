@@ -1,0 +1,39 @@
+{%extends 'layout.html'%}
+{%block head%}
+    {%if title%}
+        <title>Flask Blog - {{title}}</title>
+    {%else%}
+        <title>Flask Blog</title>    
+    {%endif%}    
+{%endblock%}    
+    
+
+{%block body%}
+    <h1 class="mb-3">Posts by {{user.username}}({{posts.total}})</h1>
+    {% for post in posts.items%}
+        <article class="media content-section">
+            <img src="{{url_for('static',filename='profile_pics/'+post.author.image_file)}}" alt="" class="rounded-circle article-img">
+            <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" >{{ post.author.username }}</a>
+                <small class="text-muted" href='#'>{{ post.date_posted.strftime('%d-%m-%Y') }}</small>
+            </div>
+            <h2><a class="article-title" href="{{url_for('post', post_id=post.id)}}">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+            </div>
+        </article>
+
+    {%endfor%}
+    {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2)%}
+        {%if page_num%}
+            {%if posts.page==page_num%}
+                <a href="{{url_for('user_posts',username=user.username, page=page_num)}}" class="btn btn-info mb-4 aria-pressed='true'">{{page_num}}</a>
+            {%else%}
+                <a href="{{url_for('user_posts',username=user.username, page=page_num)}}" class="btn btn-outline-info mb-4">{{page_num}}</a>
+            {%endif%}
+        {%else%}
+            ...
+        {%endif%}
+    {%endfor%}
+
+{%endblock%}

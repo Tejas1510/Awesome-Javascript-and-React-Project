@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+<head>
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script> 
+</head>
+    <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload=" ">
+
+        
+        <p><center>
+            <img src="{% static 'quiz/img5.jpeg' %}" width="380" height="380" alt="pic of Friends"/></center>
+        </p>
+        <h2>{{ ques.4 }}</h2>
+        <ul>
+            <form action="{% url 'quiz-e5' %}" method="POST">
+                {% csrf_token %} 
+                <input type="radio" name ="q1a1" value="{{ ques.4.optiona }} " class="multiple" checked=”checked”>{{ ques.4.optiona }} 
+                <br>
+                <input type="radio" name="q1a1" value="{{ ques.4.optionb }} " class="multiple">{{ ques.4.optionb }}   
+                <br>
+                <input type="radio" name="q1a1" value="{{ ques.4.optionc }} " class="multiple">{{ ques.4.optionc }}  
+                <br>
+                <input type="radio" name="q1a1" value="{{ ques.4.optiond }} " class="multiple">{{ ques.4.optiond }}  
+                <br>
+                <input type="submit" name="q1a5" value="go to the next question">
+            </form>
+    
+        </ul>
+        
+
+
+
+        
+    </body>
+</html>

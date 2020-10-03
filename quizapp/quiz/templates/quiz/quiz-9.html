@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+    <body>
+            <p><center>
+                <img src="{% static 'quiz/img9.jpeg' %}" width="380" height="380" alt="pic of Friends"/></center>
+            </p>
+        <h2>Q.9  how many categories of towels does Monica have?</h2>
+        <form action="quiz-10.html" method="POST">
+            <h3><input type="submit" value="op1">11</h3>
+        </form>
+        <form action="quiz-e9.html" method="POST">
+            <h3><input type="submit" value="op2">10</h3>
+        </form>
+        <form action="quiz-e9.html" method="POST">
+            <h3><input type="submit" value="op3">9</h3>
+        </form>
+        <form action="{% url 'quiz-10' %}" method="POST">
+             {% csrf_token %}<input type="submit" value="op4">12</h3>
+        </form>
+    </body>
+</html>

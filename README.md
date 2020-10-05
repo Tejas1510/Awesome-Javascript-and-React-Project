@@ -14,3 +14,12 @@ This is an amazing opportunity for beginners to exhibit their projects and take 
 
 ## Issues
 For major changes, you are welcome to open an issue to discuss what you would like to change. Enhancements will be appreciated.
+
+## Contribution
+Steps to contribute :
+Fork the repository
+Add your folder
+Create a pull request
+Wait for the pr to get merged
+If you like this repo, drop a ⭐
+

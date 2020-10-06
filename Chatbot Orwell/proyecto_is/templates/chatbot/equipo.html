@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<h1 class="center" data-aos="fade-up">Equipo</h1>
+<div class="row container">
+    <div class="col s12 m6">
+        <h2 class="header">Julio Gutiérrez Pacheco</h2>
+        <div class="card horizontal">
+            <div class="card-image">
+                <img class="responsive2" src="{% static 'images/userProfile.png' %}">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <h5><i class="small material-icons">developer_mode</i> Programador Diseñador</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m6" >
+        <h2 class="header">José Armando Rivera Ramírez </h2>
+        <div class="card horizontal">
+            <div class="card-image">
+                <img class="responsive2" src="{% static 'images/userProfile.png' %}">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <h5><i class="small material-icons">developer_mode</i> Programador Analista</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

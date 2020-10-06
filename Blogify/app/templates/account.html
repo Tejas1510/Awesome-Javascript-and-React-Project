@@ -1,0 +1,69 @@
+{%extends 'layout.html'%}
+{%block head%}
+    {%if title%}
+        <title>Flask Blog - {{title}}</title>
+    {%else%}
+        <title>Flask Blog</title>    
+    {%endif%}   
+{%endblock%}    
+    
+
+{%block body%}
+    <div class="content-section">
+        <div class="media">
+            <img src="{{image_file}}" alt="" class="rounded-circle account-img">
+            <div class="media-body">
+                <h2 class="account-heading">{{current_user.username}}</h2>
+                <p class="text-secondary">{{current_user.email}}</p>
+            </div>
+        </div>
+            <form action="" method='POST' enctype='multipart/form-data'>
+                {{form.hidden_tag()}} <!--Adds a CSRF(Cross sight request forgery) token, helps to prevent forms against forgery attack-->
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Update Details</legend>
+                    <div class="form-group">
+                        {{form.username.label(class='form-control-label')}}
+                        {%if form.username.errors%}
+                            {{form.username(class='form-control form-control-lg is-invalid')}}
+                            <div class="invalid-feedback">
+                                {%for error in form.username.errors%}
+                                    <span>{{error}}</span>
+                                {%endfor%}
+                            </div>
+    
+                        {%else%}   
+                            {{form.username(class='form-control form-control-lg')}}
+                        {%endif%}
+                        
+                        {{form.email.label(class='form-control-label',)}}
+                        {%if form.email.errors%}
+                            {{form.email(class='form-control form-control-lg is-invalid', placeholder='example@example.com')}}
+                            <div class="invalid-feedback">
+                                {%for error in form.email.errors%}
+                                    <span>{{error}}</span>
+                                {%endfor%}
+                            </div>
+    
+                        {%else%}   
+                            {{form.email(class='form-control form-control-lg', placeholder='example@example.com')}}
+                        {%endif%}
+                        
+                        
+                    </div>
+                    <div class="form-group">
+                        {{form.picture.label()}}
+                        {{form.picture(class='form-control-file')}}
+                        {%if form.picture.errors %}
+                            {%for error in form.picture.errors%}
+                                <span class='text-danger'>{{error}}</span><br>
+                            {%endfor%}
+                        {%endif%}
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    {{form.submit(class='btn btn-outline-success')}}
+                </div>
+            </form>
+    </div>
+
+{%endblock%}

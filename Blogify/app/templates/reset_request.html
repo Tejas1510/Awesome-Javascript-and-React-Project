@@ -1,0 +1,39 @@
+{%extends 'layout.html'%}
+{%block head%}
+    {%if title%}
+        <title>Flask Blog - {{title}}</title>
+    {%else%}
+        <title>Flask Blog</title>    
+    {%endif%}   
+{%endblock%}    
+    
+
+{%block body%}
+    <div class='content-section'>
+        <form action="", method='POST'>
+            {{form.hidden_tag()}} <!--Adds a CSRF(Cross sight request forgery) token, helps to prevent forms against forgery attack-->
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Reset Password</legend>
+                <div class="form-group">
+                    {{form.email.label(class='form-control-label')}}
+                    {%if form.email.errors%}
+                        {{form.email(class='form-control form-control-lg is-invalid', placeholder='example@example.com')}}
+                        <div class="invalid-feedback">
+                            {%for error in form.email.errors%}
+                                <span>{{error}}</span>
+                            {%endfor%}
+                        </div>
+
+                    {%else%}   
+                        {{form.email(class='form-control form-control-lg', placeholder='example@example.com')}}
+                    {%endif%}
+                
+                    
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{form.submit(class='btn btn-outline-success')}}
+            </div>
+        </form>
+    </div>
+{%endblock%}

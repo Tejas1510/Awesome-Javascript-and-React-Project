@@ -1,0 +1,74 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #45badd;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: url(../assets/robot.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container button {
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: white;
+  background: #ff3482;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container button:hover {
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+}
+
+.container button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.container button:disabled {
+  cursor: default;
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    background-position: center center;
+    background-size: cover;
+  }
+  button {
+    -webkit-box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+  }
+}
+/*# sourceMappingURL=style.css.map */

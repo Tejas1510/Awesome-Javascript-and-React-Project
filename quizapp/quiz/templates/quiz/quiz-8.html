@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+    <body>
+            <p><center>
+                <img src="{% static 'quiz/img8.jpeg' %}" width="440" height="380" alt="pic of Friends"/></center>
+            </p>
+        <h2>Q.8  What was Rachel's prom date called?</h2>
+        <form action="quiz-e8.html" method="POST">
+            <h3><input type="submit" value="op1">
+            Ross</h3>
+        </form>
+        <form action="quiz-e8.html" method="POST">
+            <h3><input type="submit" value="op2">
+            Kip</h3>
+        </form>
+        <form action="quiz-e8.html" method="POST">
+            <h3><input type="submit" value="op3">
+            Jack</h3>
+        </form>
+        <form action="{% url 'quiz-9' %}" method="POST">
+             <input type="submit" value="op4">
+            Chip</h3>
+        </form>
+    </body>
+</html>

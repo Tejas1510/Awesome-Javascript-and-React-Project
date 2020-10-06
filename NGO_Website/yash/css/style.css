@@ -1,0 +1,95 @@
+body{
+  margin:0;
+}
+.box{
+   background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)),
+    url('https://www.trpws.com/wp-content/uploads/2020/06/carousel8.png');
+ background-size: cover;
+  color: white;
+  text-align:center;
+  z-index:1;
+  background-position: center; 
+    
+
+}
+.text{
+    padding: 100px 0;
+    
+}
+.box p{
+  font-size:20px;
+}
+.red{
+  color:orangered;
+}
+.redline{
+  width:100px;
+  height:3px;
+  background-color:red;
+  border:none;
+}
+.touch h2{
+  padding-top: 20px;
+  text-align: center;
+}
+.form-margin{
+  margin-top: 40px;
+}
+.left{
+  text-align:left;
+}
+h3{
+  font-variant:bold;
+}
+.redline-address{
+  border:none;
+  height:3px;
+  background-color:orangered;
+  width:140px;
+  margin-bottom:20px;
+}
+.address{
+  padding-top: 50px;
+}
+.address p{
+  font-weight:bold;
+  color: #676565;
+  margin:3px;
+}
+.phone-e{
+  padding:15px 0;
+}
+.logo img{
+  height:50px;
+  width:150px;
+  z-index:2;
+  float:left;
+  margin-top:10px;
+}
+.bottom-gap{
+  margin-bottom:100px;
+}
+/*validation css*/
+input.ng-valid {
+  background-color:#dff0d8;
+}
+input.ng-invalid {
+    background-color:#f2dede;
+}
+input.ng-pristine{
+  background-color:white;
+}
+textarea.ng-invalid {
+    background-color:#f2dede;
+}
+textarea.ng-pristine{
+  background-color:white;
+}
+textarea.ng-valid {
+  background-color:#dff0d8;
+}
+footer {
+    background-color: #3f3f3f;
+    color: white;
+    padding: 2rem;
+}

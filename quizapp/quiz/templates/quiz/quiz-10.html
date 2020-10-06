@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+    <body>
+            <p><center>
+                <img src="{% static 'quiz/img10.jpeg' %}" width="380" height="380" alt="pic of Friends"/></center>
+            </p>
+        <h2>Q.10   What is Joey's full name?</h2>
+        <form action="quiz-e10.html" method="POST">
+            <h3><input type="submit" value="op1">Joesph Charles Tribiani</h3>
+        </form>
+        <form action="quiz-e10.html" method="POST">
+            <h3><input type="submit" value="op2">Joseph Tribiani Jr.</h3>
+        </form>
+        <form action="quiz-e10.html" method="POST">
+            <h3><input type="submit" value="op3">Joseph Tribiani</h3>
+        </form>
+        <form action="" method="POST">
+             {% csrf_token %}
+                <input type="submit" value="op4">Joesph Francis Tribiani
+            </h3>
+        </form>
+    </body>
+</html>

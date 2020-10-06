@@ -4,6 +4,8 @@
 [![GitHub forks](https://img.shields.io/github/forks/Tejas1510/Awesome-Javascript-and-React-Project?color=%23ff69b4&style=flat-square)](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/network)
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-tomato.svg?style=flat&logo=git)](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/issues)
 [![GitHub top language](https://img.shields.io/github/languages/top/Tejas1510/Awesome-Javascript-and-React-Project?color=yellow&logo=javascript)](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project)
+[![GitHub contributors](https://img.shields.io/github/contributors/Tejas1510/Awesome-Javascript-and-React-Project?color=orange4&style=flat-square)](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/graphs/contributors/)
+
 
 
 This repository consists of some of the great Javascript and React Projects and it is a part of Hacktoberfest.

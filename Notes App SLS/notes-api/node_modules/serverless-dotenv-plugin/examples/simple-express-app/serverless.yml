@@ -1,0 +1,19 @@
+# serverless.yml
+
+service: my-express-application
+
+plugins:
+  - serverless-dotenv-plugin
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  region: ${env:REGION}
+  stage: ${env:STAGE}
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'

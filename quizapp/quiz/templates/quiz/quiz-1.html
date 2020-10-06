@@ -1,0 +1,46 @@
+{% load static %}
+<html>
+<head>
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+</head>
+    <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+        <p><center>
+            <img src="{% static 'quiz/img1.jpeg' %}" width="380" height="380" alt="pic of Friends"/></center>
+        </p>
+        <h2> hai {{ g }}</h2>
+        <h2>{{ ques.0 }}</h2>
+        <h2>{{ data }}</h2>
+
+        <script type="">
+$(document).ready(function(){
+    $('.multiple').click(function() {
+        $('.multiple').not(this).prop('checked', false);
+    });
+});
+</script>
+
+        <ul>
+            <form action="{% url 'quiz-e1' %}" method="POST">
+                {% csrf_token %}
+                <input type="radio" name ="q1a1" value="{{ ques.0.optiona }} " class="multiple" checked=”checked”>{{ ques.0.optiona }} 
+                <br>
+                <input type="radio" name="q1a1" value="{{ ques.0.optionb }} " class="multiple">{{ ques.0.optionb }}   
+                <br>
+                <input type="radio" name="q1a1" value="{{ ques.0.optionc }} " class="multiple">{{ ques.0.optionc }}  
+                <br>
+                <input type="radio" name="q1a1" value="{{ ques.0.optiond }} " class="multiple">{{ ques.0.optiond }}  
+                <br>
+                <input type="submit" name="q1a5" value="go to the next question" >
+            </form>
+    
+        </ul>
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </body>
+</html>

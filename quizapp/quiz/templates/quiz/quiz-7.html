@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+    <body>
+            <p><center>
+                <img src="{% static 'quiz/img7.jpeg' %}" width="400" height="300" alt="pic of Friends"/></center>
+            </p>
+        <h2>Q.7  How many pages was the letter that Rachel wrote Ross when they were trying to get back together</h2>
+        <form action="quiz-e7.html" method="POST">
+            <h3>
+                <input type="submit" value="op1">
+                19
+            </h3>
+        </form>
+        <form action="quiz-e7.html" method="POST">
+            <h3>
+                <input type="submit" value="op2">
+                16
+            </h3>
+        </form>
+        <form action="quiz-e7.html" method="POST">
+            <h3>
+                <input type="submit" value="op3">
+                15
+            </h3>
+        </form>
+        <form action="{% url 'quiz-8' %}" method="POST">
+             {% csrf_token %}
+                <input type="submit" value="op4">
+                18
+            </h3>
+        </form>
+    </body>
+</html>

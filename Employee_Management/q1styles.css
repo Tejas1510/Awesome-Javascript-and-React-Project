@@ -1,0 +1,39 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .data {
+        height: 600px;
+        width: 80%;
+        background-color: lightgray;
+        margin-left: 10%;
+        margin-top: 50px;
+        padding: 20px;
+        display: inline-block;
+      }
+
+      .table {
+        width: 100%;
+        margin-top: 20px;
+        font-family: calibri; 
+      }
+      th,
+      td {
+        height: 40px;
+        text-align: center;
+        padding: 5px;
+      }
+
+      input {
+        height: 40px;
+        text-indent: 20px;
+      }
+
+      button {
+        padding: 10px;
+      }
+
+      .search{
+        padding: 10px;
+      }

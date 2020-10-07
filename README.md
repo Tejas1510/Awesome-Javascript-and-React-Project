@@ -6,15 +6,13 @@
 <img src="https://img.shields.io/badge/language-Javascript-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/language-React-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/language-HTML&CSS-blue?style=for-the-badge">
-<img src="https://img.shields.io/badge/language-Django-blue?style=for-the-badge">
-<img src="https://img.shields.io/badge/language-Bootstrap-blue?style=for-the-badge">  
+<img src="https://img.shields.io/badge/language-Django-blue?style=for-the-badge">  
  </p>
  
  <p align="center">
 <img src="https://img.shields.io/github/stars/Tejas1510/Awesome-Javascript-and-React-Project?style=for-the-badge" >
 <img src="https://img.shields.io/github/forks/Tejas1510/Awesome-Javascript-and-React-Project?style=for-the-badge" >  
 <img src="https://img.shields.io/github/issues-raw/Tejas1510/Awesome-Javascript-and-React-Project?style=for-the-badge" >
-<img src="https://img.shields.io/github/issues-pr-raw/Tejas1510/Awesome-Javascript-and-React-Project?style=for-the-badge" >
 <img src="https://img.shields.io/github/issues-pr-closed-raw/Tejas1510/Awesome-Javascript-and-React-Project?style=for-the-badge" >
 </p>
  

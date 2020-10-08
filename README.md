@@ -1,16 +1,40 @@
-# **Awesome-Javascript-and-React-Project**💯
-[![GitHub issues](https://img.shields.io/github/issues/Tejas1510/Awesome-Javascript-and-React-Project?logo=Github&style=flat-square)](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/issues)
-[![GitHub stars](https://img.shields.io/github/stars/Tejas1510/Awesome-Javascript-and-React-Project?color=brightgreen)](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Tejas1510/Awesome-Javascript-and-React-Project?color=%23ff69b4&style=flat-square)](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/network)
-[![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-tomato.svg?style=flat&logo=git)](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/issues)
-[![GitHub top language](https://img.shields.io/github/languages/top/Tejas1510/Awesome-Javascript-and-React-Project?color=yellow&logo=javascript)](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project)
+<p align="center">
+<h2 align="center">👉 A Collection of Awesome Web Development Project 👈</h2>
+</p>
 
+<p align="center">
+<img src="https://img.shields.io/badge/language-Javascript-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/language-React-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/language-HTML&CSS-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/language-Django-blue?style=for-the-badge">  
+ </p>
+ 
+ <p align="center">
+<img src="https://img.shields.io/github/stars/Tejas1510/Awesome-Javascript-and-React-Project?style=for-the-badge" >
+<img src="https://img.shields.io/github/forks/Tejas1510/Awesome-Javascript-and-React-Project?style=for-the-badge" >  
+<img src="https://img.shields.io/github/issues-raw/Tejas1510/Awesome-Javascript-and-React-Project?style=for-the-badge" >
+<img src="https://img.shields.io/github/issues-pr-closed-raw/Tejas1510/Awesome-Javascript-and-React-Project?style=for-the-badge" >
+</p>
+ 
+<p align="center">
+<img src="https://img.shields.io/github/hacktoberfest/2020/Tejas1510/Awesome-Javascript-and-React-Project?style=for-the-badge">
+</p>
+
+<p align="center">
+<img src="https://img.shields.io/github/contributors/Tejas1510/Awesome-Javascript-and-React-Project?style=for-the-badge">
+</p>
+
+# **Awesome-Javascript-and-React-Project**💯
 
 This repository consists of some of the great Javascript and React Projects and it is a part of Hacktoberfest.
 
 So if you are having any mini or major javascript project, all you need is to create a PR and I will try to merge it all.
 
 This is an amazing opportunity for beginners to exhibit their projects and take part in one of the largest Open-Source event!
+
+:star2: Star it 
+:fork_and_knife:Fork it
+:handshake: Contribute to it!
 
 ## Contribution:
 **1.** Fork [this](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project) repository.

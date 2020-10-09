@@ -1,0 +1,27 @@
+* {
+	margin: 0;
+}
+
+.app {
+	background-color: rgb(0, 0, 0);
+}
+
+* {
+	font-family: 'Kanit', sans-serif;
+	font-weight: 10px;
+}
+
+h4 {
+	margin-top: 10px;
+	font-weight: lighter;
+
+	font-size: 20px;
+	color: rgb(219, 219, 219);
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+
+	color: rgb(241, 82, 82);
+}

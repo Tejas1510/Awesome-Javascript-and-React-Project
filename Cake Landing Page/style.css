@@ -111,6 +111,15 @@ hr{
 	margin-right:15px;
 	cursor:pointer;
 }
+footer{
+	width:100%;
+	height:3%;
+	padding:1%;
+	font-size:15px;
+	text-align:center;
+	color:white;
+	background-color:black;
+}
 /* .vertical_line{ 
 	font-weight:lighter; 
 	color:white; 

@@ -9,7 +9,7 @@
 <body>
 	<div class="wrapper">
 		<div class="left_col">
-			<img src="logo.jpg" class="logo">
+			<img src="img/logo.jpg" class="logo">
 			<div class="content">
 				<h1>THE CAKE BOULEVARD</h1>
 				<p> We only use the finest ingredients in our products, 
@@ -20,7 +20,7 @@
 		</div>
 		<div class="right_col">
 			<div class="slider">
-				<img src="pic-1.jpg" id="slide">
+				<img src="img/pic-1.jpg" id="slide">
 			</div>
 			<div class="slider_content">
 				<h2>Lets see the various items we offer!</h2>
@@ -28,20 +28,23 @@
 				<p>It is to offer gourmet cakes, pastries, cupcakes, cookies, and more that are universally 
 				enjoyed by family and friends and make Cake Boulevard a part of all your celebrations and memories..</p>
 				<div class="controller">
-					<img src="back.png" id="backBtn">
+					<img src="img/back.png" id="backBtn">
 					<!-- <div class="vertical_line">|</div> -->
-					<img src="next.png" id="nextBtn">
+					<img src="img/next.png" id="nextBtn">
 				</div>
 			</div>
 		</div>
 	</div>
+	<footer class="footer">
+		<em>No rights reserved, for fictitious purpose only.<br></em>
+	</footer>
 <script>
 	<!-- var back,next,slide; -->
 	var	nextBtn=document.getElementById("nextBtn");
 	var	backBtn=document.getElementById("backBtn");
 	var	slide=document.getElementById("slide");
 	var Slideimages=new Array(
-		"pic-1.jpg","pic-2.jpg","pic-3.jpg","pic-4.jpg","pic-5.jpg");
+		"img/pic-1.jpg","img/pic-2.jpg","img/pic-3.jpg","img/pic-4.jpg","img/pic-5.jpg");
 	var i=0;
 	nextBtn.onclick=function()
 	{	
@@ -60,6 +63,6 @@
 			i=i-1;
 		}
 	}
-</script>>
+</script>
 </body>
 </html>

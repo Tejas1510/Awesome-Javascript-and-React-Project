@@ -1,0 +1,37 @@
+<div class="container">
+  <h2 class="page-header">Add Contact</h2>
+<form (submit)="addContact()">
+   <div class="form-group">
+    <label>First Name</label>
+    <input type="text" [(ngModel)]="firstName"  name="firstName" class="form-control">
+  </div> 
+   <div class="form-group">
+    <label>Last Name</label>
+    <input type="text" [(ngModel)] = "lastName"  name="lastName" class="form-control">
+   </div>
+    <div class="form-group">
+    <label>phone</label>
+    <input type="text" [(ngModel)] = "phone" name="phone" class="form-control" required>
+  </div>
+  <input type="submit" class="btn btn btn-success" value="Add">
+</form>
+</div>
+<hr>
+
+<div class="container">
+  <h2>My Contacts</h2>
+  <table class="table table-striped">
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Phone no.</th>
+      <th scope="col">Option</th>
+    </tr>
+    <tr *ngFor="let contact of contacts">
+      <td>{{contact.firstName}}</td>
+      <td>{{contact.lastName}}</td>
+      <td>{{contact.phone}}</td>
+      <td><input type="button" (click)="deleteContact(contact._id)" value="Delete" class="btn btn-danger"></td>
+    </tr>
+  </table>
+</div>

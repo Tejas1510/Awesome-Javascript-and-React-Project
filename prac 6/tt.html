@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+
+
+var sun1 = new Image();
+var moon = new Image();
+var earth = new Image();
+function init(){
+  
+  sun1.src="sun.png";
+  moon.src = "moon.png";
+  earth.src = "earth.png";
+  setInterval(draw,100);
+}
+
+function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+
+  //ctx.globalCompositeOperation = 'destination-over';
+  ctx.clearRect(0,0,500,500);
+
+  //ctx.fillStyle = 'rgba(0,0,0,0.4)';
+  //ctx.strokeStyle = 'rgba(0,153,255,0.4)';
+  ctx.save();
+  ctx.translate(295,295);
+
+
+
+  ctx.drawImage(sun1,-40,-40);
+  var time = new Date();//earth
+  ctx.rotate( ((2*Math.PI)/60)*time.getSeconds() + ((2*Math.PI)/60000)*time.getMilliseconds() );
+  ctx.translate(105,0);
+  ctx.drawImage(earth,-12,-12);
+
+  
+  ctx.save();
+  ctx.rotate( ((2*Math.PI)/6)*time.getSeconds() + ((2*Math.PI)/6000)*time.getMilliseconds() );
+  ctx.translate(0,28.5);
+  ctx.drawImage(moon,-3.5,-3.5);
+  ctx.restore();
+
+  ctx.restore();
+ 
+  ctx.beginPath();
+  ctx.stroke();
+ 
+  
+}
+
+
+   
+
+  </script>
+
+</head>
+
+ 
+
+<body  onload="init()" >
+
+  <canvas id="canvas" width="1080" height="1080"></canvas>
+
+</body>
+
+ 
+
+</html>

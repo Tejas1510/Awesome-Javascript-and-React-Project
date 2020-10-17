@@ -1,0 +1,55 @@
+body {
+  margin: 20px;
+  padding: 20px 40px;
+  font-family: "Verdana";
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+.table {
+  width: 600px;
+}
+
+.on-sale {
+  color: red;
+}
+
+.qty {
+  width: 60px;
+}
+
+.animate-repeat2 {
+  line-height:40px;
+  list-style:none;
+  box-sizing:border-box;
+}
+
+.animate-repeat2.ng-move,
+.animate-repeat2.ng-enter,
+.animate-repeat2.ng-leave {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.animate-repeat2.ng-leave.ng-leave-active,
+.animate-repeat2.ng-move,
+.animate-repeat2.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.animate-repeat2.ng-leave,
+.animate-repeat2.ng-move.ng-move-active,
+.animate-repeat2.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:40px;
+}
+body{
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,8 @@
+.mat-form-field+.mat-form-field {
+    margin-left: 100px;
+}
+
+.lin {
+    background-color: yellow;
+    color: red;
+}

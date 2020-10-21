@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 justify-content-center">
+      <h1 style="text-align: center; background-color: rgb(69, 187, 216);">Gallery</h1>
+    </div>
+  </div>
+  <div *ngFor="let event of events">
+  <div class="row">
+    <div class="col-sm-9" style="background-color:white;">
+      <h2 style="color: black;">{{event.event_title}}</h2>
+      <br>
+      <mat-divider></mat-divider>
+      <blockquote class="blockquote">
+        <h4 style="color: black;">{{event.event_sub_title}}</h4>
+        {{event.event_description}}
+      </blockquote>
+    </div>
+    <div class="col-sm-3" style="background-color:lavenderblush;">
+      <img style="height: 100%;width: 100%;"
+        src="../../../../../assets/images/gallery/event_{{event.event_no}}/main.jpeg" class="img-carousel">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" *ngFor="let image of event.event_images">
+      <img
+        src="../../../../../assets/images/gallery/event_{{event.event_no}}/event_{{event.event_no}}_{{image.hellow}}.jpeg"
+        alt="Image" class="img-fluid">
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="modal-content" >
+  <div class="container-fluid">
+    <div class="row">
+
+    </div>
+  </div>
+
+
+  <div class="modal-content">
+    <div class="row align-items-stretch">
+
+
+    </div>
+  </div>
+
+</div>

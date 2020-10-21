@@ -1,0 +1,14 @@
+table {
+  width: 100%;
+}
+.font_style{
+  font-family: fantasy;
+  font-size: 25px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 12% auto 2% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 2px solid white;
+  width: 90%; /* Could be more or less, depending on screen size */
+}

@@ -1,0 +1,26 @@
+.example-card {
+    max-width: 300px;
+    margin: 20px;
+
+  }
+
+  .title {
+    /* flex: 1 1 auto; */
+    text-align: center;
+    /* height: 20px; */
+    font-size: 14px;
+    /* background-color: white; */
+    color:#3f51b5;
+  }
+
+  .gt-title {
+    flex: 1 1 auto;
+    text-align: center;
+    text-decoration: underline;
+    height: 20px;
+    font-size: 16px;
+    /* background-color: white; */
+    align-content: center;
+    color:#31bd2c;
+    font-weight: bold;
+  }

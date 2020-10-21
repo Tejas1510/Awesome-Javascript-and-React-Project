@@ -1,0 +1,86 @@
+<div class="container-fluid d-flex justify-content-center">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
+      <div class="section_title_container text-center" class="main_title">
+        <div>
+          <h1 class="feature_title">We Make College More Affordable,<br>We Make The Dream More Achievable.
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid d-flex justify-content-center">
+  <div class="row d-flex justify-content-center" style="width: 100%; border-radius: 20%;">
+    <app-carousel class="justify-content-center" style="border-radius: 3vmax;"></app-carousel>
+
+  </div>
+
+</div>
+<br>
+<div class="container">
+
+
+
+
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+      <mat-card class="example-card" style="border-radius: 6%;">
+        <mat-card-header>
+          <div mat-card-avatar [style.background-image]="'url(../../../assets/images/home/infrastructre_icon.png)'" style="background-size: cover;">
+          </div>
+          <mat-card-title style="font-family: cursive;">Infrastructure</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="images[0]">
+        <mat-card-content>
+          <span> {{ imgText[0] }} </span>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+
+    <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+      <mat-card class="example-card" style="border-radius: 6%;">
+        <mat-card-header>
+          <div mat-card-avatar [style.background-image]="'url(../../../assets/images/home/download.jpg)'" style="background-size: cover;">
+          </div>
+          <mat-card-title style="font-family: cursive;">Upto 99% Scholarship</mat-card-title>
+          <mat-card-subtitle>
+         No Fees For Talent
+        </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="images[1]">
+        <mat-card-content>
+          <span> {{ imgText[1] }} </span>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+
+
+    <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+      <mat-card class="example-card" style="border-radius: 6%;">
+        <mat-card-header>
+          <div mat-card-avatar [style.background-image]="'url(../../../assets/images/transports/busicon.png)'" style="background-size: cover;">
+          </div>
+          <mat-card-title style=" font-family: cursive;">Location</mat-card-title>
+          <mat-card-subtitle>
+            Google Map
+        </mat-card-subtitle>
+        </mat-card-header>
+        <iframe height="350px" width="350px"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27751.512485310068!2d77.40257618128922!3d29.605457712551846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e9c5404d2417d%3A0x21359d252736d6bb!2sAlpine+International+School!5e0!3m2!1sen!2sin!4v1498943227637"
+          frameborder="2" style="border:0"></iframe>
+        <mat-card-content>
+          <span> {{ imgText[2] }} </span>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+
+
+  </div>
+</div>
+<br>
+<app-courses></app-courses>

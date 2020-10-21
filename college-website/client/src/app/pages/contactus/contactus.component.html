@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 justify-content-center">
+            <h1 style="text-align: center; background-color: rgb(69, 187, 216);">Contact Us</h1>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 30px;">
+        <div class="col-lg-6 col-sm-12 col-md-6">
+            <mat-card class="mat-card">
+                <mat-card-header>
+                    <div mat-card-avatar [style.background-image]="'url(../../../assets/images/contactus/icon.png)'" style="background-size: cover;">
+                    </div>
+                    <mat-card-title>ALPINE COLLEGE OF EDUCATION</mat-card-title>
+                    <mat-card-subtitle><b>Contact Details</b></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../../assets/images/contactus/img.jpeg">
+                <mat-card-content>
+                    <b><span style="color: brown">Location&nbsp;&nbsp;&nbsp;: </span>&nbsp;&nbsp;NH-709B Delhi Saharanpur Highway, Jalalabad
+                        Shamli</b><br>
+                    <b><span style="color: brown">Address&nbsp;&nbsp;&nbsp;&nbsp;:</span>&nbsp;&nbsp;Jalalabad, Shamli, Uttar Pradesh, India - 247772</b><br>
+                    <b><span style="color: brown">E-Mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>&nbsp;&nbsp;alpinecollage@gmail.com</b><br>
+                    <b><span style="color: brown">Website&nbsp;&nbsp;&nbsp;&nbsp;:</span>&nbsp;&nbsp;http://www.alpinecollege.online</b><br>
+                    <b><span style="color: brown">Phone No&nbsp;:</span>&nbsp;&nbsp;+91-7500291000</b><br>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-lg-6 col-sm-12 col-md-6">
+            <mat-card class="mat-card">
+                <mat-card-header>
+                    <div mat-card-avatar [style.background-image]="'url(../../../assets/images/contactus/icon2.png)'" style="background-size: cover;">
+                    </div>
+                    <mat-card-title>Contact Form</mat-card-title>
+                    <mat-card-subtitle><b>Fill your Details to Contact with us</b></mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <br><br>
+                    <mat-form-field class="example-full-width" type="text" required="required">
+                        <mat-label>Full Name*</mat-label>
+                        <input matInput placeholder="Enter Your Full Name" [(ngModel)]="contactFormData.FullName" [ngModelOptions]="{standalone: true}">
+                        <mat-icon matSuffix style="color: rgb(4, 0, 255);">account_circle</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width" type="text" required="required">
+                        <mat-label>Contact No*</mat-label>
+                        <input matInput placeholder="Enter Your Contact No" [(ngModel)]="contactFormData.Contactno" [ngModelOptions]="{standalone: true}">
+                        <mat-icon matSuffix style="color: rgb(4, 0, 255);"> contact_phone</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width" type="text">
+                        <mat-label>E-Mail</mat-label>
+                        <input matInput placeholder="Enter Your E-Mail" [(ngModel)]="contactFormData.Email" [ngModelOptions]="{standalone: true}">
+                        <mat-icon matSuffix style="color: rgb(4, 0, 255);"> email</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width" type="text">
+                        <mat-label>Address</mat-label>
+                        <input matInput placeholder="Enter Your Address " [(ngModel)]="contactFormData.Address" [ngModelOptions]="{standalone: true}">
+                        <mat-icon matSuffix style="color: rgb(4, 0, 255);"> location_city</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width" type="text" required="required">
+                        <mat-label>Description*</mat-label>
+                        <textarea matInput placeholder="Write Your Description here" [(ngModel)]="contactFormData.Description" [ngModelOptions]="{standalone: true}"></textarea>
+                        <mat-icon matSuffix style="color: rgb(4, 0, 255);"> description</mat-icon>
+                    </mat-form-field>
+                </mat-card-content>
+                <mat-card-actions align="center">
+                    <br>
+                    <button mat-raised-button color="primary" (click)="contactForm()">Submit</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-lg-12 col-md-12">
+            <iframe class="map" style="border-style: dotted ;border-width: 1vmax;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27751.512485310068!2d77.40257618128922!3d29.605457712551846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e9c5404d2417d%3A0x21359d252736d6bb!2sAlpine+International+School!5e0!3m2!1sen!2sin!4v1498943227637"
+                frameborder="0" style="border:0">
+            </iframe>
+        </div>
+    </div>
+</div>

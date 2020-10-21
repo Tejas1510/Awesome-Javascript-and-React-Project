@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%;  background-color: white; color: indigo;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media screen and (min-width: 1100px) {
+  /* start of large tablet styles */
+  .loadingSpinner {
+    position: fixed;
+    left: 46%;
+    top: 25%;
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  /* start of large tablet styles */
+  .loadingSpinner {
+    position: fixed;
+    left: 47%;
+    top: 25%;
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  /* start of large tablet styles */
+  .loadingSpinner {
+    position: fixed;
+    left: 45%;
+    top: 25%;
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* start of medium tablet styles */
+  .loadingSpinner {
+    position: fixed;
+    left: 40%;
+    top: 25%;
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  /* start of phone styles */
+  .loadingSpinner {
+    position: fixed;
+    left: 35%;
+    top: 25%;
+    z-index: 100;
+  }
+}
+
+
+
+

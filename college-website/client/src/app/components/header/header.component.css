@@ -1,0 +1,9 @@
+.header-message {
+color: hotpink;
+/* color: orange; */
+background-color: white;
+font-size: 20px;
+font-weight: 400;
+margin: 6px;
+text-align: center;
+}

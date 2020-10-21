@@ -1,0 +1,35 @@
+<div class="container">
+  <mat-tab-group>
+    <mat-tab label="Teacher Login">
+      <h3 style="color:darkblue;">Apline College of Education, Thanabhawan, Shamli </h3>
+      <h3 style="color:darkblue;">Teacher Login</h3>
+
+      <br>
+      <mat-card class="login-mat-card">
+        <form class="login-form">
+          <mat-form-field class="login-full-width">
+            <input matInput type="text" name="userName" ngModel [(ngModel)]="teacherLoginData.username"
+              [ngModelOptions]="{standalone: true}" placeholder="User Name/ID" required #userName="ngModel">
+            <mat-error *ngIf="userName.invalid">Please enter a valid User Name/ID.</mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="login-full-width">
+            <input matInput type="password" name="passkey" ngModel [(ngModel)]="teacherLoginData.password"
+              [ngModelOptions]="{standalone: true}" placeholder="Password/Key" required #passKey="ngModel">
+          </mat-form-field>
+          <br>
+          <br>
+          <div>
+            <button mat-raised-button color="primary" (click)="teacherLoginClick()" type="submit">Login</button>
+            <button mat-raised-button color="warn" style="float: right;" (click)="onNoClick()">Cancel</button>
+          </div>
+          <a href="" class="login-forgot" color="accent">Forgot User ID/Password?</a>
+          <br>
+        </form>
+      </mat-card>
+    </mat-tab>
+    <mat-tab label="User Login">
+      <h1>Coming Soon</h1>
+    </mat-tab>
+  </mat-tab-group>
+</div>

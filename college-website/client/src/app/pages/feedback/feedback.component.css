@@ -1,0 +1,93 @@
+.modal-content {
+    background-color: #fefefe;
+    margin: 2% auto 2% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 2px solid white;
+    width: 20%;
+    /* Could be more or less, depending on screen size */
+}
+
+.modal-contenta {
+    background-color: #fefefe;
+    margin: 2% auto 2% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 2px solid white;
+    width: 40%;
+    /* Could be more or less, depending on screen size */
+}
+
+.modal-contentb {
+    background-color: #fefefe;
+    margin: 2% auto 2% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 2px solid white;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+.modal-contentr {
+    background-color: #fefefe;
+    margin: 0% auto 2% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 2px solid white;
+    width: 24%;
+    /* Could be more or less, depending on screen size */
+    float: right;
+}
+
+.modal-contentt {
+    background-color: #fefefe;
+    margin: 0% auto 2% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 2px solid white;
+    width: 17%;
+    /* Could be more or less, depending on screen size */
+    float: right;
+}
+
+table {
+    width: 100%;
+}
+
+.modal-contentk {
+    background-color: #fefefe;
+    margin: 2% auto 2% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 2px solid white;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+.modal-contents {
+    background-color: #fefefe;
+    margin: 2% auto 2% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 2px solid white;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+.modal-contentx {
+    background-color: #fefefe;
+    margin: 2% auto 2% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 2px solid white;
+    width: 85%;
+    /* Could be more or less, depending on screen size */
+}
+
+.rcorners3 {
+    border-radius: 25px;
+}
+
+.Error {
+    color: red;
+}
+
+.Warning {
+    color: blue;
+}
+
+.Ignored {
+    color: green;
+}

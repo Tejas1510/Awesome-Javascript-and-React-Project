@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 justify-content-center">
+            <h1 style="text-align: center; background-color: rgb(69, 187, 216);">Courses</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center" *ngFor="let course of courses">
+
+            <mat-card class="mat-card">
+                <mat-card-header>
+                    <div mat-card-avatar [style.background-image]="'url(../../../assets/images/courses/icon.png)'"
+                        style="background-size: cover;">
+                    </div>
+                    <mat-card-title>{{course.cource_name}}</mat-card-title>
+                    <mat-card-subtitle>
+                        <b>Seats: {{course.seats}}<br>
+                            Course Duration: {{course.cource_duration}}</b>
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <b><span style="color: brown">Affiliated by : </span>{{course.affilated_by}}</b><br>
+                    <b><span style="color: brown">Mode : </span>{{course.mode}}</b><br>
+                    <b><span style="color: brown">Fee/Year : </span>{{course.first_year}}</b>
+                    <b><span style="color: brown"> Total Fee : </span>{{course.total_fees}}</b>
+                    <button style="color: brown;" mat-button routerLink='/feestructure' routerLinkActive="active">More</button>
+                    <br>
+                    <b><span style="color: brown">About Course : </span></b><br>
+                    <span>{{course.description}}</span><br>
+                    <b><span style="color: brown">Career Opportunities : </span></b><br>
+                    <span>{{course.description}}</span>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+    </div>
+</div>

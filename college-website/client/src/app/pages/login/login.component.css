@@ -1,0 +1,26 @@
+.login-mat-card{
+  border: 2px;
+  width: 120%;
+  min-width: 250px;
+  max-width: 500px;
+  background-color: whitesmoke;
+  color: #3f51b5;
+  margin: 5px;
+}
+
+.login-form {
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.login-full-width {
+  width: 100%;
+}
+
+.login-forgot{
+  float: right;
+  font-size: 12px;
+  margin-top: 10px;
+}
+

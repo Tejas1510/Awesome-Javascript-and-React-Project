@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep  4 09:09:43 2019
-
-@author: HP
-"""
-
 from tkinter import *
 from tkinter import filedialog
 

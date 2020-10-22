@@ -81,4 +81,4 @@ Do drop a ⭐if you like this initiative of mine.
 
 [![built with love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project)
 
-Check out my Github profile [here!](https://github.com/Tejas1510)
+Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)

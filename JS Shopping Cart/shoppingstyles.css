@@ -1,0 +1,131 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .header {
+        height: 150px;
+        width: 100%;
+        background-color: lightgrey;
+        line-height: 40px;
+
+      }
+
+      h1 {
+        margin-left: 5%;
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+      }
+
+      .search {
+        height: 70px;
+        width: 60%;
+        display: inline-block;
+        float:relative;
+      }
+
+      .search input {
+        height: 40px;
+        width: 100%;
+        text-indent: 20px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        outline: none;
+      }
+
+      .pricetags{
+        height: 50px;
+        width: 25%;
+        float:absolute;
+        top:50px;
+        right:100px;
+        display: inline-block;
+      }
+      .pricetags input{
+        height: 30px;
+        width: 100%;
+        text-indent: 20px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        outline: none;
+      }
+
+      #cartitems{
+        display: inline-block;
+      }
+
+      .products {
+        width: 100%;
+        height: auto;
+       
+      }
+
+      .productwrapper {
+        height: auto;
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 50px;
+      }
+
+      .product {
+        height: auto;
+        width: 25%;
+        display: inline-block;
+        margin-top: 25px;
+        margin-left: 6.25%;
+        border: 1px solid lightgray;
+      }
+
+      .prodimg {
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .product h3,
+      .product p {
+        padding: 5px;
+        padding-left: 10px;
+      }
+
+      .product p {
+        color: gray;
+      }
+      button {
+        padding: 10px;
+      }
+      .note{
+        margin:20px;
+      }
+      .modal {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        display: none;
+      }
+
+      .modalchild {
+        height: 120px;
+        width: 70%;
+        background-color: white;
+        margin-left: 15%;
+        margin-top: 100px;
+        display: inline-block;
+        padding: 30px;
+        position:relative;
+        font-family: Lora;
+      }
+
+      .alert{
+        width:20%;
+        position:absolute;
+        left:450px;
+        background-color: rgba(0, 0, 0, 0.3);
+        font-weight: bold;
+       
+      }
+      .notetext{
+        text-align: center;
+      }

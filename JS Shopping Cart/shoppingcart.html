@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="shoppingstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="modal" onclick="hideModal(event)">
+      <div class="modalchild">
+        <div class="note">
+            <h3 class="notetext">You  have  selected  a  product  again. We  have  all  products  having  Quantity 1.<br>
+            But  You  can  select  other  products  of  your  choise  from  given  list  of  products.</h3><br>
+            <button class="alert" onclick="hidemodal()">OK</button>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <h1>Shopping 360</h1>
+      <div class="search">
+        <input
+          type="search"
+          onkeyup="searchProduct(this.value)"
+          placeholder="Search For Products"
+        />
+      
+      
+      <div class="pricetags" ><h4>Search for Minimum Price:</h5>
+        <input
+          type="search"
+          onkeyup="searchForMinPrice(this.value)"
+          placeholder="Minimum Price"
+          id="minprice"
+        /></div><div class="pricetags">
+      <h4>Search for Maximum Price:</h5>
+        <input
+          type="search"
+          onkeyup="searchForMaxPrice(this.value)"
+          placeholder="Maximum Price"
+          id="maxprice"
+        />
+      </div>
+    </h4>
+  </div>
+
+    </div>
+
+    <div class="products">
+      <div class="productwrapper" id="productwrapper"></div>
+    </div>
+
+    <div class="products">
+      <h1>Cart</h1><h3 id="cartitems">Total Cart Items : 0</h3>
+      <div class="productwrapper" id="cart"></div>
+    </div>
+
+    <script src="shopping.js"></script>
+  </body>
+</html>
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-6 Que-2</title>
+    <link rel="stylesheet" href="busstyles.css">
+     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="modal" onclick="hideModal(event)">
+      <div class="modalchild">
+        <div class="form">
+          <form onsubmit="updateBus(event)">
+            <input type="text" required placeholder="Name" id="upname" />
+            <input type="text" required placeholder="Source" id="upsrc" />
+            <input type="text" required placeholder="Desination" id="updest" />
+            <input type="number" required placeholder="Number" id="upnumber" />
+            <input type="text" required placeholder="Passenger Capacity" id="uppasscap" />
+            <button type="submit">Update Bus</button>
+          </form>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="data">
+      <h1>Bus Details</h1>
+
+      <div class="form">
+        <form onsubmit="addBus(event)"><h2>Add Bus :-</h2>
+          <input type="text" required placeholder="Name" id="name" />
+            <input type="text" required placeholder="Source" id="source" />
+            <input type="text" required placeholder="Desination" id="destination" />
+            <input type="number" required placeholder="Number" id="number" />
+            <input type="text" required placeholder="Passenger Capacity" id="passcap" />
+          <button type="submit">Add Bus</button>
+        </form>
+      </div>
+      
+      <h3>
+      <div class="form">
+        <h2>Find your Bus :-</h2>
+        Source :<input
+          type="text"
+          placeholder="Enter Source"
+          id="searchSource"
+          onkeyup="searchBySource()"
+        />
+      
+        Destination :<input
+          type="text"
+          placeholder="Enter Destination"
+          id="searchDestination"
+          onkeyup="searchByDestination()"
+        />
+      </div>
+      </h3>
+      <table border="1" class="table" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Sr no</th>
+            <th>Name</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Number</th>
+            <th>Passenger Capacity</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="tdata" id="tdata"></tbody>
+      </table>
+    </div>
+
+    <script src="busdata.js"></script>
+   
+  </body>
+</html>

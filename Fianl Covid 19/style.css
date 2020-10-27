@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+  color: #000;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.main-container {
+  padding: 2rem 4rem;
+  margin: auto;
+  /* margin-top: 5rem; */
+}
+
+.main-container > h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
+.close{
+  visibility: hidden;
+}
+/* 
+header.header {
+  margin: auto;
+  padding: 1rem;
+
+  position: relative;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: all 0.5s;
+  background-color: #008db9;
+  color : #fff;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  display: flex;
+} */
+
+header .toggler{
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+header .toggler>span:nth-child(1){
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  border-top: 2px solid #fff;
+}
+
+header .toggler>span:nth-child(2){
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  border-top: 2px solid #fff;
+}
+
+header .toggler>span:nth-child(3){
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  border-top: 2px solid #fff;
+}
+
+/* header.header > ul {
+  list-style: none;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.heading {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+header.header > ul > li {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+header.header > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#affectedImg {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+#confirmedCases,
+#recoveredCases,
+#deathCases {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#confirmedCases {
+  color: #ffa500;
+}
+
+#recoveredCases {
+  color: #008000;
+}
+
+#deathCases {
+  color: #ff0000;
+}
+
+/* CountryWise Css */
+.case_title{
+  font-size: 1.4rem;
+}
+
+.choose-country h4{
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}
+
+.error {
+  display: none;
+  position: relative;
+  background-color: #dc3545;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.error-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.display-data {
+  margin-top: 4rem;
+  display: none;
+}
+
+/* Responsive Css */
+
+@media (max-width: 1200px) {
+  .main-container {
+    margin-top: 0rem;
+  }
+
+  header.header > ul {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  header.header > ul {
+    flex-direction: column;
+  }
+
+  .main-container {
+    padding: 0;
+    margin: auto;
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  header.header > ul{
+    display: none;
+  }
+}
+
+@media(min-width : 601px){
+  header .toggler,header .close{
+    display: none;
+  }
+
+  header.header > ul {
+    display: flex;
+  }
+}

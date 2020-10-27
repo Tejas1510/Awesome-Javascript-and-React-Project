@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <mat-card class="mat-card">
+                <mat-card-header>
+                    <div mat-card-avatar [style.background-image]="'url(../../../assets/images/transports/busicon.png)'" style="background-size: cover;">
+                    </div>
+                    <mat-card-title>
+                        Transports
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        Enter Your Roll Number And Date of Birth to Give Ratings
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <br>
+                <mat-card-content>
+                    <mat-form-field class="example-full-width" type="text">
+                        <mat-label>Roll Number</mat-label>
+                        <input matInput placeholder="R1703121749" required [(ngModel)]="formData.rollNo" [ngModelOptions]="{standalone: true}">
+                    </mat-form-field> &nbsp;&nbsp;
+                    <mat-form-field class="example-full-width" type="text">
+                        <mat-label>Date of Birth</mat-label>
+                        <input matInput [matDatepicker]="picker" matInput placeholder="1970-12-31" required [(ngModel)]="formData.dob" [ngModelOptions]="{standalone: true}">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="openTable">
+                        <!--- Note that these columns can be defined in any order.
+                          The actual rendered columns are set as a property on the row definition" -->
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="order">
+                            <th mat-header-cell *matHeaderCellDef><b> No. </b></th>
+                            <td mat-cell *matCellDef="let element"> {{element.order}} </td>
+                        </ng-container>
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="question">
+                            <th mat-header-cell *matHeaderCellDef><b> Question</b> </th>
+                            <td mat-cell *matCellDef="let element"> {{element.question}} </td>
+                        </ng-container>
+                        <!-- Weight Column -->
+                        <ng-container matColumnDef="ratings">
+                            <th mat-header-cell *matHeaderCellDef> <b>Ratings </b></th>
+                            <td mat-cell *matCellDef="let element">
+                                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="element.ratings">
+                                    <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+                                        {{season}} &nbsp;
+                                    </mat-radio-button>
+                                </mat-radio-group>
+                            </td>
+                        </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+
+
+                </mat-card-content>
+                <mat-card-actions align="center">
+                    <button mat-raised-button color="primary" (click)="submitClick()">Submit</button>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+    </div>
+</div>

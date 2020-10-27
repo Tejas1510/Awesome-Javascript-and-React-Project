@@ -1,0 +1,49 @@
+<div class="container-fluid" style="width: 100%;">
+
+    <div class="row header-message">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <marquee>
+                <a>{{ getHeaderMessage() }}</a>
+            </marquee>
+        </div>
+    </div>
+
+    <div class="row" style="background-color:#14bdee">
+        <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-start">
+            <span style="color:white; font-size: 16px; margin-top: 7px;">
+        Have any questions? 7500291000, alpinecollege@rediffmail.com
+      </span>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-end">
+            <button mat-raised-button color="accent" routerLink='/covid' routerLinkActive="active">Covid19</button> &nbsp;&nbsp;
+            <button mat-raised-button (click)="openDialog()" color="primary">Login</button>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <span style="font-size: 24px; font-weight: 500; margin: 5px; color: #ca1c1cad;">
+        <u>Alpine College Of Education</u>
+      </span>
+        <button mat-button routerLink='/' routerLinkActive="active">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+        Home
+      </button>
+        <button mat-button routerLink='/management' routerLinkActive="active">Management</button>
+        <button mat-button routerLink='/courses' routerLinkActive="active">Courses</button>
+        <button mat-button [matMenuTriggerFor]="academics">Academics</button>
+        <button mat-button routerLink='/gallery' routerLinkActive="active">Gallery</button>
+        <button mat-button routerLink='/feedback' routerLinkActive="active">Feedback</button>
+        <button mat-button routerLink='/aboutus' routerLinkActive="active">About Us</button>
+        <button mat-button routerLink='/contactus' routerLinkActive="active">Contact Us</button>
+        <button mat-button routerLink='/faq' routerLinkActive="active">FAQ</button>
+        <button mat-button routerLink='/credits' routerLinkActive="active">Credits</button>
+    </div>
+
+    <mat-menu #academics="matMenu">
+        <button mat-menu-item routerLink='/admission' routerLinkActive="active">Admission</button>
+        <button mat-menu-item routerLink='/feestructure' routerLinkActive="active">Fee Structure</button>
+        <button mat-menu-item routerLink='/syllabus' routerLinkActive="active">Syllabus</button>
+    </mat-menu>
+
+</div>

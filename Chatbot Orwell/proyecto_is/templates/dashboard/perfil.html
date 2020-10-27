@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<h1 class="center" data-aos="fade-up">Perfil</h1>
+<div class="row container">
+    <div class="col s12 m8">
+        <h2 class="header">{{ user.first_name }} {{ user.last_name }}</h2>
+        <div class="card horizontal">
+            <div class="card-image">
+                <img class="responsive" src="{% static 'images/userProfile.png' %}">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <h5>Correo: {{ user.email }}</h5>
+                    <h5>Privilegios: {% if user.is_admin %}Administrador{% else %}Tecnico{% endif %}</h5>
+                    <a class="waves-effect waves-light btn" href="{% url 'dashboard:change_password' %}">Cambiar contraseña</a>
+                    <a class="waves-effect waves-light btn" href="{% url 'dashboard:deleteUser' identificador=user.id %}" >Eliminar cuenta</a>
+                    
+                </div>
+            </div>
+        </div>
+        {% if user.is_superuser %}
+        <a class="waves-effect waves-light btn" href="{% url 'account:signup' %}" style="left: 40%;">Agregar usuario</a>
+        {% endif %}
+    </div>    
+</div>
+
+{% endblock %}

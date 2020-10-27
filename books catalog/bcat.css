@@ -1,0 +1,180 @@
+table{
+	border-style: inset;
+	border-color: white;
+	border-width: 5px;
+	width:  777;
+	opacity:0.8;
+	caption-side: top;
+
+
+
+}
+tr
+{
+	text-align: center;
+	color:white;
+	font-weight: 1000;
+	background-color:black;
+	font-family:"Times New Roman", Times, serif;
+    font-size:25;
+	cursor: pointer;
+}
+
+#h1{
+	font-style: calibri;
+	font-size: 25;
+	background-color: yellow;
+	color:black;
+	 background-image: linear-gradient(to left,red,yellow );
+}
+#h2{
+	font-style: calibri;
+	font-size: 25;
+	background-color: orange;
+	 background-image: linear-gradient(to left,red, orange);
+	color:black;	
+}
+#h3{
+	font-style: calibri;
+	font-size: 25;
+	background-color: green;
+	 background-image: linear-gradient(to left,red, green);
+	color:black;
+}
+#h4{
+	font-style: calibri;
+	font-size: 25;
+	background-color: lightblue;
+	 background-image: linear-gradient(to left,red, blue);
+	color:black;
+}
+#bd{
+	background-image: url("book.jpg");
+}
+#cp{
+	font-size: 50;
+	color:darkred;
+	text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; 
+	word-spacing: 5;
+	background-attachment:fixed; 
+	background-color:black;
+
+
+}
+
+#cp:hover{
+	background-color:white;
+	cursor: pointer;
+	background-attachment:fixed; 
+
+}
+a:link{
+	color:green;
+	font-size:100;
+}
+a:visited{
+	color:red;
+	font-size:100;
+}
+a:active{
+	color:yellow;
+	font-size:100;
+}
+
+a:hover{
+	cursor:help;
+	font-size:100;
+
+}
+tr:nth-child(even)
+{
+	background-color: grey;
+	color:white;
+	
+}
+tr:nth-child(odd)
+{
+	background-color:black;
+	color:white;
+}
+tr:hover{
+	background-color:white;
+	background-image: linear-gradient(red, yellow);
+	cursor:pointer;
+	color:black;
+}
+
+
+
+#price1{
+	
+	border-image-repeat:norepeat;
+	height:200;
+	width:200;
+	 
+	
+}
+#price2{
+	
+	border-image-repeat:norepeat;
+	height:200;
+	width:200;
+}
+#price3{
+	
+	border-image-repeat:norepeat;
+	height:200;
+	width:200;
+}
+#price4{
+	
+	border-image-repeat:norepeat;
+	height:200;
+	width:200;
+}
+#price5{
+	
+	height:200;
+	width:200;
+}
+#price6{
+		height:200;
+	width:200;
+}
+#price7{
+	
+	height:200;
+	width:200;
+}
+#price8{
+	
+	height:200;
+	width:200;
+}
+#price9{
+	
+	height:200;
+	width:200;
+}
+#price10{
+	
+	height:200;
+	width:200;
+}
+
+img{
+	max-width:190px;
+	max-height:190px;
+
+}
+
+
+#rcorners2 {
+  border-radius: 25px;
+  
+  padding: 20px; 
+  width: 200px;
+  height: 150px;
+  border-width:10;  
+  border-color:white;  
+}

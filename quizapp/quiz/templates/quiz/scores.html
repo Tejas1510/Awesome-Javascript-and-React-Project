@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2> The highscores are : </h2>
+
+<table style="width:100%" id="customers">
+    <tr>
+    <th>name</th>
+    <th>score</th>  
+     </tr>
+    {% for sco in score  %}
+  
+  <tr>
+    <td>{{ sco.user }}</td>
+    <td>{{ sco.score }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<a href="{% url 'first'%}"> start again </a>
+</body>
+</html>

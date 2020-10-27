@@ -1,0 +1,72 @@
+body{
+    font: 1rem;
+}
+#btn{
+    background: none;
+    border: none;
+    width: 7rem;
+    height: 3rem;
+    outline: none;
+    border: 2px solid gray;
+    color: gray;
+    font-weight: 600;
+    border-radius: 1em;
+    font-size: 1.1rem;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(220, 220, 220);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.inner, .showAll{
+    min-width: 400px;
+    max-width: 600px;
+    min-height: 600px;
+    box-shadow: 0 0 1em 1em rgba(190, 190, 190);
+    border-radius: 2em;
+    background-color: white;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item{
+    margin-top: 2em;
+}
+#saveBtn, #listBtn, #backBtn{
+    background: none;
+    border: none;
+    width: 10rem;
+    height: 3rem;
+    outline: none;
+    border: 2px solid rgb(238, 9, 9);
+    color: rgb(238, 9, 9);
+    font-weight: 600;
+    border-radius: 1em;
+    font-size: 1.1rem;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+#message{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(32, 248, 32);
+    line-height: 100%;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    padding: .4em;
+    box-sizing: border-box;
+    display: none;
+}

@@ -1,0 +1,128 @@
+.App {
+	text-align: center;
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 1rem;
+	background-color: black;
+	color: yellow;
+}
+.section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: rgb(40, 37, 53);
+}
+.title {
+	font-size: 2rem;
+}
+.navbar {
+	height: 10vh;
+	min-height: 50px;
+	color: white;
+	position: fixed;
+	width: 100%;
+	max-width: 500px;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: yellow;
+	background-color: black;
+}
+main {
+	height: 80vh;
+	margin: 5vh 0 0;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+}
+
+main::-webkit-scrollbar {
+	width: 0.25rem;
+}
+
+main::-webkit-scrollbar-track {
+	background: #1e1e24;
+}
+
+main::-webkit-scrollbar-thumb {
+	background: #6649b8;
+}
+
+p {
+	max-width: 500px;
+	margin-bottom: 12px;
+	line-height: 24px;
+	padding: 10px 20px;
+	border-radius: 25px;
+	position: relative;
+	color: white;
+	text-align: center;
+}
+
+.message {
+	display: flex;
+	align-items: center;
+}
+
+.sent {
+	flex-direction: row-reverse;
+}
+
+.sent p {
+	color: yellow;
+	background: black;
+	align-self: flex-end;
+}
+.received p {
+	background: #e5e5ea;
+	color: black;
+}
+
+img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin: 2px 5px;
+}
+
+form {
+	height: 10vh;
+	position: fixed;
+	bottom: 0;
+	background-color: rgb(24, 23, 23);
+	width: 100%;
+	max-width: 500px;
+	display: flex;
+	font-size: 1.5rem;
+}
+
+input {
+	line-height: 1.5;
+	width: 100%;
+	font-size: 1.5rem;
+	background: rgb(58, 58, 58);
+	color: yellow;
+	outline: none;
+	border: none;
+	padding: 0 10px;
+}
+
+button {
+	background-color: #002877; /* Green */
+	border: none;
+	color: white;
+	padding: 7px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	/* border-radius: 10rem; */
+	font-size: 1.25rem;
+}
+
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}

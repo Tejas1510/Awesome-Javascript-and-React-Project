@@ -1,0 +1,202 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 justify-content-center">
+            <h1 style="text-align: center; background-color: rgb(69, 187, 216);">Covid-19 Q&A Portal</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 justify-content-center">
+            <mat-tab-group>
+                <mat-tab label="Ask Question">
+                    <div class="container">
+                        <div class="row" style="margin-bottom: 30px;">
+                            <div class="col-lg-6 col-sm-12 col-md-6">
+                                <mat-card class="mat-card">
+                                    <mat-card-header>
+                                        <div mat-card-avatar [style.background-image]="'url(../../../assets/images/covid/iconCorona.png)'" style="background-size: cover;">
+                                        </div>
+                                        <mat-card-title>About Covid-19</mat-card-title>
+                                        <mat-card-subtitle>Corona Virus</mat-card-subtitle>
+                                    </mat-card-header>
+                                    <img mat-card-image src="../../../assets/images/covid/questionCorona.jpg">
+                                    <mat-card-content>
+                                        <p>{{text[0]}}</p>
+                                        <p>{{text[2]}}</p>
+                                        <p>{{text[3]}}</p>
+                                    </mat-card-content>
+                                    <mat-card-actions>
+                                    </mat-card-actions>
+                                </mat-card>
+                            </div>
+                            <div class="col-lg-6 col-sm-12 col-md-6">
+                                <mat-card class="mat-card">
+                                    <mat-card-header>
+                                        <div mat-card-avatar [style.background-image]="'url(../../../assets/images/covid/iconForm2.png)'" style="background-size: cover;">
+                                        </div>
+                                        <mat-card-title>Have Any Question...?</mat-card-title>
+                                        <mat-card-subtitle>Ask your Question About Covid-19 (Corona Virus)
+                                        </mat-card-subtitle>
+                                    </mat-card-header>
+                                    <br>
+                                    <mat-card-content>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Contact No</mat-label>
+                                            <span matPrefix>+91 &nbsp;</span>
+                                            <input type="number" matInput placeholder="Enter Your Contact Number" required [(ngModel)]="formData.contactNo" [ngModelOptions]="{standalone: true}">
+                                            <mat-icon matSuffix style="color: red;">phone</mat-icon>
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width" type="text">
+                                            <mat-label>Name</mat-label>
+                                            <input matInput placeholder="Enter Your  Name" [(ngModel)]="formData.name" [ngModelOptions]="{standalone: true}">
+                                            <mat-icon matSuffix style="color: red;">person</mat-icon>
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width" type="text">
+                                            <mat-label>City or Town</mat-label>
+                                            <input matInput placeholder="Enter Your City or Town" [(ngModel)]="formData.city" [ngModelOptions]="{standalone: true}">
+                                            <mat-icon matSuffix style="color: red;">location_city</mat-icon>
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width" type="text">
+                                            <mat-label>District</mat-label>
+                                            <input matInput placeholder="Enter Your District" [(ngModel)]="formData.district" [ngModelOptions]="{standalone: true}">
+                                            <mat-icon matSuffix style="color: red;">location_city</mat-icon>
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width" type="text">
+                                            <mat-label>Ask a Question</mat-label>
+                                            <textarea matInput placeholder="Write Your Question here" required [(ngModel)]="formData.question" [ngModelOptions]="{standalone: true}"></textarea>
+                                        </mat-form-field>
+                                    </mat-card-content>
+                                    <br><br><br>
+                                    <mat-card-actions align="center">
+                                        <button mat-raised-button color="primary" (click)="sumbitClick()">Submit</button>
+                                    </mat-card-actions>
+                                </mat-card>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                        <div mat-card-avatar [style.background-image]="'url(../../../assets/images/covid/icon4.jpg)'" style="background-size: cover;">
+                                        </div>
+                                        <mat-card-title>Questions and Answers</mat-card-title>
+                                        <mat-card-subtitle>Here some Questions and Answers about Covid-19
+                                        </mat-card-subtitle>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                        <div class="container" *ngFor="let course of ELEMENT_DATA;">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-sm-2 col-md-2">
+                                                    <p>Question&nbsp;({{course.order}})</p>
+                                                </div>
+                                                <div class="col-lg-10 col-sm-10 col-md-10">
+                                                    <p>{{course.questions}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-sm-2 col-md-2">
+                                                    <p>Answer</p>
+                                                </div>
+                                                <div class="col-lg-10 col-sm-10 col-md-10">
+                                                    <p>{{course.answer}}</p>
+                                                </div>
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </mat-card-content>
+                                </mat-card>
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Get Answer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-16 col-md-6 col-sm-12">
+                                <mat-card class="mat-card">
+                                    <mat-card-header>
+                                        <div mat-card-avatar [style.background-image]="'url(../../../assets/images/covid/callicon.png)'" style="background-size: cover;">
+                                        </div>
+                                        <mat-card-title>Enter Your Contact No</mat-card-title>
+                                        <mat-card-subtitle>Enter Your Contact Number to Get Your Answer
+                                        </mat-card-subtitle>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Contact No</mat-label>
+                                            <span matPrefix>+91 &nbsp;</span>
+                                            <input type="number" matInput placeholder="555-555-1234" required [(ngModel)]="getAnswer.contactNo" [ngModelOptions]="{standalone: true}">
+                                            <mat-icon matSuffix style="color: red;">phone</mat-icon>
+                                        </mat-form-field>
+                                    </mat-card-content>
+                                    <mat-card-actions align="center">
+                                        <button mat-raised-button color="primary" (click)="getAnswerClick()">Get
+                                            Answer</button>
+                                    </mat-card-actions>
+                                </mat-card>
+                            </div>
+                            <div class="col-lg-16 col-md-6 col-sm-12">
+                                <mat-card class="mat-card">
+                                    <mat-card-header>
+                                        <div mat-card-avatar [style.background-image]="'url(../../../assets/images/covid/answerIcon.png)'" style="background-size: cover;">
+                                        </div>
+                                        <mat-card-title>Your Answer is Here</mat-card-title>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                        <mat-form-field class="example-full-width" type="text">
+                                            <mat-label>Name</mat-label>
+                                            <input matInput placeholder="Enter Your  Name" readonly [(ngModel)]="answerJSON.name" [ngModelOptions]="{standalone: true}">
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width" type="text">
+                                            <mat-label>Your Question</mat-label>
+                                            <textarea matInput placeholder="Your Question Here" readonly [(ngModel)]="answerJSON.question" [ngModelOptions]="{standalone: true}"></textarea>
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width" type="text">
+                                            <mat-label>Answer</mat-label>
+                                            <textarea matInput placeholder="Your Answer Here" readonly [(ngModel)]="answerJSON.answer" [ngModelOptions]="{standalone: true}"></textarea>
+                                        </mat-form-field>
+                                    </mat-card-content>
+                                </mat-card>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <mat-card class="mat-card">
+                                    <mat-card-header>
+                                        <div mat-card-avatar [style.background-image]="'url(../../../assets/images/covid/iconTable.png)'" style="background-size: cover;">
+                                        </div>
+                                        <mat-card-title>Covid-19 Live Status</mat-card-title>
+                                    </mat-card-header>
+                                    <br>
+                                    <mat-card-content>
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>State Name</th>
+                                                    <th>Active Patient</th>
+                                                    <th>Confirmed Patient</th>
+                                                    <th>Deaths</th>
+                                                    <th>Last Update Time</th>
+                                                    <th>Recovered</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let state of stateData">
+                                                    <td><b>{{state.state}}</b></td>
+                                                    <td>{{state.active}}</td>
+                                                    <td>{{state.confirmed}}</td>
+                                                    <td>{{state.deaths}}</td>
+                                                    <td>{{state.lastupdatedtime}}</td>
+                                                    <td>{{state.recovered}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </mat-card-content>
+                                </mat-card>
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,170 @@
+*{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+	font-family:'Lato',sans-serif;
+}
+.wrapper{
+	display:flex;
+	width:100%;
+	height:100vh;
+	flex-wrap:column-wrap;
+}
+.left_col,.right_col{
+	height:100vh;
+	flex-basis:50%;
+	position:relative;
+}
+/* .left_col{ */
+	/* background:#F9F2F4; */
+/* } */
+.logo{
+	display:block;
+	width:80px;
+	margin-top:30px;
+	margin-left:120px;
+}
+.content{
+	max-width:500px;
+	position:absolute;
+	top:50%;
+	left:120px;
+	transform:translateY(-50%);
+}
+.content h1{
+	color:#E50B5A;
+	text-shadow: 2px 2px 8px #F9628A;/*#E90744 ;*/
+	font-size:60px;
+	line-height:70px;
+	margin:25px 0;
+}
+.content h1:hover{
+	opacity:0.2;
+	text-shadow: 2px 2px #E50B5A;
+}
+.content p{
+	color:black;
+	line-height:28px;
+	font-size:17px;
+	margin-bottom:50px;
+	
+}
+button{
+	width:200px;
+	border:none;
+	background:#F9628A;
+	box-shadow:0px 10px 10px 1px rgba(273, 7, 68, 0.5);
+	padding:25px 0;
+	color:black;
+	font-weight:bold;
+	outline:none;
+	font-size:13px;
+	cursor:pointer;
+}
+.slider{
+	width:100%;
+	height:60%;
+	display:flex;
+}
+.slider img{
+	width:100%;
+}
+.slider_content{
+	width:100%;
+	height:40%;
+	/* display:flex; */
+	background:#F9628A;
+	color:black;
+	padding-top:30px;
+	padding-left:30px;
+	box-sizing:border-box;
+}
+.slider_content h2{
+	font-size:26px;
+	font-weight:100;
+}
+.slider_content p{
+	font-size:16px;
+	line-height:26px;
+	margin-bottom:20px;
+	color:#3E0216;
+}
+hr{
+	border:none;
+	/* align:center; */
+	width:270px; 
+	height:2px;
+	background:black;
+	margin:20px 0 30px;
+}
+.controller{
+	width:120px;
+	padding:15px; 
+	/* margin:20px; */
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+.controller img{
+	width:45px;
+	/* margin-right:5px; */
+	margin-right:15px;
+	cursor:pointer;
+}
+footer{
+	width:100%;
+	height:3%;
+	padding:1%;
+	font-size:15px;
+	text-align:center;
+	color:white;
+	background-color:black;
+}
+/* .vertical_line{ 
+	font-weight:lighter; 
+	color:white; 
+	font-size:45px; 
+	margin-right:15px: 
+ } */
+@media only screen and (max-width:800px;){
+	.logo{
+		margin:30px auto;
+	}
+	.content{
+		left:0;
+		padding:20px;
+		text-align:center;
+	}
+	.left_col,.right_col{
+		flex-basis:100%;
+	}
+	.content h1{
+		line-height:38px;
+		font-size:34px;
+	}
+	.slider{
+		height:auto;
+	}
+	.slider_content{
+		height:auto;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

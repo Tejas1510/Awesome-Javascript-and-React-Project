@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<h1 class="center">Reporte {{ reporte.id }}</h1>
+<div class="container">
+    <h4>Cliente: {{reporte.cliente}}</h4>
+    <h4>Modelo computadora: {{reporte.modelopc}}</h4>
+    <h4>Fecha: {{ reporte.fecha }} a las  {{ reporte.hora }}</h4>
+    <h4>Diagnostico otorgado: {{ reporte.problema }}</h4>
+    <a class="waves-effect waves-light btn" href="{% url 'dashboard:reporteAtendido' identificador=reporte.id %}">Marcar como solucionado</a>
+</div>
+{% endblock %}

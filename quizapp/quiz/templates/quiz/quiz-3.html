@@ -1,0 +1,50 @@
+{% load static %}
+<html>
+<head>
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+    
+
+</head>
+    <bod onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+        
+        <p><center>
+            <img src="{% static 'quiz/img3.jpeg' %}" width="380" height="380" alt="pic of Friends"/></center>
+        </p>
+        <h2>{{ ques.2 }}</h2>
+        <ul>
+            <form action="{% url 'quiz-e3' %}" method="POST">
+                {% csrf_token %}
+                <input type="radio" name ="q1a1" value="{{ ques.2.optiona }} " class="multiple" checked=”checked”>{{ ques.2.optiona }} 
+                <br>
+                <input type="radio" name="q1a1" value="{{ ques.2.optionb }} " class="multiple" >{{ ques.2.optionb }}   
+                <br>
+                <input type="radio" name="q1a1" value="{{ ques.2.optionc }} " class="multiple" >{{ ques.2.optionc }}  
+                <br>
+                <input type="radio" name="q1a1" value="{{ ques.2.optiond }} " class="multiple">{{ ques.2.optiond }}  
+                <br>
+                <input type="submit" name="q1a1" value="go to the next question">
+            </form>
+    
+        </ul>
+        <script type="text/javascript">
+            function checkOnlyOne(b){
+
+        var x = document.getElementsByClassName('multiple');
+var i;
+
+for (i = 0; i < x.length; i++) {
+  if(x[i].value != b) x[i].checked = false;
+}
+}
+        </script>
+
+
+
+        
+    </body>
+</html>

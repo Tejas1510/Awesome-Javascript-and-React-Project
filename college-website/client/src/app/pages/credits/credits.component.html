@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 justify-content-center">
+            <h1 style="text-align: center; background-color: rgb(69, 187, 216);">Credits</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-12 d-flex justify-content-center">
+            <span class="title">The development credit of this Single Page Application(SPA) goes to the below
+                individuals &
+                the students of the Alpine Colllege. </span>
+        </div>
+    </div>
+
+    <!-- NG for loop for crdit students -->
+    <div class="row center-block">
+        <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center" *ngFor="let credit of credits">
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar [style.background-image]="'url(../../../assets/images/credits/' + credit.pic_src + ')'" style="background-size: cover;">
+                    </div>
+                    <mat-card-title>{{ credit.title }}</mat-card-title>
+                    <mat-card-subtitle>{{ credit.sub_title }}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../../assets/images/credits/{{credit.pic_src}}">
+                <mat-card-content>
+                    <p>{{ credit.description }}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <!-- END NG For Loop -->
+
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 d-flex justify-content-center">
+            <span class="title">
+                <div><img src="../../../assets/images/credits/GT_logo.jpeg" width="60px" height="60px"></div>
+                The project was completed under <span class="gt-title">'Revamp The Rural'</span> initiative of the
+            <br>
+
+            <div>
+                <span class="gt-title">Gindowa Technologies Private Limited</span><br>
+                <span>www.gindowa.com | hr@gindowa.com</span>
+            </div>
+
+            </span>
+        </div>
+    </div>
+
+</div>

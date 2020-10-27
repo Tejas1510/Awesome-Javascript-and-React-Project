@@ -1,0 +1,2 @@
+# automatic_email_sender_with_html_buttons
+This a python script that can be used with any scheduler or ansible playbooks or can be use solely to generate mail with buttons which basically contains approve and reject button.The idea behind this scipt is that it will send mail to client whose suppose server is running and reach a high cpu utilization and we need to stop his or her server then this script will trigger and mail will automatically sent to him to know his answer whether it is approved or rejected.

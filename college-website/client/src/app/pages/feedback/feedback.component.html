@@ -1,0 +1,168 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 justify-content-center">
+            <h1 style="text-align: center; background-color: rgb(69, 187, 216);">FeedBack</h1>
+        </div>
+    </div>
+    <div class="row" style="align-items: center;">
+        <div class="col-lg-12 col-sm-12 col-md-12 justify-content-center">
+            <!--this is the Tab by Angular material-->
+            <mat-tab-group>
+                <mat-tab label="PTM">
+                    <div class="container" style="font-size: 19px;" *ngIf="openLoginTitle">
+                        <div class="row">
+                            <br>
+                            <div class="col-lg-12 col-sm-12 col-md-12 ">
+                                <b><span style="color: red;">Login to Show Feedback</span></b>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <!--The content below is only a placeholder and can be replaced.-->
+                    <div class="container" *ngIf="openFeedback">
+                        <div class="row" class="modal-contentx">
+                            <mat-form-field>
+                                <mat-label>PTM</mat-label>
+                                <mat-select *ngIf="getPTM()" [(ngModel)]="selectedPTM" (selectionChange)="onSelectPTM($event.value)">
+                                    <mat-option value="0">Select PTM</mat-option>
+                                    <mat-option *ngFor="let PTM of getPTM()" value={{PTM.ptm_name}}>
+                                        {{PTM.ptm_name}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>Course</mat-label>
+                                <mat-select *ngIf="courses" [(ngModel)]="selectedCourse" (selectionChange)="onSelectCourse($event.value)">
+                                    <mat-option value="0">Select Course</mat-option>
+                                    <mat-option *ngFor="let course of courses" value={{course.course_year}}>
+                                        {{course.course_year}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>Student</mat-label>
+                                <mat-select *ngIf="students" [(ngModel)]="selectedStudent" (selectionChange)="onSelectStudent($event.value)">
+                                    <mat-option value="0">Select Student</mat-option>
+                                    <mat-option *ngFor="let student of students" value={{student.university_roll_no}}>
+                                        {{student.name}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="modal-contentx" ng-repeat="s in Notification.status">
+                            <div class="cantainer">
+                                <div class="row">
+                                    <div class="col-sm-4" style="font-size: 19px;"><span style="color: red;">PTM:
+                                        </span>{{Notification.ptmNumber}} </div>
+                                    <div class="col-sm-5" style="font-size: 19px;"> <span style="color: red;">Agenda:
+                                        </span> {{Notification.ptmAgenda}}<span id="demo"></span> </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4" style="font-size: 19px;"> <span style="color: red;">Date:
+                                        </span> {{Notification.ptmDate}}<span id="demo"></span> </div>
+                                    <div class="col-sm-2" style="font-size: 19px;"> <span style="color: red;">Status:
+                                        </span> {{Notification.status}}<span id="demo"></span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Question Form-->
+                        <div *ngIf="openQuestionForm" class="rcorners3">
+                            <div class="modal-contentx">
+                                <div class="cantainer">
+                                    <div class="row">
+                                        <div class="col-sm-4" style="font-size: 19px;"><span style="color: red;">Teacher
+                                                Name:
+                                            </span>{{teachersData.first_name}} {{teachersData.last_name}} </div>
+                                        <div class="col-sm-4" style="font-size: 19px;"> <span style="color: red;">Teacher
+                                                ID:
+                                            </span> {{teachersData.username}}<span id="demo"></span> </div>
+                                        <div class="col-sm-4" style="font-size: 19px;"> <span style="color: red;">PTM:
+                                            </span> {{Notification.ptmNumber}}<span id="demo"></span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-contentx">
+                                <div class="cantainer">
+                                    <div class="row">
+                                        <div class="col-sm-4" style="font-size: 19px;"> <span style="color: red;">Student
+                                                Name:
+                                            </span> {{studentDetailsJSON.name}} </div>
+
+                                        <div class="col-sm-4" style="font-size: 19px;"><span style="color: red;">Class:
+                                            </span> {{studentDetailsJSON.course_year}} </div>
+
+                                        <div class="col-sm-4" style="font-size: 19px;"> <span style="color: red;">Roll
+                                                No:
+                                            </span> {{studentDetailsJSON.university_roll_no}}<span id="demo"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-contentx">
+                                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                                    <ng-container matColumnDef="questionOrder">
+                                        <th mat-header-cell *matHeaderCellDef style="font-size: 24px;color: rgb(247, 171, 30)"> S.R. </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.questionOrder}} </td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="question">
+                                        <th mat-header-cell *matHeaderCellDef style="font-size: 24px;color: rgb(247, 171, 30)"> Questions </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.question}} </td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="teacherFB">
+                                        <th mat-header-cell *matHeaderCellDef style="font-size: 24px;color: rgb(247, 171, 30);">Teachers Feedback
+                                        </th>
+                                        <td mat-cell *matCellDef="let element">
+                                            <mat-form-field>
+                                                <mat-label>Teachers Feedback</mat-label>
+                                                <textarea matInput readonly="{{ isReadOnly }}" [(ngModel)]="element.teacherFB"></textarea>
+                                            </mat-form-field>
+                                        </td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="parentFB">
+                                        <th mat-header-cell *matHeaderCellDef style="font-size: 24px;color: rgb(247, 171, 30);">Parents Feedback
+                                        </th>
+                                        <td mat-cell *matCellDef="let element">
+                                            <mat-form-field>
+                                                <mat-label>Parents Feedback</mat-label>
+                                                <textarea matInput [(ngModel)]="element.parentFB"></textarea>
+                                            </mat-form-field>
+                                        </td>
+                                    </ng-container>
+                                    <ng-container matColumnDef="solution">
+                                        <th mat-header-cell *matHeaderCellDef style="font-size: 24px;color: rgb(247, 171, 30);">Solution</th>
+                                        <td mat-cell *matCellDef="let element">
+                                            <mat-form-field>
+                                                <mat-label>Solution</mat-label>
+                                                <textarea matInput readonly="{{ isReadOnly }}" [(ngModel)]="element.solution"></textarea>
+                                            </mat-form-field>
+                                        </td>
+                                    </ng-container>
+                                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                </table>
+                            </div>
+                            <div class="modal-contentt" *ngIf="openButton">
+                                <button mat-stroked-button (click)="submitClick()" style="text-align: right;background-color: rgb(247, 171, 30);color: white;font-size: 18px;">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Transports">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 justify-content-center">
+                                <app-transports></app-transports>
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Others">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 justify-content-center">
+                                <h1 style="color: blue;"><b>Others Coming Soon</b></h1>
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>

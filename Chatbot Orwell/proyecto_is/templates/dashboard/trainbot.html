@@ -1,0 +1,156 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<div class="contact-us">
+    <h1 class="center">Entrenamiento del bot</h1>
+    <div class="respuesta"></div>
+    <br><br>
+    <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="row">
+            <div class="col s12 m5 ">
+                <img class="responsive" style="border-radius: 15px;" src="{% static 'images/training.png' %}">
+            </div>
+            <div class="col s12 m7 ">
+                <form>
+                    <div class="row">
+                        <h3>Nueva respuesta</h3>
+                        <div class="input-field col s12">
+                            <input id="disabled" type="text" class="validate js-text-1">
+                            <label for="disabled">Pregunta</label>
+                            <button onclick="dictarPregunta()" class="btn btn-primary narrow center">Dictar
+                                Pregunta</button>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="when" type="text" class="validate js-text-2">
+                            <label for="when">Respuesta</label>
+                            <button onclick="dictarRespuesta()" class="btn btn-primary narrow center">Dictar
+                                Respuesta</button>
+                            <a class="waves-effect waves-light btn js-say" style="left: 41%; margin-top: 30px;">Guardar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% csrf_token %}
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/js.cookie.js' %}"></script>
+<script>
+    var chatterbotUrl = '{% url "chatterbotadmin" %}';
+    var csrftoken = Cookies.get('csrftoken');
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+
+    $.ajaxSetup({
+        beforeSend: function (xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+
+    var $respuesta = $('.respuesta');
+    var $input1 = $('.js-text-1');
+    var $input2 = $('.js-text-2');
+    var $sayButton = $('.js-say');
+    var texto = ""
+
+    function createRowBot(text) {
+        texto = text.replace(/(?:\\r\\n|\\r|\\n)/g, '<br />');
+        console.log(text);
+        var $row = '<div class="message message-left"><p class="message-title"><span>ORWELL</span><p class="message-text">' + texto + '</p></p></div>';
+        $chatlog.append($row);
+    }
+
+    function submitInput() {
+        var inputData = {
+            'text1': $input1.val(),
+            'text2': $input2.val(),
+        }
+        var $submit = $.ajax({
+            type: 'POST',
+            url: chatterbotUrl,
+            data: JSON.stringify(inputData),
+            contentType: 'application/json'
+        });
+
+        $submit.done(function (statement) {
+            var $row = "<h5 class='center'>" + statement + "</h5>";
+            $respuesta.append($row);
+            $input1.val('');
+            $input2.val('');
+        });
+
+        $submit.fail(function () {
+            console.log("Error");
+        });
+    }
+
+    $sayButton.click(function () {
+        submitInput();
+    });
+
+    $input1.keydown(function (event) {
+        if (event.keyCode == 13) {
+            submitInput();
+        }
+    });
+
+    $input2.keydown(function (event) {
+        if (event.keyCode == 13) {
+            submitInput();
+        }
+    });
+</script>
+<script>
+    function dictarPregunta() {
+        window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+        let finalTranscript = '';
+        let recognition = new window.SpeechRecognition();
+        recognition.interimResults = true;
+        recognition.maxAlternatives = 10;
+        recognition.continuous = true;
+        recognition.lang = 'es-MX';
+        recognition.onresult = (event) => {
+            let interimTranscript = '';
+            for (let i = event.resultIndex, len = event.results.length; i < len; i++) {
+                let transcript = event.results[i][0].transcript;
+                if (event.results[i].isFinal) {
+                    finalTranscript += transcript;
+                } else {
+                    interimTranscript += transcript;
+                }
+            }
+            document.getElementById('mensaje').value = finalTranscript + interimTranscript;
+        }
+        recognition.start();
+    }
+</script>
+<script>
+    function dictarRespuesta() {
+        window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+        let finalTranscript = '';
+        let recognition = new window.SpeechRecognition();
+        recognition.interimResults = true;
+        recognition.maxAlternatives = 10;
+        recognition.continuous = true;
+        recognition.lang = 'es-MX';
+        recognition.onresult = (event) => {
+            let interimTranscript = '';
+            for (let i = event.resultIndex, len = event.results.length; i < len; i++) {
+                let transcript = event.results[i][0].transcript;
+                if (event.results[i].isFinal) {
+                    finalTranscript += transcript;
+                } else {
+                    interimTranscript += transcript;
+                }
+            }
+            document.getElementById('mensaje').value = finalTranscript + interimTranscript;
+        }
+        recognition.start();
+    }
+</script>
+{% endblock %}

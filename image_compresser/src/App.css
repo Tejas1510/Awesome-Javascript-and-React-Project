@@ -1,0 +1,259 @@
+.app
+{
+  height: 100vh;
+  background-image: url("https://animal-wallpaper.com/wallpaper/mustard-images-For-Background-HD-Wallpaper.jpg");
+  text-align: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* .app h2{
+  font-size: 40px;
+  margin-top:50px ;
+  margin-bottom: 20px;
+  
+} */
+header {
+  background:url("https://www.schedule2crossfit.com/wp-content/uploads/2016/07/2115-e1487729715977.jpg");
+  display: flex;
+  color:  darkgoldenrod;
+  font-size: 25px;
+  text-shadow: 0 2px 0 white;
+  
+  
+}
+header:before,
+header:after {
+  content: '';
+  margin: auto 1em;
+  border-bottom: solid 1px;
+  flex: 1;
+}
+h3 {
+  position: relative;
+  padding: 0.25em 1em;
+  overflow: hidden;
+  background: linear-gradient(  white ,  white) no-repeat top center, linear-gradient( white, white) no-repeat bottom center;
+  background-size: calc(100% - 1.7em) 1px
+}
+h3:before,
+h3:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: solid 1px;
+  border-top: none;
+  border-bottom: none;
+  transform: skew(45deg)
+}
+h3:after {
+  transform: skew(-45deg)
+}
+@media only screen and (min-width: 600px) {
+  ol {
+    counter-reset: li; 
+    list-style: none; 
+    list-style: decimal; 
+    font: 20px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    margin-top: 25px;
+  }
+  .rounded-list h1{
+    margin-top: 12px;
+    text-decoration:underline;
+    text-shadow:0 2px 0 white;
+  }
+  .rounded-list a{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    margin: 320px;
+    margin-top: 4px;
+    margin-bottom: 7px;
+    background:url("https://www.schedule2crossfit.com/wp-content/uploads/2016/07/2115-e1487729715977.jpg");
+    color:white;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+  }
+  
+  .rounded-list a:hover{
+    background:black;
+  }
+  
+  .rounded-list a:hover:before{
+    transform: rotate(360deg);
+  }
+  
+  .rounded-list a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: darkgoldenrod;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid black;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  ol {
+    counter-reset: li; 
+    list-style: none; 
+    list-style: decimal; 
+    font: 12px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 1em;
+  }
+  .rounded-list h1{
+    margin-top: 2px;
+    text-decoration:underline;
+    text-shadow:0 1px 0 white;
+  }
+  .rounded-list a{
+    position: relative;
+    display: block;
+    padding: .2em .2em .2em 1em;
+    margin: 32px;
+    margin-top: 3px;
+    margin-bottom: 4px;
+    background:url("https://www.schedule2crossfit.com/wp-content/uploads/2016/07/2115-e1487729715977.jpg");
+    color:white;
+    text-decoration: none;
+    border-radius: .1em;
+    transition: all .3s ease-out;
+  }
+  
+  .rounded-list a:hover{
+    background:black;
+  }
+  
+  .rounded-list a:hover:before{
+    transform: rotate(360deg);
+  }
+  
+  .rounded-list a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 20%;
+    margin-top: -0.3em;
+    background: darkgoldenrod;
+    height: 1em;
+    width: 1em;
+    line-height: 1em;
+    border: .2em solid black;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 1em;
+    transition: all .3s ease-out;
+  }
+}
+
+.wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom: 20px;
+}
+
+.file-upload{
+  margin-top: 23px;
+  height:120px;
+  width:120px;
+  border-radius: 100px;
+  position:relative;
+  
+  display:flex;
+  justify-content:center;
+  align-items: center;  
+
+  border:4px solid white;
+  overflow:hidden;
+  /* background-image: linear-gradient(to bottom, black 50%, #FFFFFF 50%); */
+  background-image: url(https://www.schedule2crossfit.com/wp-content/uploads/2016/07/2115-e1487729715977.jpg);
+  background-size: 100% 200%;
+  transition: all 1s;
+  color: rgba(209, 151, 43, 0.918);;
+  font-size:100px;
+}
+input[type='file']{
+
+  height:200px;
+  width:200px;
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+  cursor:pointer;
+
+}
+
+input[type='file']:hover{
+
+  background-position: 0 -100%;
+
+  color:#2590EB;
+
+}
+
+/* compress button */
+
+@keyframes sheen {
+  0% {
+    transform: skewY(-45deg) translateX(0);
+  }
+  100% {
+    transform: skewY(-45deg) translateX(12.5em);
+  }
+}
+
+.button {
+  padding: 0.75em 2em;
+  text-align: center;
+  color:white;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/58a5c2f6579fb3f46445da39/1487793488691-0ZOQLOEUIKEBOIPXW4VZ/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0s0XaMNjCqAzRibjnE_wBlkZ2axuMlPfqFLWy-3Tjp4nKScCHg1XF4aLsQJlo6oYbA/black-triangle-background.jpg?format=1500w");
+  border: 2px solid white;
+  font-size: 24px;
+  display: inline-block;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+.button:before {
+  content: "";
+  background-color:rgba(209, 151, 43, 0.918); 
+  height: 100%;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -4.5em;
+  transform: skewX(-45deg) translateX(0);
+  transition: none;
+}
+.button:hover {
+  background-image:white;
+  color:white;
+  border-bottom: 4px solid darken(black, 10%);
+  border: 2px solid black;
+}
+.button:hover:before {
+    transform: skewX(-45deg) translateX(13.5em);
+    transition: all 0.5s ease-in-out;
+}

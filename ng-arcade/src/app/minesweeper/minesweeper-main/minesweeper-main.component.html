@@ -1,0 +1,37 @@
+<div class="section">
+  <div class="container is-fluid">
+    <div class="columns">
+      <div class="column is-centered">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Minesweeper</p>
+            <div class="dropdown is-right" [class.is-active]="difficultyMenuActive">
+              <div class="dropdown-trigger">
+                <button class="button" (click)="toggleDifficultyMenu()">
+                  <span>Difficulty</span>
+                  <span class="icon is-small">
+                    <fa-icon [icon]="faDropdown" aria-hidden="true"></fa-icon>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                  <a class="dropdown-item" (click)="easy()">Easy</a>
+                  <a class="dropdown-item" (click)="medium()">Medium</a>
+                  <a class="dropdown-item" (click)="hard()">Hard</a>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="card-content">
+            <board [board]="board" [action]="action"></board>
+          </div>
+          <footer class="card-footer">
+            <a class="card-footer-item" (click)="setActionUncovor()">Uncovor</a>
+            <a class="card-footer-item" (click)="setActionFlag()">Flag</a>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

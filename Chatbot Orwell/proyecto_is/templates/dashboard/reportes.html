@@ -1,0 +1,92 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<div class="row sidenav-margin">
+    <div class="container">
+        <div class="col s12">
+            <div class="flex">
+                <h2 class="center" data-aos="fade-up">Reportes reparaciones</h2>
+                <div class="block text-right margin_base">
+                </div>
+            </div>
+            <div class="form-container">
+                <form action="{% url 'dashboard:searchReport' %}" method="post">
+                    {% csrf_token %}
+                    <div class=" col s3">
+                        <select name="opcion" onchange="place();" id="opcion">
+                            <option value="1">Fecha</option>
+                            <option value="2">Nombre</option>
+                        </select>
+                    </div>
+                    <div class="search col s9">
+                        <input id="campo" required="required" name="campo" aria-invalid="false"
+                            placeholder="Formato de la fecha: dd/mm/aa" type="text" value="">
+                    </div>
+                    <input type="submit" style="position: absolute; left: -9999px" />
+                    {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                            {% endfor %}
+                    </ul>
+                    {% endif %}
+                </form>
+                <table class="highlight">
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Modelo computadora</th>
+                            <th>Fecha</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for reporte in reportes %}
+                        <tr>
+                            <th>{{reporte.cliente}}</th>
+                            <th>{{reporte.modelopc}}</th>
+                            <th>{{reporte.fecha}} a las {{reporte.hora}}</th>
+                            {% if reporte.atendido %}
+                            <th><i class="small material-icons">check</i></th>
+                            {% else %}
+                            <th><i class="small material-icons">close</i></th>
+                            {% endif %}
+                            <th><a class="waves-effect waves-light btn"
+                                    href="{% url 'dashboard:reporte' identificador=reporte.id %}">Ver</a></th>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% if reportes.has_other_pages %}
+            <div class="pagination center">
+                <span class="page-links">
+                    {% if reportes.has_previous %}
+                    <a href="?page={{ reportes.previous_page_number }}"><i
+                            class="material-icons ">keyboard_arrow_left</i></a>
+                    {% endif %}
+                    <span class="page-current">
+                        Pagina {{ reportes.number }} de {{ reportes.paginator.num_pages }}.
+                    </span>
+                    {% if reportes.has_next %}
+                    <a href="?page={{ reportes.next_page_number }}"> <i
+                            class="material-icons ">keyboard_arrow_right</i></a>
+                    {% endif %}
+                </span>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<script>
+    function place() {
+        if (document.getElementById('opcion').value == "1") {
+            document.getElementsByName('campo')[0].placeholder = "Formato de la fecha: dd/mm/aa";
+        } else {
+            document.getElementsByName('campo')[0].placeholder = "Introduce el nombre";
+        }
+    }
+</script>
+
+{% endblock %}

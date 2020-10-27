@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini project</title>
+    <link rel="stylesheet" href="./app.css" type="text/css">
+</head>
+
+<body>
+   
+    <div class="main">
+        <div class="inner">
+            <button id="btn" class="item">Get qoute</button>
+            <p id="qoute" class="item"></p>
+            <small id="author"></small>
+            <button id="saveBtn" class="item">Save this qoute</button>
+            <div id="message" class="item" >Qoute saved</div>
+            <button id="listBtn" class="item">All saved qoutes</button>
+        </div>
+
+
+        <div class="showAll hide">
+            <button id="backBtn">Back</button><hr>
+            <div class="list"></div>
+        </div>
+    </div>
+    
+
+    <!-- scripts -->
+    <script src="./app.js"></script>
+    <script type="text/javascript" src="https://api.forismatic.com/api/1.0/?method=getQuote&amp;format=jsonp&amp;jsonp=parseQuote&amp;lang=en"></script>
+</body>
+</html>

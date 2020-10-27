@@ -1,0 +1,28 @@
+{
+  "name": "gt-server",
+  "version": "1.0.0",
+  "description": "GT-Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev-server": "nodemon server.js",
+    "prod-server-start": "pm2 start server.js",
+    "prod-server-stop": "pm2 stop server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "g": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.4.6",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.2"
+  }
+}

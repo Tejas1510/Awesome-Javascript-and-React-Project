@@ -1,0 +1,100 @@
+{% load static %}
+<html>
+
+<head>
+  <title>Registro</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  {% block extra_head %}{% endblock %}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    html {
+      display: table;
+      margin: auto;
+    }
+
+    body {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body class="grey lighten-3">
+  <div class="row">
+    <div class="col s12 z-depth-4 card-panel">
+      <h1 style="text-align: center; padding-left:110px; padding-right: 110px;">ORWELL</h1>
+      <div class="container">
+      <form method="post" action="{% url 'account:signup' %}">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+          <hr class="separator">
+            <div class="input-field">
+              <label for="id_first_name" class="active">Nombre:</label>
+              {{ form.first_name }}
+              {% for error in form.first_name.errors %}
+              <span style="color: red;">{{ error }}</span>
+              {% endfor %}
+            </div>
+            <div class="input-field">
+              <label for="id_last_name" class="active">Apellidos</label>
+              {{ form.last_name }}
+              {% for error in form.last_name.errors %}
+              <span style="color: red;">{{ error }}</span>
+              {% endfor %}
+            </div>
+            <div class="input-field ">
+              <label for="email" class="active">Email</label>
+              {{ form.email }}
+              {% for error in form.email.errors %}
+              <span style="color: red;">{{ error }}</span>
+              {% endfor %}
+            </div>
+            <div class="input-field ">
+              <label for="id_password" class="active">Contraseña</label>
+              {{ form.password }}
+              {% for error in form.password.errors %}
+              <span style="color: red;">{{ error }}</span>
+              {% endfor %}
+            </div>
+            <div class="input-field ">
+              <label for="id_password" class="active">Confirmacion</label>
+              {{ form.password_confirm }}
+              {% for error in form.password_confirm.errors %}
+              <span style="color: red;">{{ error }}</span>
+              {% endfor %}
+            </div>
+
+
+        <div class="form-title">
+          <h4>Tipo de usuario</h4>
+        </div>
+        <hr class="separator">
+          <div class="input-field ">
+            {{ form.user_type }}
+            {% for error in form.email.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+          </div>
+      
+
+        {% if REDIRECT_FIELD_VALUE %}
+        <input type="hidden" name="{{ REDIRECT_FIELD_NAME }}" value="{{ REDIRECT_FIELD_VALUE }}" />
+        {% endif %}
+        <button type="submit" class="btn btn-primary narrow center">
+          Registrar
+        </button>
+      </form>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

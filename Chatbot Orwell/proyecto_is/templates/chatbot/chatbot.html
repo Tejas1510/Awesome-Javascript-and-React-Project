@@ -1,0 +1,243 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .card-title {
+        padding: 10px;
+    }
+
+    .card-title {
+        min-height: 57px;
+    }
+
+    .message-content {
+        border: 1px solid #dcdada;
+        background: #f9f9f9;
+    }
+
+    .message {
+        background: #f1f0f0;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .message-support {
+        background: #448AFF;
+        color: #fff;
+        margin-left: 580px;
+    }
+
+    p.message-title {
+        font-size: 18px;
+    }
+
+    h5 {
+        display: inline-block;
+    }
+
+    .message-left {
+        margin-right: 580px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #ddd;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #002a38;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+</style>
+<br>
+<h1 class="center" data-aos="fade-up">Soporte Técnico</h1>
+<h5 class="center">Escribe un mensaje para comenzar</h5>
+<div class="container">
+    <div class="container">
+        <div class="container">
+            <div class="card message-card">
+                <div class="card-title">
+                    <h5>CHATBOT</h5>
+                </div>
+                <div class="card-content message-content" id="content_messages"
+                    style="max-height: 300px; overflow-y: scroll;">
+                    
+                </div>
+                <div class="card-footer bottom" id="bottom">
+                    <div class="row" style="margin: 0px;">
+                        <div class="input-field col s11" style="margin: 0px;">
+                            <input type="text" id="mensaje" class="materialize-textarea js-text"
+                                placeholder="Escribe tu mensaje">
+                        </div>
+                        <div class="input-field col s1" style="margin: 0px;">
+                            <button type="submit" class="btn btn-floating waves-effect waves-light js-say"
+                                style="padding: 0px!important;">
+                                <i class="material-icons">send</i>
+                            </button>
+                        </div>
+                        <button onclick="dictarPregunta()" class="btn btn-primary narrow center dictarMsn">Dictar
+                            Mensaje</button>
+                    </div>
+                </div>
+                <p>*Para obtener respuestas óptimas trata de ser lo más explícito al realizar tus preguntas.</p>
+            </div>
+            <div class="createCita">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% csrf_token %}
+<script>
+
+</script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/js.cookie.js' %}"></script>
+<script>
+</script>
+<script>
+    var chatterbotUrl = '{% url "chatterbot" %}';
+    var csrftoken = Cookies.get('csrftoken');
+    function csrfSafeMethod(method) {
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+        beforeSend: function (xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+    var $chatlog = $('.card-content');
+    var $input = $('.js-text');
+    var $sayButton = $('.js-say');
+    var $dictarButton = $('.dictarMsn');
+    var $citaSoporte = $('.createCita');
+    var texto = ""
+
+    function createRowBot(text) {
+        texto = text.replace(/(?:\\r\\n|\\r|\\n)/g, '<br />');
+        var $row = '<div class="message message-left"><p class="message-title"><span>ORWELL</span><p class="message-text">' + texto + '</p></p></div>';
+        $chatlog.append($row);
+    }
+
+    function createRowUser(text) {
+        var $row = '<div class="message message-support"><p class="message-title"><span>Usuario</span><p class="message-text">' + text + '</p></p></div>';
+        $chatlog.append($row);
+    }
+
+    function submitInput() {
+        var inputData = {
+            'text': $input.val(),
+            'id': "{{ idC }}"
+        }
+
+        createRowUser(inputData.text);
+
+        var $submit = $.ajax({
+            type: 'POST',
+            url: chatterbotUrl,
+            data: JSON.stringify(inputData),
+            contentType: 'application/json'
+        });
+
+        $submit.done(function (statement) {
+            if (statement.text == "Cita de reparacion") {
+                $input.prop("disabled", true);
+                $sayButton.prop("disabled", true);
+                $dictarButton.prop("disabled", true);
+                var $row = '{% include "../snippet/createCita.html" %}';
+                $citaSoporte.append($row)
+                document.getElementById('id_fecha').valueAsDate = new Date();
+                createRowBot('Por favor llena el siguiente formulario para agendar tu cita');
+                const direccion = document.querySelector('#submit-report');
+                const form = document.getElementById('report_form');
+                form.addEventListener('click', function () {
+                    form.addEventListener("submit", function (event) {
+                        event.preventDefault();
+                        event.stopImmediatePropagation();
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.open('POST', '{% url "createCita" %}', true);
+                        xhttp.onreadystatechange = function () {
+                            if (xhttp.status === 200 && xhttp.readyState === 4) {
+                                if (xhttp.responseText) {
+                                    var response = JSON.parse(this.responseText);
+                                    if(response=='Ok'){
+                                        $citaSoporte.fadeOut(400, function(){ $(this).remove();});
+                                        var cliente = $("#id_cliente").val();
+                                        var modelo = $("#id_modelopc").val();
+                                        var problema = $("#id_problema").val();
+                                        var fecha = $("#id_fecha").val();
+                                        var hora = $("#id_hora").val();
+                                        createRowBot("Entendido, guarde una cita para "+cliente+" con el modelo de computadora "+modelo+" para el dia "+fecha+" a las "+hora+ " con el siguiente diagnostico "+problema);
+                                    }
+                                }
+                            } else if (xhttp.status === 500) {
+                                console.log("Error");
+                                document.getElementById("msnError").innerHTML = 'La fecha seleccionada ya no esta disponible';
+                            }
+                        }
+                        xhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+                        xhttp.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
+                        var data = new FormData(form);
+                        data.append('idC', '{{ idC }}');
+                        xhttp.send(data);
+                    });
+                });
+            }
+            else {
+                createRowBot(statement.text);
+            }
+            $input.val('');
+            $chatlog[0].scrollTop = $chatlog[0].scrollHeight;
+        });
+
+        $submit.fail(function () {
+            console.log("Error");
+        });
+    }
+
+    $sayButton.click(function () {
+        submitInput();
+    });
+
+    $input.keydown(function (event) {
+        if (event.keyCode == 13) {
+            submitInput();
+        }
+    });
+</script>
+<script>
+    function dictarPregunta() {
+        window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+        let finalTranscript = '';
+        let recognition = new window.SpeechRecognition();
+        recognition.interimResults = true;
+        recognition.maxAlternatives = 10;
+        recognition.continuous = true;
+        recognition.lang = 'es-MX';
+        recognition.onresult = (event) => {
+            let interimTranscript = '';
+            for (let i = event.resultIndex, len = event.results.length; i < len; i++) {
+                let transcript = event.results[i][0].transcript;
+                if (event.results[i].isFinal) {
+                    finalTranscript += transcript;
+                } else {
+                    interimTranscript += transcript;
+                }
+            }
+            document.getElementById('mensaje').value = finalTranscript + interimTranscript;
+        }
+        recognition.start();
+    }
+</script>
+
+{% endblock %}

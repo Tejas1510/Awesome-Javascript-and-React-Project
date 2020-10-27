@@ -1,0 +1,144 @@
+#bg{
+	background-color: #FF1493;
+
+}
+#div1{
+	background-color:DarkSlateGrey;
+	height:300px;
+	width:600px;
+	margin-left:400px; 
+	margin-top: 200px;
+	margin-bottom: 200px;
+	margin-right: 200px;
+	 border-radius: 25px;
+
+}
+#p1{
+	color: #FF1493;
+	font-weight: 100px;
+	font-size: 30px;
+
+	
+
+}
+#p2{
+	color: #808080;
+	font-weight: 100px;
+	font-size: 10px;
+
+	
+
+}
+#sd1{
+	background-color:#808080;
+	margin-top:1px;
+	 width:600px;
+	 height:25px;
+	 position: absolute;
+	 border-radius: 25px;
+}
+#leftd{
+	background-color:DarkSlateGrey;
+	margin-bottom:200px;
+	margin-right:650px;
+	margin-left:10px;
+	width:200px;
+	height:200px;
+	margin-top:30px;   
+	 position: absolute;
+
+}
+#rightd{
+	background-color:DarkSlateGrey;
+	width:200px;
+	height:200px;
+	margin-left: 400px;
+	 margin-top:50px;
+	 position: absolute;
+}
+#in{
+	background-color:#696969;
+	border: none;
+	background-color: transparent;
+	border-bottom: 2px solid grey; 
+	color:white;
+	font-weight:bold;
+
+
+
+}
+#bt{
+	align-self:right; 
+	background-color: transparent;
+	border: none;
+	color:#FF1493;
+	font-weight:bold;
+}
+placeholder{
+	color:#808080;
+	font-weight:bold; 
+
+}
+.dot1 {
+	margin-top:5px;
+	margin-left:10px;
+	margin-right:1px;  
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot2 {
+  height: 10px;
+  width: 10px;
+  margin-left:5px; 
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot3 {
+	margin-left:5px; 
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+
+.dot11 {
+
+	margin-top:5px;
+	margin-left:500px;
+	margin-right:1px;  
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot22 {
+  height: 10px;
+  width: 10px;
+  margin-left:500px; 
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot33 {
+	margin-left:500px; 
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#bt:hover{
+	background-color:white;
+	background-image: linear-gradient(red, yellow);
+	cursor:pointer;
+	color:black;
+}

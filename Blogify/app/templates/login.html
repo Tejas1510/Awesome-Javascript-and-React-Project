@@ -1,0 +1,67 @@
+{%extends 'layout.html'%}
+{%block head%}
+    {%if title%}
+        <title>Flask Blog - {{title}}</title>
+    {%else%}
+        <title>Flask Blog</title>    
+    {%endif%}   
+{%endblock%}    
+    
+
+{%block body%}
+    <div class='content-section'>
+        <form action="", method='POST'>
+            {{form.hidden_tag()}} <!--Adds a CSRF(Cross sight request forgery) token, helps to prevent forms against forgery attack-->
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Welcome Back!</legend>
+                <div class="form-group">
+                    
+                    
+                    {{form.email.label(class='form-control-label')}}
+                    {%if form.email.errors%}
+                        {{form.email(class='form-control form-control-lg is-invalid', placeholder='example@example.com')}}
+                        <div class="invalid-feedback">
+                            {%for error in form.email.errors%}
+                                <span>{{error}}</span>
+                            {%endfor%}
+                        </div>
+
+                    {%else%}   
+                        {{form.email(class='form-control form-control-lg', placeholder='example@example.com')}}
+                    {%endif%}
+                    
+                    {{form.password.label(class='form-control-label')}}
+                    {%if form.password.errors%}
+                        {{form.password(class='form-control form-control-lg is-invalid')}}
+                        <div class="invalid-feedback">
+                            {%for error in form.password.errors%}
+                                <span>{{error}}</span>
+                            {%endfor%}
+                        </div>
+
+                    {%else%}   
+                        {{form.password(class='form-control form-control-lg')}}
+                    {%endif%}
+                    
+                </div>
+                <div class='form-check'>
+                    {{form.remember(class='form-check-input')}}
+                    {{form.remember.label(class='form-check-label')}}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{form.submit(class='btn btn-outline-success')}}
+                <small class='text-muted ml-2'>
+                    <a href="{{url_for('users.reset_request')}}">Forgot Password?</a>
+                </small>
+            </div>
+            
+        </form>
+    </div>
+    <div class='border-top pt-3'>
+        <small class="text-muted">
+            Need an Account? <a href="{{url_for('users.register')}}" class='ml-2'>Sign Up</a>
+        </small>
+
+    </div>
+{%endblock%}

@@ -1,0 +1,40 @@
+{% load static %}
+<form method="post" action="{% url 'account:login' %}" class="login-form" novalidate>
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  <div class="input-field">
+    <label for="id_first_name" class="active">Email:</label>
+    {{ form.username }}
+    {% for error in form.first_name.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}
+  </div>
+  <div class="input-field">
+      <label for="id_first_name" class="active">Password:</label>
+      {{ form.password }}
+      {% for error in form.first_name.errors %}
+      <span style="color: red;">{{ error }}</span>
+      {% endfor %}
+    </div>
+
+  {% if REDIRECT_FIELD_VALUE %}
+  <input type="hidden" name="{{ REDIRECT_FIELD_NAME }}" value="{{ REDIRECT_FIELD_VALUE }}" />
+  {% endif %}
+  <div class="row">
+    <div class="col s6">
+      <button class="btn btn-primary login-button loginbutton">
+        Iniciar sesión
+      </button>
+    </div>
+    <div class="col s6">
+      <a rel="nofollow" href="{% url 'account:password_reset' %}" class="btn btn-primary login-button">
+        Recuperar contraseña
+      </a>
+      {% with available_backends=site.settings.available_backends %}
+      {% if available_backends %}
+      {% endif %}
+      {% endwith %}
+    </div>
+
+  </div>
+</form>

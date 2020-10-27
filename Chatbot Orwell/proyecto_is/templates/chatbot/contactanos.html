@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<div class="contact-us">
+  <h1 class="center" data-aos="fade-up">¿Tienes alguna pregunta?</h1>
+  <h3 class="center">Contáctanos</h3>
+  <h5 class="center">{{mensaje}}</h5>
+  <div class="row container">
+    <div class="row">
+      <div class="container">
+        <form action="" method="post">
+          {% csrf_token %}
+          <div class="input-field">
+            <label for="id_from_email" class="active">Correo:</label>
+            {{ form.from_email }}
+            {% for error in form.from_email.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+          </div>
+          <div class="input-field">
+            <label for="id_subject" class="active">Asunto:</label>
+            {{ form.subject }}
+            {% for error in form.subject.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+          </div>
+          <div class="input-field">
+            <label for="id_message" class="active">Mensaje:</label>
+            {{ form.message }}
+            {% for error in form.message.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="waves-effect waves-light btn"
+              style="left: 45%; font-size: 20px; font-weight: 500;">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

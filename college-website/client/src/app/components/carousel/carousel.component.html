@@ -1,0 +1,51 @@
+<div class='container-fluid'>
+
+  <div class='col-sm-12' style="padding: 2px;border-radius: 20%;">
+    <div class="box stack-top" style="margin-left: 49vmax;margin-top: 1vmax;background-color: rgba(32, 8, 4, 0.39);border-radius: 1vmax;"> <h1 style="color: rgb(252, 255, 47); font-family: cursive;margin-left: 1vmax;"><U>MESSAGE</U></h1> <marquee direction = "up" height = "85%" scrollamount="3">
+      <h2 style="color: greenyellow; font-family: cursive;"> {{ imgText[0]}}</h2><hr>,
+      <h2 style="color: rgb(252, 255, 47); font-family: cursive;"> {{ imgText[1]}}</h2><hr>,
+      <h2 style="color: rgb(6, 245, 233); font-family: cursive;"> {{ imgText[2]}}</h2><hr>,
+      <h2 style="color: rgb(250, 233, 2); font-family: cursive;"> {{ imgText[3]}}</h2><hr>
+    </marquee></div>
+    <ngb-carousel *ngIf="images">
+       <ng-template ngbSlide>
+        <img [src]="images[0]" class="img-carousel" style="height: 500px; width: 1200px;">
+        <div class="carousel-caption">
+        </div>
+
+      </ng-template>
+
+      <ng-template ngbSlide>
+        <img [src]="images[1]" class="img-carousel" style="height: 500px; width: 1200px;">
+        <div class="carousel-caption">
+
+        </div>
+
+      </ng-template>
+
+      <ng-template ngbSlide>
+        <img [src]="images[2]"  class="img-carousel" style="height: 500px; width: 1200px;">
+        <div class="carousel-caption">
+
+        </div>
+
+      </ng-template>
+
+      <ng-template ngbSlide>
+        <img [src]="images[3]"  class="img-carousel" style="height: 500px; width: 1200px;">
+        <div class="carousel-caption">
+
+        </div>
+
+      </ng-template>
+
+      <ng-template ngbSlide>
+        <img [src]="images[4]"  class="img-carousel" style="height: 500px; width: 1200px;">
+        <div class="carousel-caption">
+
+        </div>
+
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>

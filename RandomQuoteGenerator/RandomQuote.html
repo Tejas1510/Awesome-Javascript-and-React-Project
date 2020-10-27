@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Random Quote Generator</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body style="background-color: palevioletred">
+    <div>
+      <h1>RANDOM QUOTES GENERATOR</h1>
+    </div>
+    <div>
+      <h2>Your Daily dose of motivation is here!</h2>
+    </div>
+    <div style="position: relative; left: 45%">
+      <button
+        style="
+          height: 50;
+          background-color: seashell;
+          font-size: 20px;
+          font-weight: bold;
+        "
+        onclick="generate()"
+      >
+        Generate Quote
+      </button>
+    </div>
+    <div
+      id="display"
+      style="
+        top: 60%;
+        left: auto;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        color: blue;
+      "
+    ></div>
+    <script>
+      function generate() {
+        var quotes = [
+          "Don’t downgrade your dream just to fit your reality, upgrade your conviction to match your destiny.",
+          "You are braver than you believe, stronger than you seem and smarter than you think.",
+          "When the going gets tough, the tough get going.",
+          "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+          "Always make a total effort, even when the odds are against you.",
+          "Never do tomorrow what you can do today. Procrastination is the thief of time.",
+          "Remember that not getting what you want is sometimes a wonderful stroke of luck.",
+          "The future belongs to those who believe in the beauty of their dreams.",
+          "You’ve got to get up every morning with determination if you’re going to go to bed with satisfaction.",
+          "Remember that life’s greatest lessons are usually learned from worst times and from the worst mistakes.",
+        ];
+        var randomNumber = Math.floor(Math.random() * quotes.length);
+        document.getElementById("display").innerHTML = quotes[randomNumber];
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+.divBody{
+  background-color:white;
+}
+
+.divCourse{
+height: 200px;
+/* background-color: #3f51b5; */
+/* color: white; */
+
+background-color: #3f51b5;
+color: white;
+;
+
+text-align: center;
+margin: auto;
+/* padding: 10px; */
+border: 2px;
+border-color: white;
+}
+
+.img-carousel{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120%;
+  float: left;
+  height: 70%;
+}
+
+.modal-content {
+  background-color: lavender;
+  margin: 1% auto 1% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 2px solid white;
+  width: 98%; /* Could be more or less, depending on screen size */
+  height: 100%;
+}
+
+.modal-contents {
+  background-color: lavender;
+  margin: 1% auto 1% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 2px solid white;
+  width: 95%; /* Could be more or less, depending on screen size */
+  height: 100%;
+}
+.main_title {
+  text-align: center;
+  max-width: 680px;
+  margin: 0px auto 75px; }
+  .main_title h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    color: #222222;
+    margin-bottom: 12px; }
+  .main_title p {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    line-height: 24px;
+    color: #777777;
+    margin-bottom: 0px; }
+
+    .feature_title
+{
+	position: relative;
+	font-size: 30px;
+	margin-top: 23px;
+	font-family: fantasy;
+}
+.box{
+  width: 20%;
+  height: 47%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 3;
+
+}
+.stack-top{
+  z-index: 6;
+  margin: 20px;
+}

@@ -126,6 +126,8 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=DevrajDC" title="Coding">💻</a>
         </td>
+    </tr>
+    <tr>
         <td align="center">
             <a href="https://github.com/prikshitsetia">
             <img src="https://avatars1.githubusercontent.com/u/42894108?s=400&u=0e10b044ac6776c0e0153e1a866775699f685260&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -133,8 +135,6 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=prikshitsetia" title="Coding">💻</a>
         </td>
-    </tr>
-    <tr>
         <td align="center">
             <a href="https://github.com/dewanshchaudhari">
             <img src="https://avatars1.githubusercontent.com/u/55588442?s=400&u=ed67c7cea7039c42d83557b7130022b1c01f65e3&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -163,6 +163,8 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=AdityaSharma96" title="Coding">💻</a>
         </td>
+    </tr>
+    <tr>
         <td align="center">
             <a href="https://github.com/prajwal-scorpionking123">
             <img src="https://avatars3.githubusercontent.com/u/46968147?s=400&u=d2c67c24c64def4f4e9a698c9822954c46f07384&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -177,8 +179,6 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=pranjalvarshney" title="Coding">💻</a>
         </td>
-    </tr>
-    <tr>
         <td align="center">
             <a href="https://github.com/VaishnaviJha786">
             <img src="https://avatars2.githubusercontent.com/u/52750035?s=400&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -200,6 +200,8 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=Neat-Stack" title="Coding">💻</a>
         </td>
+    </tr>
+    <tr>
         <td align="center">
             <a href="https://github.com/spartaabhishek">
             <img src="https://avatars0.githubusercontent.com/u/70537689?s=400&u=6fc7e61107d4429183c5219baf587f29f580d0ae&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -221,8 +223,6 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=ritika600" title="Coding">💻</a>
         </td>
-    </tr>
-    <tr>
         <td align="center">
             <a href="https://github.com/proghead00">
             <img src="https://avatars0.githubusercontent.com/u/55017730?s=400&u=91fe2e4d9e7ac99e0e2e1ca92cf4abfccd6f951f&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -237,6 +237,8 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=ishitacodes" title="Coding">💻</a>
         </td>
+    </tr>
+    <tr>
         <td align="center">
             <a href="https://github.com/divinenaman">
             <img src="https://avatars1.githubusercontent.com/u/63128054?s=400&u=fdc47465b9de683829ddd499ce1e4695ae6e8608&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -265,8 +267,6 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=albertbolt1" title="Coding">💻</a>
         </td>
-    </tr>
-    <tr>
         <td align="center">
             <a href="https://github.com/Sushantrimurti">
             <img src="https://avatars0.githubusercontent.com/u/56467504?s=400&u=e4880e5563c988103a3a448b5a4757b18533197e&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -274,6 +274,8 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=Sushantrimurti" title="Coding">💻</a>
         </td>
+    </tr>
+    <tr>
         <td align="center">
             <a href="https://github.com/KeerthanaHK">
             <img src="https://avatars3.githubusercontent.com/u/54075393?s=400&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -346,6 +348,8 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=prachi0513" title="Coding">💻</a>
         </td>
+    </tr>
+    <tr>
         <td align="center">
             <a href="https://github.com/poojamalani15">
             <img src="https://avatars3.githubusercontent.com/u/63039519?s=400&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -353,8 +357,6 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=poojamalani15" title="Coding">💻</a>
         </td>
-    </tr>
-    <tr>
         <td align="center">
             <a href="https://github.com/nids98">
             <img src="https://avatars3.githubusercontent.com/u/37770020?s=400&u=2790c94b416f0febff4e60b3c4785896443e837d&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -383,6 +385,8 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=ashutosh-101" title="Coding">💻</a>
         </td>
+    </tr>
+    <tr>
         <td align="center">
             <a href="https://github.com/adi112100">
             <img src="https://avatars3.githubusercontent.com/u/47907947?s=400&u=b1f569cb926d8268fa70fa1a614795fb5e73d5da&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -397,8 +401,6 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=Vegeta360" title="Coding">💻</a>
         </td>
-    </tr>
-    <tr>
         <td align="center">
             <a href="https://github.com/TristanDobos">
             <img src="https://avatars3.githubusercontent.com/u/73593021?s=400&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -420,6 +422,8 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=MigueMartelo" title="Coding">💻</a>
         </td>
+    </tr>
+    <tr>
         <td align="center">
             <a href="https://github.com/Kartikeyyadav7">
             <img src="https://avatars1.githubusercontent.com/u/51492769?s=400&u=11c9912873f73db6046d22c6aab9d654c6191e67&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -441,8 +445,6 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=Gauravchandrabhan" title="Coding">💻</a>
         </td>
-    </tr>
-    <tr>
         <td align="center">
             <a href="https://github.com/ArpitaGanatra">
             <img src="https://avatars1.githubusercontent.com/u/35517007?s=400&u=e9ad946a0e1de83152255cd94dbd9d254f432c04&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -457,6 +459,8 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             </a><br />
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=AnshikaPranzal" title="Coding">💻</a>
         </td>
+    </tr>
+    <tr>
         <td align="center">
             <a href="https://github.com/Amanthukral12">
             <img src="https://avatars2.githubusercontent.com/u/47064923?s=400&u=4b2ee974fd0a0e448d529a4d6e6c122da5d6a8db&v=4" width="100px;" alt="" style="border-radius:50%"/> <br />
@@ -479,7 +483,6 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
             <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=SobhanBera" title="Coding">💻</a>
         </td>
     </tr>
-    
 </table>
 
 ##### Thanks to every contributor who took there time to consider this project helpful.

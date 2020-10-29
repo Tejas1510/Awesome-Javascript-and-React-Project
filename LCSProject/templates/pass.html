@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+    <title>pass</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style >
+
+
+    .header{
+      position: absolute;
+      width: 100%;
+      height: screen.;
+      top:0;
+      text-align: center;
+      background-color: #2196f3;
+    }
+    .main {
+      width: 100%;
+      height: 800px;
+      padding: 10px;
+    }
+
+    .bottom1{
+      position: relative;
+      border: 3px solid green;
+      margin-top: 6%;
+      width: 180px;
+      height: 100%;
+      float: left;
+      background-color: #64ffda; 
+
+
+    } 
+
+    .bottom2 {
+      position: relative;
+      margin-top: 6%;
+      width: 30%;
+      height: 100%;
+      border: 3px solid green;
+      float: left;
+      margin-left:10px;
+      text-align: center;
+      background-color: #64ffda;
+    } 
+
+    .bottom3 {
+      position: relative;
+      margin-top: 6%;
+      width: 25%;
+      height: 100%;
+      border: 3px solid green;
+      float: left;
+      margin-left:10px;
+      text-align: center;
+      background-color: #64ffda;
+    } 
+
+    
+  </style>
+</head>
+<body style="background-color: black;">
+  <div class="header ">
+    <h2 style="color:black;text-align: center;color: white;">Results of Image Comparison</h2>
+  </div>
+
+  <div class="main">
+
+
+    <div class="bottom1">
+        <h3 style="text-align: center;margin-bottom: 20px;">Compressed Images</h3>
+        <img src="{{ url_for('static', filename=user1) }}" style="margin-left: 40px;">
+        <h4 style="text-align: center;margin-bottom: 20px;">Image 1</h3>
+        <img src="{{ url_for('static', filename=user2) }}" style="margin-left: 40px;">
+        <h4 style="text-align: center;">Image 2</h3>
+    </div>
+
+
+
+    <div class="bottom2">
+      <h3>Re-sized image Strings</h3>
+      <textarea readonly style="width:95%;height:40%;overflow: scroll;" >
+        String for Image1:
+        {{stringpass1}}
+      </textarea>
+      <h5>Length of String is : {{ms1}}</h5>
+      <textarea readonly style="width:95%;height:40%;overflow: scroll;">
+        String for Image2:
+        {{stringpass2}}
+      </textarea>   
+      <h5>Length of String is : {{ms2}}</h5> 
+    </div>
+
+
+
+    <div class="bottom2">
+      <h3>Compressed Strings</h3>
+      <textarea readonly style="width:95%;height:40%;overflow: scroll;">
+        Compressed String for Image1:
+        {{compress1}}
+      </textarea>
+      <h5>Length of String is : {{cl1}}</h5>
+      <textarea readonly style="width:95%;height:40%;overflow: scroll;">
+       Compressed String for Image2:
+        {{compress2}}
+      </textarea>  
+      <h5>Length of String is : {{cl2}}</h5>  
+    </div>
+
+
+
+    <div class="bottom3">
+        <h3>Longest Common Sub-sequence</h3>
+        <textarea readonly style="width:95%;height:45%;overflow: scroll;">
+          LCS string:
+          {{finallcs}}
+        </textarea>
+        <h5>Length of String is : {{lcsl}}</h5>
+
+        <h4>Percentage Image Match: {{f}}%</h4>
+
+        <div class="progress-bar progress-bar" role="progressbar" aria-valuenow="{{f}}" aria-valuemin="0" aria-valuemax="100" style="width:{{f}}%;height: 35px;">
+        </div>
+
+    </div>
+
+
+  </div>
+    
+  </div>
+
+</body>
+</html>

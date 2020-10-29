@@ -84,7 +84,6 @@ Do drop a ⭐if you like this initiative of mine.
 
 Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
 
-<br/>
 
 ## Contributors:
 

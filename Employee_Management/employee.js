@@ -31,10 +31,10 @@ let ouremployees = [
   },
 ];
 
-function display(employeearray) {
+const display = (employeearray) => {
   let tabledata = "";
 
-   employeearray.forEach(function (employee, index) {
+   employeearray.forEach((employee, index) => {
     let currentrow = `<tr>
     <td>${index + 1}</td>
     <td>${employee.name}</td>
@@ -42,7 +42,7 @@ function display(employeearray) {
     <td>${employee.city}</td>
     <td>${employee.salary}</td>
     <td>
-    <button onclick='deleteEmployee(${index})'>delete</button>
+    <button class="br-pill b--dark-blue" onclick='deleteEmployee(${index})'>delete</button>
     </td>
     </tr>`;
 
@@ -56,10 +56,10 @@ function display(employeearray) {
 display(ouremployees);
 
 
-function searchByName() {
+const searchByName = () => {
   let searchValue = document.getElementById("searchName").value;
 
-  let newdata = ouremployees.filter(function (employee) {
+  let newdata = ouremployees.filter( (employee) =>  {
     return (
       employee.name.toUpperCase().indexOf(searchValue.toUpperCase()) != -1
     );
@@ -68,7 +68,7 @@ function searchByName() {
   display(newdata);
 }
 
-function searchByCity() {
+const searchByCity = () => {
   let searchValue = document.getElementById("searchCity").value;
 
   let newdata = ouremployees.filter(function (employee) {
@@ -82,7 +82,7 @@ function searchByCity() {
 
 
 
-function deleteEmployee(index) {
+const deleteEmployee = (index) => {
   ouremployees.splice(index, 1);
   display(ouremployees);
 }

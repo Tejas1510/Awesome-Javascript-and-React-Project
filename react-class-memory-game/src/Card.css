@@ -1,0 +1,16 @@
+.card{
+    height:150px;
+    background: #807E82;
+    border-radius: 20px;
+    min-width: 6.5rem;
+    border:3px solid #636863ce;
+    background: #000000;
+}
+
+.card.hidden{
+    background: #807E82;
+    transition: background 0.4s ease-out;
+}
+.picked, .solved{
+    transition: background 0.4s ease-out;
+}

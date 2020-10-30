@@ -73,16 +73,10 @@ git push
 **8.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) !
 
 **9.** **Congratulations!** Sit and relax, you've made your contribution to [Awesome-Javascript-and-React-Project](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project) project.
+
 ## Issues:
 For major changes, you are welcome to open an issue to discuss what you would like to change. Enhancements will be appreciated.
 
-### Note:
-Do drop a ⭐if you like this initiative of mine.
-
-<a href="https://github.com/Tejas1510"><img src="http://ForTheBadge.com/images/badges/built-by-developers.svg" alt="built by developers"></a>
-[![built with love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project)
-
-Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
 
 
 ## Contributors:
@@ -485,3 +479,11 @@ Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)
 
 ##### Thanks to every contributor who took there time to consider this project helpful.
 ##### Tap the pc icon to open particular contributor's commits to this repository.
+
+### Note:
+Do drop a ⭐if you like this initiative of mine.
+
+<a href="https://github.com/Tejas1510"><img src="http://ForTheBadge.com/images/badges/built-by-developers.svg" alt="built by developers"></a>
+[![built with love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/Tejas1510/Awesome-Javascript-and-React-Project)
+
+Check out my Github profile [Tejas1510!](https://github.com/Tejas1510)

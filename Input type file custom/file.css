@@ -1,0 +1,42 @@
+.logoContainer{
+	width:140px;
+	height:151px;
+	margin: 15px auto 0 auto;
+	padding: 11px 10px 21px 10px;
+	text-align: center;
+	line-height: 120px;
+}
+.logoContainer img{
+	max-width:100%;
+}
+.fileContainer{
+	background:#ccc;/* you can give it background img as well*/
+	width: 202px;
+	height: 31px;
+	overflow:hidden;
+	position:relative;
+	font-size:16px;
+	line-height: 31px;
+	color:#434343;
+	padding: 0px 41px 0 53px;
+	margin: 0 auto 60px auto;
+	cursor: pointer !important;
+}
+.fileContainer span{
+	overflow:hidden;
+	display:block;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	cursor: pointer;
+}
+.fileContainer input[type="file"]{
+	opacity:0;
+	margin: 0;
+	padding: 0;
+	width:100%;
+	height:100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+	cursor: pointer;
+}

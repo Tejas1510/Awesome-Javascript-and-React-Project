@@ -79,7 +79,7 @@ For major changes, you are welcome to open an issue to discuss what you would li
 
 
 
-## Contributors:
+## Contributors ✨:
 
 <table>
     <tr>
@@ -479,6 +479,19 @@ For major changes, you are welcome to open an issue to discuss what you would li
 
 ##### Thanks to every contributor who took there time to consider this project helpful.
 ##### Tap the pc icon to open particular contributor's commits to this repository.
+
+## ❤️ Project Admin
+<table>
+    <tr>
+        <td align="center">
+            <a href="https://github.com/Tejas1510">
+            <img src="https://avatars0.githubusercontent.com/u/64543913?s=400&u=6468d71695b9ce8fc4a5704cfe7df32fdd28437a&v=4" width="200px;" alt="" style="border-radius:50%"/> <br />
+            <b>Tejas1510</b>
+            </a><br />
+            <a href="https://github.com/Tejas1510/Awesome-Javascript-and-React-Project/commits?author=Tejas1510" title="Coding">💻</a>
+        </td>
+ </tr>
+ </table>
 
 ### Note:
 Do drop a ⭐if you like this initiative of mine.

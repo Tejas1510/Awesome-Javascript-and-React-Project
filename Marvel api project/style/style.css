@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  max-height: 100vh;
+  background-color: #261C15;
+  font-family: sans-serif;
+}
+
+#navbar {
+  width: 100%;
+  height: 20vh;
+  background-color: #341254;
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbar p {
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 2px;
+  font-size: x-large;
+}
+
+#poster {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 20px;
+  min-height: 90vh;
+  max-width: 100vw;
+  border: 3px #CDBAF2 solid;
+}
+
+#poster .parentpanel {
+  width: 30%;
+  margin: 20px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+#poster .parentpanel .panel {
+  width: auto;
+  height: 100%;
+  margin-top: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+#poster .parentpanel .panel:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  background-size: cover;
+}
+
+#poster .parentpanel .panel:hover a {
+  display: block;
+}
+
+#poster .parentpanel .panel:hover::before {
+  display: block;
+  opacity: 1;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 3px 8px 1px black;
+          box-shadow: 1px 3px 8px 1px black;
+}
+
+#poster .parentpanel .panel a {
+  display: none;
+  font-size: 30px;
+  color: #362b2b !important;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  cursor: pointer;
+}
+
+#poster .parentpanel ::before {
+  content: " ";
+  width: 90%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  opacity: 0;
+  background-color: rgba(252, 252, 252, 0.75);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+@media screen and (max-width: 1100px) {
+  #poster .parentpanel {
+    width: 40%;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #poster .parentpanel {
+    width: 80%;
+    height: 350px;
+  }
+}
+
+#character {
+  position: relative;
+  padding: 7px 15px;
+}
+
+/* Add spacing between each country suggestion */
+.suggestion {
+  padding: 4px 3px;
+  background-color: white;
+  color: #353333;
+}
+
+/* Change suggestion color when hovering it with the mouse */
+.suggestion:hover {
+  background-color: #adf;
+  cursor: pointer;
+}
+
+/* Position the suggestion list just below the input box */
+#suggestions {
+  position: absolute;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 75px;
+  z-index: 100;
+}
+
+#alert {
+  color: wheat;
+}
+/*# sourceMappingURL=style.css.map */

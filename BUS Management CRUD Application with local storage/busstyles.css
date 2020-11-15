@@ -1,0 +1,58 @@
+     * {
+        margin: 0px;
+        padding: 0px;
+        
+      }
+      body{font-family:Lora;}
+
+      .data {
+        height: 600px;
+        width: 80%;
+        background-color: lightgray;
+        margin-left: 10%;
+        margin-top: 50px;
+        padding: 20px;
+        display: inline-block;
+      }
+
+      .table {
+        width: 100%;
+        margin-top: 20px;
+        font-family: Oxygen; 
+      }
+      th,
+      td {
+        height: 40px;
+        text-align: center;
+        padding: 5px;
+      }
+
+      .form {
+        margin-top: 20px;
+      }
+      input {
+        height: 40px;
+        text-indent: 20px;
+      }
+
+      button {
+        padding: 10px;
+      }
+
+      .modal {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        display: none;
+      }
+
+      .modalchild {
+        height: 200px;
+        width: 70%;
+        background-color: white;
+        margin-left: 15%;
+        margin-top: 100px;
+        display: inline-block;
+        padding: 30px;
+      }

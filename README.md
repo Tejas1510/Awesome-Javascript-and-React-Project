@@ -24,6 +24,8 @@
 <img src="https://img.shields.io/github/contributors/Tejas1510/Awesome-Javascript-and-React-Project?style=for-the-badge">
 </p>
 
+![Awesome-Javascript-and-React-Project](https://socialify.git.ci/Tejas1510/Awesome-Javascript-and-React-Project/image?description=1&forks=1&issues=1&language=1&owner=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark)
+
 # **Awesome-Javascript-and-React-Project**💯
 
 This repository consists of some of the great Javascript and React Projects and it is a part of Hacktoberfest.

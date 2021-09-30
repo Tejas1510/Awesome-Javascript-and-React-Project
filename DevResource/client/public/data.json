@@ -1,0 +1,24 @@
+[
+    {
+        "title":"React Tutorial",
+        "content":"A collection of awesome things regarding React ecosystem and how to get started with react development for beginners",
+        "link":"https://reactjs.org/",
+        "selectedFile":"https://www.cloudways.com/blog/wp-content/uploads/Why-ReactJS-Should-be-a-Perfect-Choice-for-Your-Next-Front-end-Application-Banner.jpg",
+        "id":"1"
+    },
+    {
+        "title":"Open Source Projects",
+        "content":"A curated list of various open source programs like gsoc, mlh to learn about contribution and Github ",
+        "link":"https://github.com/sindresorhus/awesome",
+        "selectedFile":"https://i.imgur.com/x7I3Z6I.png",
+        "id":"2"
+    },
+    {
+        "title":"Compititive Programming",
+        "content":"A bunch of well drafted 100 question involving various topics like math, greedy, binary search and dynamic programming",
+        "link":"https://codeforces.com/",
+        "selectedFile":"https://static-fastly.hackerearth.com/static/hackerearth/images/marketing/algorithm_blog/algo-og.jpg",
+        "id":"3"
+    }
+    
+]

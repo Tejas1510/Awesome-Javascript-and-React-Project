@@ -1,0 +1,24 @@
+.form {
+  width: 60%;
+  margin: 1rem auto;
+  background-color: var(--blue);
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--light);
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1rem;
+}
+
+.form-label {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}

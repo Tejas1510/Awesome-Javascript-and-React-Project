@@ -1,0 +1,19 @@
+.button {
+  background-color: var(--light);
+  border: 2px solid var(--blue);
+  border-radius: 0.5rem;
+  color: var(--blue);
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 0.2rem 1rem;
+  transition: all 0.4s ease-out;
+}
+
+.button:hover {
+  background-color: white;
+}
+
+.buttons_center {
+  display: flex;
+  justify-content: center;
+}

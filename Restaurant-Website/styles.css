@@ -1,0 +1,542 @@
+body{
+	font-size:16px;
+	color:#fff;
+	font-family: 'Oxygen' , sans-serief;
+	background-color:#951C49;
+
+}
+
+/******* Header styles*****/
+#header-nav{
+	background-color:#ffbb00;
+	border-radius:0;
+	border:0;
+	
+}
+
+#logo-img{
+	background:url("images/HOME/bazinga-new.png") no-repeat;
+	width:150px;
+	height: 150px;
+	margin: 10px 15px 10px 0px;
+}
+
+#Best{
+	margin-top: 10px;
+}
+#star{
+	height:30px;
+}
+
+.navbar-brand{
+	height:80px;
+	padding-top: 25px;
+}
+
+
+.navbar-brand h1{/*Restaurant Name*/
+	font-family: 'Lora',serif;
+	color:#000099;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:1.8em;
+	text-shadow: 1px 1px 1px #222;
+	margin-top:0;
+	margin-bottom:0;
+    line-height:.75;
+
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus{
+	text-decoration : none;
+}
+.navbar-brand p{ /*Best in the town*/
+  color :#000;
+  text-transform: uppercase;
+  font-size:.8em;
+  margin-top: 0;
+  font-style: bold;
+  
+}
+
+.navbar-brand p span{
+	vertical-align:middle;
+	color:#000;
+	margin-top:0px;
+}
+
+#nav-list{
+	margin-top:10px;
+}
+
+#nav-list a{
+	color:#000099;
+	text-align:center;
+	font-size: 1.4em;
+}
+#navlist span{
+	margin-bottom:2px;
+}
+#nav-list a:hover{
+background-color:#E7E7E7;
+}
+
+
+#phone{
+	margin-top:5px;
+}
+
+#phone a{
+	text-align:right;
+	padding-bottom:0;
+	
+}
+#phone div{/*We Deliver*/
+	color:#cc0000;
+	font-size:1.1em;
+	text-align:right;
+	padding-right:15px;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar{
+	border :1px solid #000066;
+}
+
+.navbar-header button.navbar-toggle{
+	clear:both;
+	margin-top:-30px;
+}
+
+/*******Main Content******/
+#menu-tile,#special-tile,#map-tile
+{
+   height:250px;
+   width:100%;
+   margin-bottom:15px;
+   position:relative;
+   border:2px solid #3F0C1F;
+   overflow:hidden;
+}
+
+#menu-tile:hover,#special-tile:hover,#map-tile:hover
+{
+	box-shadow:0 1px 5px 1px #cccccc;
+}
+
+#menu-tile{
+	background:url('images/HOME/menu.jpg') no-repeat;
+	background-position:center;
+}
+#special-tile{
+	background:url('images/HOME/special-2.jpg') no-repeat;
+	background-position:center;
+}
+#menu-tile span,#special-tile span,#map-tile span
+{
+	position:absolute;
+	bottom:0;
+	right:0;
+	left:0;
+	text-align:center;
+	text-transform:uppercase;
+	background-color:#000;
+	color:#fff;
+	font-size:1.8em;
+	opacity:.8;
+}
+
+/****Footer Styles****/
+.panel-footer{
+	margin-top:30px;
+	padding-top:35px;
+	padding-bottom:30px;
+	background-color:#222;
+	border-top:0;
+}
+#hours, #address{
+	line-height:2;
+}
+
+#hours > span, #address > span {
+	font-size:1.3em;
+}
+
+#address p{
+	color:#008F11;
+	font-size:1em;
+	line-height:1.8;
+}
+#testinomials{
+    font-style:italic;
+}
+#testinomials p:nth-child(2){
+    margin-top:25px;
+}
+
+/****** Menu-Categories Page Styles *****/
+.category-title{
+	position: relative;
+	border:2px solid #3F0C1F;
+    overflow:hidden;
+    width:200px;
+    height: 200px;
+    margin: 0 auto 15px;
+}
+
+.category-title span{
+	position:absolute;
+	bottom:0;
+	right:0;
+	width:100%;
+	text-align:center;
+	font-size:1.2em;
+	text-transform:uppercase;
+	background-color:#000;
+	color:#fff;
+	opacity:.8;
+
+}
+
+.category-title:hover{
+	box-shadow:0 1px 5px 1px #cccccc;
+}
+
+#menu-categories-title{
+   margin-bottom:40px;
+}
+#awards-view{
+ font-size:1.3em;
+ min-height: 300px;
+}
+
+
+
+/********Single Category Page******/
+.menu-item-tile{
+	margin-bottom: 25px;
+}
+.menu-item-tile hr{
+	width:80%;
+}
+
+.menu-item-tile .menu-item-price{
+	font-size:1.1em;
+	text-align:right;
+	margin-top:-15px;
+	margin-right: -15px;
+}
+.menu-item-tile .menu-item-price span{
+	font-size: .6em;
+}
+
+.menu-item-photo{
+     position:relative;
+     border:2px solid #3F0C1F;
+     margin-right:-15px;
+     margin-left:auto;
+     margin-bottom:20px;
+     max-width: 250px;
+}
+
+.menu-item-photo div{
+	position:absolute;
+    right:0;
+    bottom:0;
+    width:80px;
+    background-color:#557c3e;
+    text-align:center;
+}
+.menu-item-description{
+	padding-right:30px;
+}
+h3.menu-item-title{
+	margin: 0 0 10px;
+}
+p.menu-item-details{
+	font-family:'Lora',serief;
+	font-size:.8em;
+	font-style:italic;
+}
+
+/********About-Page Styles********/
+.container .infobox{
+	margin-bottom:15px;
+	box-shadow:0 0 50px #3F0C1F;
+	border-radius:15px;
+	border:3px solid #e6e6e6;
+	background-color: #ffbb00;
+}
+.container .inquireinfo{
+	color: #000099;
+	
+    
+}
+
+.container .infodata{
+	color: #951c49;
+}
+
+
+
+.container .fa{
+     margin: 5px;
+     font-size: 50px;
+
+    
+}
+
+.container .fa-github{
+	text-align:center;
+	color:#33331A;
+	height:50px;width:48px;
+	background-color: #e6e6e6;
+    border-radius: 70% ;
+    
+}
+
+.container .fa-github:hover {
+	color:#1a1a1a;
+	background-color:white;
+}
+
+
+.container .fa-linkedin-square:hover{
+	color:#1a1aff;
+	background-color:white;
+}
+
+.container .fa-envelope:hover{
+	background-color:#ff3333;
+	color:white;
+}
+.container .fa-linkedin-square{
+	text-align:center;
+	color:#3366ff;height:48px;width:48px;
+	background-color: #e6e6e6;
+	border-radius: 20% ;
+
+}
+
+.container .fa-envelope{
+	color:#e6e6e6;
+	text-align:center;
+	height:50px;width:54px;
+	background-color: #ff5555;
+	border-radius: 10% ;
+
+}
+
+/*******Large Devices only********/
+@media (min-width: 1200px)
+{
+  .container .jumbotron{
+  	background:url('images/HOME/tables.jpg');
+  	height:675px;
+  	box-shadow:0 0 50px #3F0C1F;
+  	border:2px solid #3F0C1F;
+  }
+
+  .container .photo{
+  	background:url('images/ABOUT/shwetsofa.jpg') no-repeat;
+  	height:704px;width:360px;
+  	box-shadow:0 0 50px #3F0C1F;
+  	border:5px solid  #e6e6e6;
+  	border-radius:25px;
+  }
+
+}
+/*******Medium Devices only********/
+@media (min-width:992px) and (max-width:1199px)
+{
+   #logo-img{
+   	background:url("images/HOME/bazinga-medium-size.png") no-repeat;
+	width:120px;
+	height: 120px;
+	margin: 5px 15px 5px 0px;
+   }
+
+   .container .jumbotron{
+  	background:url('images/HOME/tables_medium.jpg');
+  	height:558px;
+  	box-shadow:0 0 50px #3F0C1F;
+  	border:2px solid #3F0C1F;
+  }
+
+  .container .photo{
+  	background:url('images/ABOUT/shwetsofa.jpg') no-repeat;
+  	height:704px;width:360px;
+  	box-shadow:0 0 50px #3F0C1F;
+  	border:5px solid #e6e6e6;
+  	border-radius: 25px;
+  	vertical-align : middle;
+  }
+
+   
+
+}
+/*******Small Devices only********/
+@media (min-width:768px) and (max-width:991px)
+{
+  #header-nav{
+  	font-size:0.8em;
+  	height:100px;
+  }
+  .navbar-brand h1{
+  	font-size:1.5em;
+  }
+  .container .jumbotron{
+  	background:url('images/HOME/tables_small.jpg');
+  	height:432px;
+  	box-shadow:0 0 50px #3F0C1F;
+  	border:2px solid #3F0C1F;
+  }
+  
+  .container .photo{
+  	background:url('images/ABOUT/shwetsofa_small.jpg') no-repeat;
+  	height:454px;width:238px;
+  	box-shadow:0 0 50px #3F0C1F;
+  	border:5px solid #e6e6e6;
+  	border-radius: 25px;
+  	vertical-align : center;
+  }
+  .container .message-box{
+  	margin-top: 15px;
+  	margin-bottom: 10px;
+  	margin-left:-15px;
+  }
+
+
+}
+/*******Extra small Devices only********/
+@media(max-width:767px)
+{
+	
+
+	.navbar-brand h1{
+       font-size:1.5em;
+	}
+
+	#collapsable-nav a{
+		font-size:1.2em;
+	}
+
+	#collapsable-nav a span{
+		font-size:1em;
+	}
+    #call-btn > a{
+    	font-size:1.5em;
+    	display:block;
+    	margin:0 20px;
+    	border:2px solid #fff;
+    	background-color:#f6b319;
+    	color:#951c49;
+    }
+
+    #xs-deliver{
+         margin-top:5px;
+         font-size:,7em;
+         letter-spacing:.1em;
+         text-transform:uppercase;
+    }
+
+	.container .jumbotron{
+		margin-top:30px;
+		padding:0;
+		box-shadow:0 0 50px #3F0C1F;
+		border:2px solid #3F0C1F;
+	}
+
+	.container .photosm{
+		margin-left:8vw;
+  	    margin-top:20px;
+  	    margin-bottom:20px;
+  	    width:283px;
+		padding:0;
+		box-shadow:0 0 50px #3F0C1F;
+		border:5px solid #e6e6e6;
+		border-radius:50%;
+        overflow: hidden;
+        
+    }
+    .container .xslinks{
+    	margin-top:15%;
+    	margin-left:5vw;
+    }
+    .hideinxs{
+    	display:none;
+    }
+
+
+	#menu-tile, #special-tile{
+		width:392px;
+		margin:0 auto 15px;
+	}
+
+	.menu-item-photo{
+		margin-right:auto;
+	}
+
+	.menu-item-tile .menu-item-price{
+		text-align:center;
+	}
+	.menu-item-description{
+		text-align:center;
+	}
+     
+    .panel-footer section{
+    	margin-bottom: 30px;
+    	text-align:center;
+    } 
+
+    .panel-footer section:nth-child(3)
+    {
+    	margin-bottom:0;
+    }
+
+    .panel-footer section hr{
+        width:50%;
+    }
+
+
+}
+
+/******Super Extra Small Devices Only*****/
+@media (max-width: 479px)
+{
+   .navbar-h1{
+      padding:5px;
+      font-size:6vw;
+    }
+
+	#menu-tile,#special-tile{
+		width:280px;
+        margin:0 auto 15px;
+	}
+
+	.col-xxs-12{
+		position:relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		float:left;
+		width:100%;
+	}
+    
+    .hideinxs{
+       display:block;    
+   }
+    
+    .container .photosm{
+        margin-left:8%;
+        margin-right:5%;
+    }
+
+	.container .xslinks{
+		display:none;
+		
+	}
+
+}
+
+
+

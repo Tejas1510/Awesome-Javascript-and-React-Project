@@ -1,0 +1,17 @@
+.card_list{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width:1024px) {
+  .card_list{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .card{
+    flex: 1;
+  }
+  
+}

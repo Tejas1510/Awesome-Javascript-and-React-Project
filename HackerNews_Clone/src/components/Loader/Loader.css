@@ -1,0 +1,19 @@
+.loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid var(--grey);
+  border-left-color: var(--primary);
+  background: transparent;
+  animation: rotate 1s linear infinite;
+  margin: 6rem auto;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

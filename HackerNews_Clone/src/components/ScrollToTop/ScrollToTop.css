@@ -1,0 +1,12 @@
+.scroll-to-top{
+  width:3rem;
+  height: 3rem;
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  background: var(--grey);
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: -2px 0px 4px #888888;
+}

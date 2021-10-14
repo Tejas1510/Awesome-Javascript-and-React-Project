@@ -1,0 +1,20 @@
+.btn{
+  background-color: var(--grey);
+  color:var(--black-ft);
+  border: none;
+  border-radius: 1.6rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  margin: 0 0.4rem;
+  margin-bottom: 0.7rem;
+}
+.btn.active{
+  background-color: var(--primary);
+}
+
+.btn:hover{
+  transition: background 0.5s ease-in;
+  background-color: var(--primary);
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&display=swap');
+
+:root{
+  --primary:#FBC91b;
+  --primary-light:#ceb24f;
+  --grey:#f2f2f2;
+  --black-ft:rgba(0,0,0,0.82);
+  --grey-ft:rgba(0,0,0,0.50);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.3;
+  font-family: 'Open Sans', sans-serif;
+}
+.container{
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.action_button{
+  margin-bottom: 1.5rem;
+}
+
+.button{
+  display: block; 
+  background-color: var(--primary);
+  color: var(--black-ft);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  margin: 1.5rem auto;
+}
+.button:disabled{
+  cursor: not-allowed;
+  background-color: var(--primary-light);
+
+}
+
+@media screen and (max-width:1024px){
+  .button{
+    width: 100%;
+  }
+}

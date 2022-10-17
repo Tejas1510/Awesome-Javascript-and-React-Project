@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<div class = "container-fluid " id = "hero" style="background-color:#203647; " >
+    <div class = row>
+        <div class = "col-8" >
+            <img src="{{url_for('static',filename='images/image5.svg')}}" class="img-fluid" >
+        </div>
+        <div class = "col-4 " style="margin-left: -5%; text-align: justify; margin-top: 7%;">
+            <h2 class="display-1" style="
+            font-family: Inter;
+            font-size: 80px;
+            font-weight: 400;
+            line-height: 97px;
+            letter-spacing: 0em;
+            text-align: left;
+            
+            "><b style="font-family: Inter;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 97px;
+            letter-spacing: 0em;
+            text-align: left;
+            ">Invoicing</b> Guide</h2>
+            
+            <h5 style="color: #419BA7; font-family: Mulish;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 50px;
+            letter-spacing: 0em;
+            text-align: left;
+            ">Creating Invoices</h5>
+            <br>
+        </div>
+    </div>    
+</div>
+
+
+<br>
+
+<div>
+  <div class = row>
+    <div class = "col" >
+      <img src="{{url_for('static',filename='images/Vector.svg')}}" style="margin-top: 20%; margin-bottom: 10%;">
+      <img src="{{url_for('static',filename='images/C1.svg')}}" style="margin-left: -20%; margin-top: -140%;">
+    </div>
+
+    <div class="col" style="margin-right: 10%;">
+      <p style="font-family: Mulish;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 33px;
+      letter-spacing: 0.06em;
+      text-align: left;
+      margin-top: 5%;
+      ">
+        How do I create an invoice using the Invoice Generator? <br><br>
+
+        Simply fill out the fields on the form, and choose to either send the invoice directly or download it to send later.
+      </p>
+      <p>
+        <h4 style="font-family: Mulish;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        color:  #12232E;
+        ">A numbering system for invoices</h4> 
+        This can be as easy as starting with number 1. Knowing ahead of time will help you keep from duplicating invoices and causing confusion down the line.
+      </p>
+
+      <p>
+        <h4 style="font-family: Mulish;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        color:  #12232E;
+        ">Contact information</h4> 
+        This includes the your name (or business name) and the customer’s name, billing addresses, phone numbers and email addresses for both you and your customer.
+      </p>
+
+      <p>
+        <h4 style="font-family: Mulish;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        color:  #12232E;
+        ">Invoice date, payment terms, and due date</h4> 
+        The invoice date is the date you create the invoice and submit it to your customer.
+      </p>
+
+      <p>
+        <h4 style="font-family: Mulish;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        color:  #12232E;">Product or service information</h4>
+
+        Here you can include a description of the product or service you delivered to your customer
+
+      </p>
+
+      <p>
+        <h4 style="font-family: Mulish;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        color:  #12232E;
+        
+        ">Taxes, discounts and shipping fees</h4>
+
+        If you charge taxes as part of your fees, include them in the tax field. Discounts may be applied as well select the appropriate format for each. Shipping fees (if there are any) are applied as a flat rate.
+
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <img src="{{url_for('static',filename='images/arrowLeft.svg')}}" style=" margin-left:10% ; margin-right: 2%;">
+      <a href="{{url_for('invoice_guide')}}" style="font-family: Mulish;
+      font-size: 25px;
+      font-weight: 400;
+      color: #203647;
+      line-height: 40px;
+      letter-spacing: 0em;
+      text-align: left;
+      text-decoration: none;
+      " >Intro</a>
+    </div>
+    <div class="col">
+      <img src="{{url_for('static',filename='images/arrowRight.svg')}}" style=" float: right; margin-right:10%;">
+      <a href="{{url_for('send_invoice')}}" style="float: right; 
+      margin-right:5%;
+      margin-bottom: 4%;
+      color: #203647; 
+      font-family: Mulish;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: 0em;
+      text-align: left;
+      text-decoration: none;
+      ">Sending Invoice</a>
+    </div>
+  </div>
+</div>
+        
+        
+{% endblock %}

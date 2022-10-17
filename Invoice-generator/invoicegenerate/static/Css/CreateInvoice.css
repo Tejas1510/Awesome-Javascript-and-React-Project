@@ -1,0 +1,45 @@
+
+#navbar {
+    height: 50px;
+}
+
+.drop{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	display: none;
+	z-index:999;
+}
+
+
+.drop > li > a{
+	color: white;
+	text-decoration: none;
+	display: block;
+	padding: 15px;
+	font-family: sans-serif;
+	font-size: small;
+	background-color: black;
+}
+
+.drop > li > a:hover{
+	background-color: orange;
+} 
+
+
+ul >li:hover .drop{
+	display: block;
+} 
+
+.nav > li > a 
+{
+  color: white;
+}
+
+#hero > h1,h2,h3,h5,h4,h6
+{
+  text-align: center;
+  color: white;
+
+}

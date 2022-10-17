@@ -1,0 +1,561 @@
+{% extends "layout.html" %}
+{% block body %}
+<p>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+      {% endif %}
+    {% endwith %}
+  </p>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/logo.css')}}">
+    <div class=" container-fluid" style="margin: 1% ; text-align: center; font-size: x-large;">
+        <h1 style="color: #144564;"><b>FREE INVOICE GENERATOR</b></h1>
+    </div>
+    <div style="background-color: #EFEFEF;">
+        <h1 style="color: #FFB750; text-align: center; padding: 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">THREE EASY STEPS</h1>
+        <div
+            style=" display: flex; align-items: center; justify-content: center; flex-direction: row; margin-left: 50px;">
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                <div class="dot"><span style="top: 10px;">1</span></div>
+                <div class="dot1"><span>Enter Details</span></div>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                <div class="dot"><span>2</span></div>
+                <div class="dot1"><span>Preview</span></div>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: right; flex-direction: column;">
+                <div class="dot"><span>3</span></div>
+                <div class="dot1"><span>Download</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-bottom: 3%; ;">
+        <div id="static" class="invoice-holder clearfix">
+            <form method="POST" action="{{url_for('invoice_generator')}}" class="form-horizontal" enctype="multipart/form-data">
+
+                <!-- Currency and Download Section -->
+                <div class="invoice-controls desktop">
+                    <div class="btns clearfix">
+                        <button class="btn btn-lg"
+                            style="background-color: #144564; margin: 5px; width: 200px; border-radius: 30px; box-shadow: 1px 2px #888888;"><a
+                                href="#" style="color: white; text-decoration: none;">Send Invoice</a></button>
+                    </div>
+                    <hr>
+                    <div class="clearfix same-line">
+                        <button
+                            style="margin: 5px; border-radius: 30px; background-color: white; box-shadow: 1px 2px #888888;" type=submit formaction="{{url_for('result1')}}"
+                         class="btn btn-md">Preview</button>
+
+                        <div class="btn-group">
+                            <button style="background-color: white; border-radius: 30px; box-shadow: 1px 2px #888888;"
+                                type="button" class="btn btn-md dropdown-toggle" data-toggle="dropdown"
+                                aria-expanded="false">Download</button>
+                            <div class="dropdown-menu">
+                                <input type="submit" formaction="{{url_for('get_pdf')}}" value="pdf">
+                                <input type="submit" value="XML">
+                                <!-- <button type="submit" formaction="{{url_for('get_pdf')}}"><a class="dropdown-item" href="#">PDF</a></button>
+                                <button><a class="dropdown-item" href="#">XML</a></button> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="panel panel-default">
+                        <div style="padding-top: 10px;">Currency</div>
+                        <div class="panel-body">
+                            <select class="form-control" name="currency"
+                                style="border-radius: 30px; box-shadow: 1px 2px #888888;" id="currency-option" onchange="currencyFunction()">
+                                <option value="EUR" id="EUR">EUR</option>
+                                <option value="USD" id="USD">USD</option>
+                                <option value="YEN" id="YEN">YEN</option>
+                                <option value="GBP" id="GBP">GBP</option>
+                                <option value="AUD" id="AUD">AUD</option>
+                                <option value="CAD" id="CAD">CAD</option>
+                                <option value="INR" selected="selected" id="INR">INR</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="switch-container1 switch-ios same-line">
+                        <span style="padding-right: 100px;">
+                            Notes:
+                        </span>
+                        <input type="checkbox" name="notes2" id="notes" class="ios" onclick="checkFunction()">
+                        <label for="notes"></label>
+                    </div>
+                    <div class="switch-container1 switch-ios same-line">
+                        <span style="padding-right: 75px;">
+                            Late Fees:
+                        </span>
+                        <input type="checkbox" name="late" id="fees" class="ios" onclick="checkFunction()">
+                        <label for="fees"></label>
+                    </div>
+                    <hr>
+                    <div class="col">
+                        <button class="btn btn-lg"
+                            style="background-color: #144564; margin: 5px; width: 200px; border-radius: 30px; box-shadow: 1px 2px #888888;" type="submit" formaction="{{url_for('myinvoice')}}"><a
+                                href="#" style="color: white; text-decoration: none;">My Invoices</a></button>
+                        <button class="btn btn-lg"
+                            style="background-color: #144564; margin: 5px; width: 200px; border-radius: 30px; box-shadow: 1px 2px #888888; " type=submit formaction="{{url_for('invoice_generator')}}">
+                                <a style="color: white; text-decoration: none;">Save Template</a></button>
+                   
+                    </div>
+                </div>
+                <!-- End of Currency and download section -->
+
+                <div class="papers">
+
+                    <!-- header -->
+                    <div class="same-line">
+                        <div class="input-group addon-input same-line" style="justify-content: left;">
+                            Date:
+                            <div class="input-group-addon">
+                                <input id="invoiceDate" class="form-control" type="date" type="text" name="date"
+                                    style="background-color: #EEFBFB;  border: none;">
+                            </div>
+                        </div>
+                        <div class="input-group addon-input same-line" style="justify-content: right;">
+                            Due Date:
+                            <div class="input-group-addon">
+                                <input id="invoiceDueDate" class="form-control date" type="date" name="due_date"
+                                    style="background-color: #EEFBFB;  border: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Header -->
+
+                    <div class="invoice">
+
+                        <!-- Heading -->
+                        <div class="title same-line">
+                            <h1 class="input-label">INVOICE</h1>
+                            <input style="width: 15%; background-color: #EEFBFB" type="text"
+                                class="form-control input-label" name="header" value="#001" />
+                        </div>
+                        <!-- End of Heading -->
+
+                        <hr>
+
+                        <!-- Top section -->
+                        <div class="two-col clearfix">
+                            <div class="col">
+
+                                <div class="drop-zone">
+                                    <!-- <span class="drop-zone__prompt">+ Add your Logo</span> -->
+                                    <!-- {% if filename %}
+                                       
+                                    <label for="imageUpload" name ="file" class="drop-zone__prompt"><img src="{{ url_for('display_image', filename=filename) }}"height="80px" width="200px"></label>
+                                        
+                                    {% else %} -->
+                                    <label for="imageUpload" name ="file" class="drop-zone__prompt">+ Add your Logo<img id="output" width="150" height="50" />	</label>
+                                    <!-- {% endif %} -->
+                                    <input type="file" id="imageUpload" name="photo" placeholder="+ Add your Logo" style="display:none" accept='image/*' onchange="loadFile(event)" class="drop-zone__prompt" >
+                                    
+                                    
+                                </div>
+                                <div class="contact_to ">
+                                    <div class="field">
+                                        <input type="text" class="input-label form-control" name="from_title"
+                                            value="Bill From" />
+                                    </div>
+                                    <div class="value">
+                                        <input type="text" style="background-color: #EEFBFB;  border: none;" class="form-control"
+                                            name="billfrom" id="emailFrom" cols="10" rows="1"
+                                            placeholder="Email">
+                                        <input type="text" style="background-color: #EEFBFB;  border: none;" class="form-control"
+                                            placeholder="Who is this invoice from?" name="sender" cols="10"
+                                            rows="5">
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="col">
+
+                                <div class="input-group addon-input">
+                                    <input class="input-label form-control" type="text" name="payment_methods_title"
+                                        value="Payment Methods" />
+                                    <select style="width: 100px; background-color: #EEFBFB;  border: none;"
+                                        class="custom-select" name="paymentmethod" id="inputGroupSelect01">
+                                        <option selected>Choose...</option>
+                                        <option value="Cash">Cash</option>
+                                        <option value="UPI">UPI</option>
+                                        <option value="Bank">Bank Transaction</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group addon-input">
+                                    <input class="input-label form-control" type="text" name="date_title"
+                                        value="Order Number">
+                                    <input style="width: 100px; background-color: #EEFBFB; border: none;" type="text"
+                                        class="form-control" name="orderno" aria-label="order_number" aria-describedby="basic-addon1">
+                                </div>
+                                
+                                <div class="contact_to">
+                                    <div class="field">
+                                        <input type="text" class="input-label form-control" name="to_title"
+                                            value="Bill To" />
+                                    </div>
+
+                                    <div class="value">
+                                        <input type="email" style="background-color: #EEFBFB; border: none;" class="form-control"
+                                            name="emailto" id="emailTo" cols="5" rows="1" placeholder="Email">
+                                        <br>
+                                        <input type="text" style="background-color: #EEFBFB;  border: none;" class="form-control"
+                                            placeholder="Who is this invoice to?" name="receiver" cols="10"
+                                            rows="5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of top section -->
+
+                        <!-- Items Table -->
+                        <!-- <div class="items-holder">
+                            <div class="items-table-header">
+                                <div class="amount">
+                                    <div class="field bordered">
+                                        <input type="text" class="input-label form-control" value="Amount"
+                                            name="amount_header" />
+                                    </div>
+                                </div>
+                                <div class="unit_cost">
+                                    <div class="field bordered">
+                                        <input type="text" class="input-label form-control" value="Rate"
+                                            name="unit_cost_header" />
+                                    </div>
+                                </div>
+                                <div class="quantity">
+                                    <div class="field bordered">
+                                        <input type="text" class="input-label form-control" value="Quantity"
+                                            name="quantity_header" />
+                                    </div>
+                                </div>
+                                <div class="name">
+                                    <div class="field bordered">
+                                        <input type="text" class="input-label form-control" value="Description"
+                                            name="item_header" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-table">
+                                <div class="item-row">
+                                    <div class="main-row">
+                                        <div class="delete" id="remove"></div>
+                                        <div class="amount value">
+                                            <span class="currency-symbol">Rs.</span>0
+                                        </div>
+                                        <div class="unit_cost">
+                                            <div class="input-group">
+                                                <span class="input-group-text currency-sign">Rs.</span>
+                                                <input class="item-calc form-control" type="number" step="any"
+                                                    autocomplete="off" name="unit_cost" value="0" />
+                                            </div>
+                                        </div>
+                                        <div class="quantity">
+                                            <input type="number" step="any" class="item-calc form-control"
+                                                autocomplete="off" name="quantity" value="0" />
+                                        </div>
+                                        <div class="name">
+                                            <textarea class="item-calc form-control" rows="1" name="desc"
+                                                placeholder="Description of item/service..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="input-blue" id="add">+Line Item</button>
+                                <button class="input-blue" id="remove">-Remove Item</button>
+                            </div>
+                        </div> -->
+
+                        <!-- Items Table -->
+                        <div id="cart">
+                            <table name="cart">
+                                <tr style="background-color: black; color: white;">
+                                    <th></th>
+                                    <th>Item</th>
+                                    <th>Qty</th>
+                                    <th>Price</th>
+                                    <th>&nbsp;</th>
+                                    <th>Item Total</th>
+                                </tr>
+                                <tr class="line_items">
+                                    <td>
+                                        <button class="row-remove"
+                                            style="border-radius: 10px; background-color: #007CC7; color: white; border: none;">-</button>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="item" placeholder="item" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="qty" placeholder='0' class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"
+                                                style="background-color: #EEFBFB; border: none;" id="rate">Rs.</span>
+                                        </div>
+                                        <input type="text" name="price" placeholder="0" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <span id="amount">Rs.</span>
+                                        <input type="text" name="item_total" value="" jAutoCalc="{qty} * {price}"
+                                            style="border: none;" disabled>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Subtotal"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" style="border: none;"
+                                                id="subtotal">Rs.</span>
+                                        </div>
+                                        <input type="text" name="sub_total" value="0" jAutoCalc="SUM({item_total})"
+                                            class="form-control" style=" border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Tax(in %)"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"
+                                                style="background-color: #EEFBFB; border: none;" id="tax"></span>
+                                        </div>
+                                        <input type="text" name="tax_total" value="0" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Discount(in %)"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"
+                                                style="background-color: #EEFBFB; border: none;"
+                                                id="discount"></span>
+                                        </div>
+                                        <input type="text" name="discount_total" value="0" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Shipping"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"
+                                                style="background-color: #EEFBFB; border: none;"
+                                                id="shipping">Rs.</span>
+                                        </div>
+                                        <input type="text" name="shipping_total" value="0" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Total"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" style="border: none;" id="total">Rs.</span>
+                                        </div>
+                                        <input type="text" name="grand_total" value="0"
+                                            jAutoCalc="{sub_total} + {tax_total} + {shipping_total} - {discount_total}"
+                                            class="form-control" style="border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Amount paid"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"
+                                                style="background-color: #EEFBFB; border: none;"
+                                                id="amountPaid">Rs.</span>
+                                        </div>
+                                        <input type="text" name="amount_paid" value="0" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Balance Due"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" style="border: none;" id="balance">Rs.</span>
+                                        </div>
+                                        <input type="text" name="balance_due" value="0"
+                                            jAutoCalc="{grand_total} - {amount_paid}"
+                                            class="form-control" style="border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="99"><button class="row-add"
+                                            style="border-radius: 10px; background-color: #007CC7; color: white; border: none;">Add
+                                            Row</button></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- End of Items Table -->
+
+                         <!-- Lower Section -->
+                         <div class="clearfix">
+                            <div style="display: flex; flex-direction: row;">
+                                <div class="col col-12">
+                                    <div class="notes-holder" style="margin-top: 20px; display: none;"
+                                        id="notes-holder">
+                                        <div class="field">
+                                            <input type="text" class="input-label form-control" name="notes_title"
+                                                value="Notes" />
+                                        </div>
+                                        <div class="value">
+                                            <textarea class="notes form-control"
+                                                placeholder="Notes - any relevant information not already covered"
+                                                name="notes"
+                                                style="background-color: #EEFBFB; border: none;"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="terms-holder">
+                                        <div class="field">
+                                            <input type="text" class="input-label form-control" name="terms_title"
+                                                value="Terms" />
+                                        </div>
+                                        <div class="value">
+                                            <textarea class="terms form-control"
+                                                placeholder="Terms and conditions - late fees, payment methods, delivery schedule"
+                                                name="terms"
+                                                style="background-color: #EEFBFB; border: none;"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="latefees-holder" style="display: none;" id="fees-holder">
+                                        <div class="field">
+                                            <input type="text" class="input-label form-control" name="latefees_title"
+                                                value="Late Fees" />
+                                        </div>
+                                        <div class="value">
+                                            <textarea class="latefees form-control"
+                                                placeholder="Penalty Details and Amount" name="latefees"
+                                                style="background-color: #EEFBFB; border: none;"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+
+                    </div>
+                    <!-- <p><input type = "submit" value = "submit" /></p> -->
+                </div>
+                
+            </form>
+        </div>
+
+        <div class="ng-cloak">
+            <div ng-view></div>
+        </div>
+
+    </div>
+    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jautocalc@1.3.1/dist/jautocalc.js"></script>
+    <script src="{{url_for('static',filename='javascript/script.js')}}"></script>
+    <script src="{{url_for('static',filename='javascript/currency.js')}}"></script>
+     <script type="text/javascript">
+        $(function () {
+            var name = 1;
+            function autoCalcSetup() {
+                $('#cart').jAutoCalc('destroy');
+                $('#cart tr.line_items').jAutoCalc({ keyEventsFire: true, decimalPlaces: 2, emptyAsZero: true });
+                $('#cart').jAutoCalc({ decimalPlaces: 2 });
+            }
+            autoCalcSetup();
+
+
+            $('button.row-remove').on("click", function (e) {
+                e.preventDefault();
+
+                var form = $(this).parents('form')
+                $(this).parents('tr').remove();
+                autoCalcSetup();
+
+            });
+
+            $('button.row-add').on("click", function (e) {
+                e.preventDefault();
+
+                var $table = $(this).parents('table');
+                var $top = $table.find('tr.line_items').first();
+                var $new = $top.clone(true);
+                
+                $new.jAutoCalc('destroy');
+                $new.insertBefore($top);
+                $new.find('input[type=text]').val('');
+                
+                autoCalcSetup();
+
+            });
+
+        });
+    </script>
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
+    <script>
+
+        function checkFunction() {
+            var notes = document.getElementById("notes");
+            var notesHolder = document.getElementById("notes-holder");
+
+            if (notes.checked == true) {
+                notesHolder.style.display = "block";
+            } else {
+                notesHolder.style.display = "none";
+            }
+
+            var fees = document.getElementById("fees");
+            var feesHolder = document.getElementById("fees-holder");
+
+            if (fees.checked == true) {
+                feesHolder.style.display = "block";
+            } else {
+                feesHolder.style.display = "none";
+            }
+        }
+    </script>
+    
+  {% endblock %}

@@ -1,0 +1,61 @@
+
+
+#navbar {
+    height: 50px;
+}
+
+
+.drop{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	display: none;
+	z-index:999;
+}
+
+
+.drop > li > a{
+	color: white;
+	text-decoration: none;
+	display: block;
+	padding: 15px;
+	font-family: sans-serif;
+	font-size: small;
+	background-color: rgb(108, 108, 108);
+}
+
+.drop > li > a:hover{
+	background-color:#51db9d
+
+	;
+} 
+
+
+ul >li:hover .drop{
+	display: block;
+}
+
+.nav > li > a:hover
+{
+	color: #51db9d;
+}
+
+
+body a
+{
+  color: whitesmoke;
+  font-style: normal;
+}
+
+.nav > li > a 
+{
+  color: white;
+}
+#hero > h1,h2,h3,h5,h4,h6
+{
+  text-align: center;
+  color: white;
+
+}
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card-wrapper">
+        <div class="card">
+            <h1 class="center">Create an account</h1>
+            <form name="signup_form" method="POST" enctype="multipart/form-data">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="'field" required>
+                <label for="email">Email</label>
+                <input type="text" name="email" class="'field" required>
+                <label for="password">Password</label>
+                <input type="text" name="password" class="'field" required>
+
+                <p class="error error--hidden"></p>
+                <input type="submit" value="Sign Up" class="btn">
+            </form>
+        </div>
+</body>
+</html>

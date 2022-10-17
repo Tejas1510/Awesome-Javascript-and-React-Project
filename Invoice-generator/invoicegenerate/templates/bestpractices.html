@@ -1,0 +1,220 @@
+{% extends "layout.html" %}
+{% block body %}
+        
+
+        <div class = "container-fluid " id = "hero">
+            <div class = row>
+                <div class = "col-6" >
+                    <img src="{{url_for('static',filename='images/image 7.svg')}}" class="img-fluid">
+                </div>
+                <div class = "col-6" style="background-color:#203647; padding-top: 7%; padding-bottom: 3%; padding-left: 3%;">
+
+
+                    <p style="position: absolute;
+width: 420px;
+height: 218px;
+
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 80px;
+line-height: 97px;
+
+color: #FFFFFF;
+">Invoicing <br>  Guide</p>
+
+
+
+
+<p style="
+
+margin-bottom: 0px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+
+margin-top: 200px;
+color: #419BA7;
+
+transform: rotate(-0.26deg);
+">Best Practices</p>
+                </div>
+            </div>    
+        </div>
+
+
+        <br>
+
+        
+          
+
+ 		<div class="container-fluid " style="margin: bottom 2%; background-color: #12232E ;">
+              
+              <p style="position: absolute;
+
+left: 120px;
+top: 535px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 46px;
+/* or 115% */
+
+letter-spacing: 0.06em;
+
+color: #12232E;
+">How do I make the invoicing process as easy and low-maintenance as possible?</p>
+
+<p style="position: absolute;
+width: 240px;
+height: 33px;
+left: 121px;
+top: 660px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+/* identical to box height, or 138% */
+
+letter-spacing: 0.06em;
+
+color: rgba(0, 0, 0, 0.66);">
+    Here are some tips:
+</p>
+
+<p style="position: absolute;
+width: 1212px;
+height: 97px;
+left: 120px;
+top: 729px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 46px;
+/* or 115% */
+
+letter-spacing: 0.06em;
+
+color: #12232E;
+">Create invoices that have all the information your customer needs</p>
+
+<p style="position: absolute;
+width: 1193px;
+height: 134px;
+left: 125px;
+top: 849px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+/* or 138% */
+
+letter-spacing: 0.06em;
+
+color: rgba(0, 0, 0, 0.66);
+">This makes it easier for both you and your customer to refer back to the invoice in the future.including phone numbers and email addresses makes it easy to follow-up. You never know who might be processing your invoice - accounts payable might need a quick phone call or email to clear up any questions.</p>
+
+<p style="position: absolute;
+width: 894px;
+height: 110px;
+left: 124px;
+top: 1004px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 46px;
+/* or 115% */
+
+letter-spacing: 0.06em;
+
+color: #12232E;
+">Number your invoices, download them and save them in a place that is easily accessible</p>
+
+<p style="position: absolute;
+width: 773px;
+height: 120px;
+left: 120px;
+top: 1158px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+/* or 138% */
+
+letter-spacing: 0.06em;
+
+color: rgba(0, 0, 0, 0.66);
+">This way you’ll always have a unique number associated with each one, and finding them later will be a snap if they are saved in one place.</p>
+
+<p style="position: absolute;
+width: 739px;
+height: 103px;
+left: 124px;
+top: 1287px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 46px;
+/* or 115% */
+
+letter-spacing: 0.06em;
+
+color: #12232E;
+">Send your invoices on time and to the right person.</p>
+
+<p style="position: absolute;
+width: 731px;
+height: 98px;
+left: 126px;
+top: 1411px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+/* or 138% */
+
+letter-spacing: 0.06em;
+
+color: rgba(0, 0, 0, 0.66);">Do some research on payment terms that are effective in your field, and try out a few to see which ones work best.</p>
+
+
+		</div>
+    
+
+        <!-- <div class="row">
+            <div class="col">
+                <img class="vector1" src="Vector.png">
+            </div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 34% ; text-align:end; margin-bottom: 2%
+    ;">
+    <img src="{{url_for('static',filename='images/Vector.png')}}">
+    </div>  
+    
+    <a href="{{url_for('getting_paid')}}" class="btn" style="margin-left: 2% ; color:#203647; font-size: 25px; font-weight: 200; font-family: mulish;"> <img style="margin-right: 0%; margin-bottom: 3%;" src="{{url_for('static',filename='images/arrowleft.svg')}}"> Getting Paid</a>
+      
+    
+   {% endblock %}

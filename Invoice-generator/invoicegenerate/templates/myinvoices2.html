@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/logo.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/min.css')}}"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #c1dfdd;">
+
+    
+    <p>Which invoice number?</p>
+    <form method="POST" action="{{url_for('invoice')}}">
+        <input type="number" value="orderno" name="invoiceno">
+        <input type="submit" value="show">
+    </form>
+   
+
+    
+
+
+
+
+</body>

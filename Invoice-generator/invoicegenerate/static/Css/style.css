@@ -1,0 +1,887 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    color: #232e38;
+    background-color: #C1DFDD !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: ColfaxWeb, Helvetica, Arial, sans-serif
+}
+
+.container {
+    padding: 0 15px
+}
+
+form {
+    margin: 0 0 15px
+}
+
+.form-control {
+    background: #fff;
+    border: 1px solid #c4cdd5;
+    box-shadow: inset 0 1px 2px 0 rgba(102, 113, 123, .21);
+    border-radius: 3px;
+    font-size: 14px;
+    color: #313538;
+    line-height: 20px;
+    font-family: NeueHaasUnica, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -moz-transition-property: color, background-color, border-color;
+    -o-transition-property: color, background-color, border-color;
+    -webkit-transition-property: color, background-color, border-color;
+    transition-property: color, background-color, border-color;
+    -moz-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s
+}
+
+.form-control:hover {
+    border-color: #879099
+}
+
+.form-control:focus {
+    background: #fff none repeat scroll 0 0;
+    border-color: #009e74;
+    outline: 0;
+    box-shadow: inset 0 1px 2px 0 rgba(102, 113, 123, .21)
+}
+
+.papers {
+    padding: 20px;
+    position: relative;
+    background: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, .1), 3px 3px 0 #fff, 4px 4px 0 rgba(0, 0, 0, .125), 6px 6px 0 #fff, 7px 7px 0 rgba(0, 0, 0, .15);
+    -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, .1), 3px 3px 0 #fff, 4px 4px 0 rgba(0, 0, 0, .125), 6px 6px 0 #fff, 7px 7px 0 rgba(0, 0, 0, .15);
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, .1), 3px 3px 0 #fff, 4px 4px 0 rgba(0, 0, 0, .125), 6px 6px 0 #fff, 7px 7px 0 rgba(0, 0, 0, .15)
+}
+
+.form-control {
+    box-shadow: none
+}
+
+.form-control:focus {
+    box-shadow: none
+}
+
+.input-group-addon {
+    font-size: 13px
+}
+
+.invoice-holder {
+    margin: 30px 0 0;
+    padding: 0 225px 0 0;
+    position: relative
+}
+
+.invoice-holder .papers {
+    float: right;
+    width: 100%
+}
+
+.invoice-holder .invoice-controls.desktop {
+    float: right;
+    margin-right: -225px;
+    width: 210px;
+    position: relative
+}
+
+.invoice-holder .invoice-controls.desktop>.affix {
+    top: 25px
+}
+
+.invoice-holder .invoice-controls.desktop>.affix-el {
+    width: 210px;
+    padding: 15px 0 15px 15px
+}
+
+.invoice-holder .invoice-controls.mobile,
+.invoice-holder .mobile-btns {
+    display: none
+}
+
+.invoice-holder .invoice-controls .btns {
+    clear: both
+}
+
+.invoice-holder .invoice-controls .btns .btn-holder {
+    padding: 0;
+    margin: 0 0 10px
+}
+
+.invoice-holder .invoice-controls .section {
+    text-align: left
+}
+
+.invoice-holder .invoice-controls .section a,
+.invoice-holder .invoice-controls .section a:active,
+.invoice-holder .invoice-controls .section a:visited {
+    display: block;
+    width: 100%;
+    text-shadow: 0 0 2px #fff
+}
+
+.invoice-holder .invoice-controls .section a:hover {
+    color: #10806f
+}
+
+.invoice-holder .invoice-controls .selected-currency {
+    color: #3d4c59;
+    margin: 15px 0 0;
+    padding: 0 0 0 15px;
+    font-size: 1.1em
+}
+
+.invoice-holder .invoice-controls .selected-currency .title {
+    color: #999
+}
+
+.invoice-holder .invoice-controls .selected-currency a {
+    color: inherit
+}
+
+.invoice-holder .invoice-controls .selected-currency a .edit-icon {
+    visibility: hidden
+}
+
+.invoice-holder .invoice-controls .selected-currency a:hover {
+    color: #10806f
+}
+
+.invoice-holder .invoice-controls .selected-currency a:hover .edit-icon {
+    visibility: visible
+}
+
+.invoice-holder .invoice-controls .alternative-download {
+    margin: 10px 0 0;
+    padding: 0 15px;
+    clear: both
+}
+
+.invoice-holder .invoice-controls .alternative-download a {
+    padding: 6px 0;
+    line-height: 20px
+}
+
+.invoice-holder .invoice-controls .save-template {
+    margin: 10px 0 10px;
+    padding: 0 15px;
+    clear: both
+}
+
+.invoice-holder .invoice-controls .save-template a {
+    padding: 6px 0;
+    line-height: 20px
+}
+
+.invoice-holder .invoice-controls .save-template .using-default {
+    color: #999;
+    font-size: 13px;
+    padding: 6px 0;
+    line-height: 20px
+}
+
+.invoice-holder .invoice-controls .my-invoices-btn {
+    margin: 15px 0 10px;
+    padding: 10px 0 0;
+    clear: both;
+    font-size: 1.2em;
+    border-top: 1px solid #ddd
+}
+
+.invoice-holder .invoice-controls .my-invoices-btn a .badge {
+    font-size: 14px
+}
+
+.invoice {
+    margin: 0 -15px 0 0
+}
+
+.invoice .two-col {
+    clear: both;
+    margin: 0 0 10px;
+    width: 100%
+}
+
+.invoice .two-col .col {
+    float: left;
+    width: 50%;
+    padding: 0 34px 0 0
+}
+
+.invoice .two-col .col-offset {
+    margin-left: 50%
+}
+
+.invoice .input-label {
+    color: #777;
+    background: 0 0;
+    border-color: transparent;
+    border-radius: 4px !important
+}
+
+.invoice .input-label:hover {
+    border-color: rgba(0, 0, 0, .1);
+    background-color: rgba(255, 255, 255, .05);
+    cursor: pointer
+}
+
+.invoice .input-label:focus {
+    cursor: text;
+    box-shadow: none;
+    border-color: #ccc;
+    background-color: rgba(255, 255, 255, .1)
+}
+
+.invoice .input-group.addon-input {
+    float: right;
+    margin: 1px 0;
+    clear: both;
+    position: relative
+}
+
+.invoice .input-group.addon-input .input-label {
+    text-align: right
+}
+
+.invoice .input-group.addon-input .delete {
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden
+}
+
+.invoice .input-group.addon-input .delete .btn {
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0;
+    color: #999
+}
+
+.invoice .input-group.addon-input .delete .btn:focus,
+.invoice .input-group.addon-input .delete .btn:hover {
+    color: #10806f
+}
+
+.invoice .input-group.addon-input .field {
+    line-height: 34px;
+    padding-right: 10px
+}
+
+.invoice .input-group.addon-input>.input-group-addon {
+    padding: 0 1px 0 5px;
+    background: 0;
+    border: 0;
+    width: 150px;
+    text-align: right;
+    line-height: inherit
+}
+
+.invoice .input-group.addon-input>.input-group-addon>.form-control {
+    border-radius: 4px;
+    text-align: right
+}
+
+.invoice .input-group.addon-input>.input-group-addon.value {
+    padding: 5px 11px
+}
+
+.invoice .input-group.addon-input>.input-group-addon.deleteable {
+    padding-right: 45px;
+    width: 195px
+}
+
+.invoice .input-group.addon-input:hover .delete {
+    visibility: visible
+}
+
+.invoice .input-group.addon-input.highlight {
+    font-weight: 700;
+    background: #f5f5f5;
+    border-radius: 4px;
+    color: #3d4c59;
+    padding: 5px 0 5px 15px
+}
+
+.invoice .input-group.addon-input.highlight>.field {
+    color: inherit
+}
+
+.invoice .input-group.addon-input.highlight>.value {
+    font-size: inherit;
+    font-weight: inherit
+}
+
+.invoice .field {
+    color: #777;
+    font-size: 1em;
+    text-align: right;
+    display: inline-block;
+    height: 26px;
+    padding: 0 5px;
+    line-height: 26px;
+    box-shadow: none
+}
+
+.invoice .field.bordered {
+    background: #232e38;
+    border-radius: 4px
+}
+
+.invoice .field.bordered .input-label {
+    color: #fff
+}
+
+.invoice .col.contact-info {
+    padding-right: 0
+}
+
+.invoice .logo {
+    text-align: left;
+    position: relative;
+    width: 200px;
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden
+}
+
+.invoice .logo .placeholder {
+    width: 100%;
+    height: 130px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    text-align: center;
+    padding: 50px 0 0;
+    border: 1px solid rgba(0, 0, 0, .1)
+}
+
+.invoice .logo .placeholder .main {
+    font-size: 1.2em;
+    color: #777
+}
+
+.invoice .logo .placeholder .secondary {
+    color: #aaa
+}
+
+.invoice .logo img {
+    border-radius: 4px;
+    max-width: 200px;
+    max-height: 150px;
+    overflow: hidden
+}
+
+.invoice .logo input[type=file] {
+    cursor: pointer !important;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    padding: 0;
+    line-height: 100%
+}
+
+.invoice .logo .remove-logo {
+    position: absolute;
+    display: block;
+    top: 5px;
+    left: 5px;
+    padding: 0 5px;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    background: #3a3a3a;
+    box-shadow: none;
+    border: none
+}
+
+.invoice .logo .remove-logo:focus,
+.invoice .logo .remove-logo:hover {
+    text-decoration: none;
+    background: #009e74
+}
+
+.invoice .logo .file-1 {
+    top: 0
+}
+
+.invoice .logo .file-2 {
+    top: 20px
+}
+
+.invoice .logo .file-3 {
+    top: 40px
+}
+
+.invoice .logo .file-4 {
+    top: 60px
+}
+
+.invoice .logo .file-5 {
+    top: 80px
+}
+
+.invoice .logo .file-6 {
+    top: 100px
+}
+
+.invoice .logo .file-7 {
+    top: 120px
+}
+
+.invoice .logo .file-8 {
+    top: 140px
+}
+
+.invoice .logo:hover .placeholder {
+    background: #eee
+}
+
+.invoice .logo-not-supported {
+    display: none
+}
+
+.invoice .row.bill-to-details .col-sm-6 {
+    padding-left: 0
+}
+
+.invoice .contact {
+    margin: 15px 0 0;
+    max-width: 275px
+}
+
+.invoice .contact .field {
+    text-align: left;
+    padding: 0;
+    height: 36px
+}
+
+.invoice .contact .value {
+    text-align: left;
+    padding-top: 0
+}
+
+.invoice .contact .value .expandingText {
+    min-height: 60px
+}
+
+.invoice .contact.from .field {
+    display: none
+}
+
+.invoice .title {
+    /* margin: 0 30px 45px 0; */
+    float: center;
+    text-align: center;
+    /* max-width: 50% */
+}
+
+.input-blue {
+    background-color: skyblue;
+}
+
+.same-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center
+}
+.invoice .title .input-label {
+    /* margin: 15px 0 10px;
+    padding: 0 15px 0 15px; */
+    font-size: 2.75em;
+    font-weight: 200;
+    color: #232e38;
+    text-align: center;
+    height: auto
+}
+.invoice .title .subtitle {
+    margin-right: 5px;
+    max-width: 170px;
+    float: right
+}
+
+.invoice .title .subtitle .form-control {
+    text-align: right
+}
+
+.invoice .items-holder {
+    margin: 30px 0
+}
+
+.invoice .items-holder .items-table-header {
+    padding-right: 352px;
+    padding-bottom: 2px
+}
+
+.invoice .items-holder .items-table-header>div .field {
+    width: 100%;
+    text-align: left;
+    display: block;
+    border-radius: 0;
+    padding: 1px 0;
+    height: auto;
+    border-width: 0
+}
+
+.invoice .items-holder .items-table-header>div .field .input-label {
+    height: 26px
+}
+
+.invoice .items-holder .items-table-header>div .field .input-label:hover {
+    border-color: transparent
+}
+
+.invoice .items-holder .items-table-header>div .field .input-label:focus {
+    border-color: transparent
+}
+
+.invoice .items-holder .items-table-header .amount,
+.invoice .items-holder .items-table-header .delete,
+.invoice .items-holder .items-table-header .quantity,
+.invoice .items-holder .items-table-header .unit_cost {
+    white-space: nowrap;
+    float: right
+}
+
+.invoice .items-holder .items-table-header .amount .field .input-label {
+    text-align: right
+}
+
+.invoice .items-holder .items-table-header .name .field.bordered {
+    border-radius: 4px 0 0 4px
+}
+
+.invoice .items-holder .items-table-header .quantity {
+    width: 92px;
+    margin-right: -92px
+}
+
+.invoice .items-holder .items-table-header .unit_cost {
+    width: 122px;
+    margin-right: -214px
+}
+
+.invoice .items-holder .items-table-header .amount {
+    width: 102px;
+    margin-right: -316px
+}
+
+.invoice .items-holder .items-table-header .amount .field.bordered {
+    border-radius: 0 4px 4px 0
+}
+
+.invoice .items-holder .items-table .item-row .main-row {
+    padding-right: 352px
+}
+
+.invoice .items-holder .items-table .item-row .main-row>div {
+    white-space: nowrap;
+    padding: 1px
+}
+
+.invoice .items-holder .items-table .item-row .main-row .amount,
+.invoice .items-holder .items-table .item-row .main-row .delete,
+.invoice .items-holder .items-table .item-row .main-row .quantity,
+.invoice .items-holder .items-table .item-row .main-row .unit_cost {
+    white-space: nowrap;
+    float: right
+}
+
+.invoice .items-holder .items-table .item-row .main-row .quantity {
+    width: 90px;
+    margin-right: -92px
+}
+
+.invoice .items-holder .items-table .item-row .main-row .unit_cost {
+    width: 120px;
+    margin-right: -214px
+}
+
+.invoice .items-holder .items-table .item-row .main-row .amount {
+    width: 100px;
+    margin-right: -316px;
+    text-align: right
+}
+
+.invoice .items-holder .items-table .item-row .main-row .value {
+    padding: 7px 15px;
+    font-size: 14px
+}
+
+.invoice .items-holder .items-table .item-row .main-row .delete {
+    width: 34px;
+    text-align: center;
+    line-height: 40px;
+    margin-right: -348px;
+    visibility: hidden
+}
+
+.invoice .items-holder .items-table .item-row .main-row .delete .delete-row {
+    color: #999;
+    border: none;
+    box-shadow: none;
+    background: 0 0;
+    padding: 0;
+    font-size: 14px
+}
+
+.invoice .items-holder .items-table .item-row .main-row .delete .delete-row:hover {
+    color: #10806f
+}
+
+.invoice .items-holder .items-table .item-row .main-row .delete .delete-row:focus {
+    color: #10806f
+}
+
+.invoice .items-holder .items-table .item-row .details-row {
+    padding-right: 34px;
+    padding-bottom: 15px
+}
+
+.invoice .items-holder .items-table .item-row .details-row>.row {
+    margin: 0 -1px
+}
+
+.invoice .items-holder .items-table .item-row .details-row>.row>div {
+    padding: 0 1px
+}
+
+.invoice .items-holder .items-table .item-row .details-row .fields {
+    margin: 5px 0 0
+}
+
+.invoice .items-holder .items-table .item-row.ui-sortable-placeholder {
+    height: 34px;
+    border: 3px dashed #ccc;
+    visibility: visible !important;
+    margin: 2px 0
+}
+
+.invoice .items-holder .items-table .item-row:hover .delete {
+    visibility: visible
+}
+
+.invoice .items-holder .new-line {
+    margin-top: 2px;
+    padding-right: 34px
+}
+
+.invoice .add-rates {
+    float: right;
+    width: 100%;
+    margin: 5px 34px 0 0;
+    padding: 0;
+    line-height: 25px;
+    text-align: right
+}
+
+.invoice .col.rates {
+    padding-right: 0
+}
+
+.body {
+    position: relative;
+    z-index: 1;
+    /* background: #fff; */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .25);
+    border-radius: 4px;
+    /* color: #4e5459; */
+    max-width: 950px;
+    margin: 30px auto 0;
+    padding: 20px 30px 30px
+}
+
+.my-invoices-holder .search .bar .icon {
+    margin-top: -13px
+}
+
+.my-invoices-holder .btn-toolbar {
+    text-align: right
+}
+
+.my-invoices-holder .my-invoices {
+    margin: 15px 0 30px
+}
+
+.my-invoices-holder .warning {
+    padding: 0 15px;
+    color: #c00
+}
+
+.my-invoices-holder .erase-everything {
+    margin: 30px 0 15px;
+    text-align: center
+}
+
+.my-invoices {
+    margin: 0
+}
+
+.my-invoices .invoice-card {
+    float: left;
+    margin: 10px 0 0;
+    margin-right: 13px;
+    position: relative
+}
+
+.my-invoices .invoice-card a.tile {
+    display: block;
+    width: 150px;
+    height: 115px;
+    border-radius: 2px;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 1px;
+    text-align: center;
+    color: #999;
+    position: relative
+}
+
+.my-invoices .invoice-card h3 {
+    font-size: 24px;
+    font-weight: 200;
+    margin: 25px 0 5px;
+    overflow: hidden;
+    color: #3d4c59
+}
+
+.my-invoices .invoice-card h3 span {
+    font-weight: 200
+}
+
+.my-invoices .invoice-card .to {
+    font-size: 14px;
+    color: #3d4c59;
+    line-height: 24px;
+    height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 10px
+}
+
+.my-invoices .invoice-card .date {
+    font-size: 12px
+}
+
+.my-invoices .invoice-card .btn-trash {
+    box-shadow: none;
+    border-radius: 0;
+    background: 0 0;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #999;
+    visibility: hidden
+}
+
+.my-invoices .invoice-card .btn-trash:hover {
+    color: #e35c44
+}
+
+.my-invoices .invoice-card .draft {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: orange;
+    text-shadow: 1px 1px 2px #fff
+}
+
+.my-invoices .invoice-card .draft:before {
+    content: 'Draft'
+}
+
+.my-invoices .invoice-card a.tile:hover {
+    text-decoration: none;
+    border-color: #10806f
+}
+
+.my-invoices .invoice-card a.tile:hover .btn-trash {
+    visibility: visible
+}
+
+.my-invoices .invoice-card:last-child {
+    margin-right: 0
+}
+
+.empty-message {
+    color: #999;
+    font-size: 18px;
+    font-weight: 200;
+    margin: 20px 0;
+    text-align: center;
+    width: 100%
+}
+
+.required {
+    color: red
+}
+
+.no-spam-label {
+    color: #777;
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.delivery-confirmation-label {
+    color: #777;
+    font-style: italic;
+    padding-top: 10px
+}
+
+.attach-note {
+    line-height: 36px;
+    height: 36px;
+    color: #999;
+    float: left
+}
+
+.modal {
+    -webkit-overflow-scrolling: auto
+}
+
+.modal-backdrop {
+    background: #000;
+    bottom: 0
+}
+
+.modal-header .close {
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    margin-top: -2px;
+    text-align: center;
+    width: 20px;
+    opacity: 1;
+    color: #ccc;
+    font-size: 21px
+}
+
+.modal-footer .btn-primary {
+    padding-top: 8px
+}
+
+body.modal-open .sumome-share-client-wrapper {
+    z-index: 1000 !important;
+    display: none !important
+}

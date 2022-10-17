@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/logo.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/min.css')}}"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #c1dfdd;">
+    
+    <div class="container">
+        <div id="static" class="invoice-holder clearfix">
+            <form class="form-horizontal" enctype="multipart/form-data">
+                    
+            
+                    
+               
+                <!-- End of Currency and download section -->
+
+                <div class="papers">
+
+                    <!-- header -->
+                    <div class="same-line">
+                        <div class="input-group addon-input same-line" style="justify-content: left;">
+                            Date:
+                            <div class="input-group-addon">
+                                <input id="invoiceDate" class="form-control" type="date" type="text" name="date" value={{result["date"]}}
+                                    style="background-color: #EEFBFB;  border: none;">
+                                    
+                     
+                            </div>
+                        </div>
+                        <div class="input-group addon-input same-line" style="justify-content: right;">
+                            Due Date:
+                            <div class="input-group-addon">
+                                <input id="invoiceDueDate" class="form-control date" type="date" name="due_date" value={{result["due_date"]}}
+                                    style="background-color: #EEFBFB;  border: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Header -->
+
+                    <div class="invoice">
+
+                        <!-- Heading -->
+                        <div class="title same-line">
+                            <h1 class="input-label">INVOICE</h1>
+                            <input style="width: 15%; background-color: #EEFBFB" type="text"
+                                class="form-control input-label" name="header" value="{{result["header"]}}" />
+                        </div>
+                        <!-- End of Heading -->
+
+                        <hr>
+
+                        <!-- Top section -->
+                        <div class="two-col clearfix">
+                            <div class="col">
+                                <div class="drop-zone">
+                                   
+                                   
+                                    <span class="drop-zone__prompt"><img src="{{url_for('static',filename='images/uploads/'+photo)}}" height="80" width= "200" /></span>
+                                    
+                                </div>
+                                <div class="contact_to ">
+                                    <div class="field">
+                                        <input type="text" class="input-label form-control" name="from_title"
+                                            value="Bill From" />
+                                    </div>
+                                    <div class="value">
+                                        <input type="email" style="background-color: #EEFBFB;  border: none;" class="form-control"
+                                            name="email" value="{{result["email"]}}" cols="10" rows="1"
+                                         >
+                                        <br>
+                                        <input type="text" style="background-color: #EEFBFB;  border: none;" class="form-control"
+                                            name="from" value="{{result["from"]}}" cols="10" 
+                                            rows="5">
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="col">
+
+                                <div class="input-group addon-input">
+                                    <input class="input-label form-control" type="text" name="payment_methods_title"
+                                        value="Payment Methods" />
+                                    <input style="width: 100px; background-color: #EEFBFB;  border: none;"
+                                         name="paymentmethod" value="{{result["paymentmethod"]}}" id="inputGroupSelect01">
+                                        
+                                </input>
+                                </div>
+
+                                <div class="input-group addon-input">
+                                    <input class="input-label form-control" type="text" name="date_title"
+                                        value="Order Number">
+                                    <input style="width: 100px; background-color: #EEFBFB; border: none;" type="text"
+                                        class="form-control" name="orderno" value="{{result["orderno"]}}" aria-label="order_number" aria-describedby="basic-addon1">
+                                </div>
+
+                                <div class="contact_to">
+                                    <div class="field">
+                                        <input type="text" class="input-label form-control" name="to_title"
+                                            value="Bill To" />
+                                    </div>
+
+                                    <div class="value">
+                                        <input type="email" style="background-color: #EEFBFB; border: none;" class="form-control"
+                                            name="emailto" value="{{result["emailto"]}}" id="emailTo" cols="5" rows="1" >
+                                        <br>
+                                        <input type="text" style="background-color: #EEFBFB;  border: none;" class="form-control"
+                                             name="to" value="{{result["to"]}}" cols="10"
+                                            rows="5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of top section -->
+
+                        <!-- Items Table -->
+                        <!-- <div class="items-holder">
+                            <div class="items-table-header">
+                                <div class="amount">
+                                    <div class="field bordered">
+                                        <input type="text" class="input-label form-control" value="Amount"
+                                            name="amount_header" />
+                                    </div>
+                                </div>
+                                <div class="unit_cost">
+                                    <div class="field bordered">
+                                        <input type="text" class="input-label form-control" value="Rate"
+                                            name="unit_cost_header" />
+                                    </div>
+                                </div>
+                                <div class="quantity">
+                                    <div class="field bordered">
+                                        <input type="text" class="input-label form-control" value="Quantity"
+                                            name="quantity_header" />
+                                    </div>
+                                </div>
+                                <div class="name">
+                                    <div class="field bordered">
+                                        <input type="text" class="input-label form-control" value="Description"
+                                            name="item_header" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-table">
+                                <div class="item-row">
+                                    <div class="main-row">
+                                        <div class="delete" id="remove"></div>
+                                        <div class="amount value">
+                                            <span class="currency-symbol">Rs.</span>0
+                                        </div>
+                                        <div class="unit_cost">
+                                            <div class="input-group">
+                                                <span class="input-group-text currency-sign">Rs.</span>
+                                                <input class="item-calc form-control" type="number" step="any"
+                                                    autocomplete="off" name="unit_cost" value="0" />
+                                            </div>
+                                        </div>
+                                        <div class="quantity">
+                                            <input type="number" step="any" class="item-calc form-control"
+                                                autocomplete="off" name="quantity" value="0" />
+                                        </div>
+                                        <div class="name">
+                                            <textarea class="item-calc form-control" rows="1" name="desc"
+                                                placeholder="Description of item/service..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="input-blue" id="add">+Line Item</button>
+                                <button class="input-blue" id="remove">-Remove Item</button>
+                            </div>
+                        </div> -->
+
+                        <!-- Items Table -->
+                        <div id="cart">
+                            <table name="cart">
+                                <tr style="background-color: black; color: white;">
+                                    <th></th>
+                                    <th>Item</th>
+                                    <th>Qty</th>
+                                    <th>Price</th>
+                                    <th>&nbsp;</th>
+                                    <th>Item Total</th>
+                                </tr>
+                                <tr class="line_items">
+                                    <td>
+                                        <button class="row-remove"
+                                            style="border-radius: 10px; background-color: #007CC7; color: white; border: none;">-</button>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="item" value="Item Name" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="qty" value="1" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"
+                                                style="background-color: #EEFBFB; border: none;" id="rate">
+                                                {% if result["currency"]== "INR"%}
+                                                Rs.
+                                                {% elif result["currency"]== "USD"%}
+                                                $
+                                                {% elif result["currency"]== "EUR"%}
+                                                &euro;
+                                                {% elif result["currency"]== "YEN"%}
+                                                &#165;
+                                                {% elif result["currency"]== "GBP"%}
+                                                &#163;
+                                                {% elif result["currency"]== "AUD"%}
+                                                A$
+                                                {% else %}
+                                                C$
+                                                {% endif %}
+                                            </span>
+                                        </div>
+                                        <input type="text" name="price" value="9.99" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <span id="amount">
+                                            {% if result["currency"]== "INR"%}
+                                            Rs.
+                                            {% elif result["currency"]== "USD"%}
+                                            $
+                                            {% elif result["currency"]== "EUR"%}
+                                            &euro;
+                                            {% elif result["currency"]== "YEN"%}
+                                            &#165;
+                                            {% elif result["currency"]== "GBP"%}
+                                            &#163;
+                                            {% elif result["currency"]== "AUD"%}
+                                            A$
+                                            {% else %}
+                                            C$
+                                            {% endif %}
+                                        </span>
+                                        <input type="text" name="item_total" value="" jAutoCalc="{qty} * {price}"
+                                            style="border: none;" disabled>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Subtotal"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" style="border: none;"
+                                                id="subtotal">
+                                                {% if result["currency"]== "INR"%}
+                                                Rs.
+                                                {% elif result["currency"]== "USD"%}
+                                                $
+                                                {% elif result["currency"]== "EUR"%}
+                                                &euro;
+                                                {% elif result["currency"]== "YEN"%}
+                                                &#165;
+                                                {% elif result["currency"]== "GBP"%}
+                                                &#163;
+                                                {% elif result["currency"]== "AUD"%}
+                                                A$
+                                                {% else %}
+                                                C$
+                                                {% endif %}
+                                            </span>
+                                        </div>
+                                        <input type="text" name="sub_total" value="{{result["sub_total"]}}"
+                                            class="form-control" style=" border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Tax(in %)"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"
+                                                style="background-color: #EEFBFB; border: none;" id="tax"></span>
+                                        </div>
+                                        <input type="text" name="tax_total" value="{{result["tax_total"]}}" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Discount(in %)"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"
+                                                style="background-color: #EEFBFB; border: none;"
+                                                id="discount"></span>
+                                        </div>
+                                        <input type="text" name="discount_total" value="{{result["discount_total"]}}" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Shipping"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"
+                                                style="background-color: #EEFBFB; border: none;"
+                                                id="shipping">
+                                                {% if result["currency"]== "INR"%}
+                                                Rs.
+                                                {% elif result["currency"]== "USD"%}
+                                                $
+                                                {% elif result["currency"]== "EUR"%}
+                                                &euro;
+                                                {% elif result["currency"]== "YEN"%}
+                                                &#165;
+                                                {% elif result["currency"]== "GBP"%}
+                                                &#163;
+                                                {% elif result["currency"]== "AUD"%}
+                                                A$
+                                                {% else %}
+                                                C$
+                                                {% endif %}
+                                            </span>
+                                        </div>
+                                        <input type="text" name="shipping_total" value="{{result["shipping_total"]}}" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Total"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" style="border: none;" id="total">
+                                                {% if result["currency"]== "INR"%}
+                                                Rs.
+                                                {% elif result["currency"]== "USD"%}
+                                                $
+                                                {% elif result["currency"]== "EUR"%}
+                                                &euro;
+                                                {% elif result["currency"]== "YEN"%}
+                                                &#165;
+                                                {% elif result["currency"]== "GBP"%}
+                                                &#163;
+                                                {% elif result["currency"]== "AUD"%}
+                                                A$
+                                                {% else %}
+                                                C$
+                                                {% endif %}
+                                            </span>
+                                        </div>
+                                        <input type="text" name="grand_total" value="{{result["grand_total"]}}"
+                                            
+                                            class="form-control" style="border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Amount paid"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"
+                                                style="background-color: #EEFBFB; border: none;"
+                                                id="amountPaid">
+                                                {% if result["currency"]== "INR"%}
+                                                Rs.
+                                                {% elif result["currency"]== "USD"%}
+                                                $
+                                                {% elif result["currency"]== "EUR"%}
+                                                &euro;
+                                                {% elif result["currency"]== "YEN"%}
+                                                &#165;
+                                                {% elif result["currency"]== "GBP"%}
+                                                &#163;
+                                                {% elif result["currency"]== "AUD"%}
+                                                A$
+                                                {% else %}
+                                                C$
+                                                {% endif %}
+                                            </span>
+                                        </div>
+                                        <input type="text" name="amount_paid" value="{{result["amount_paid"]}}" class="form-control"
+                                            style="background-color: #EEFBFB; border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">&nbsp;</td>
+                                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                                            value="Balance Due"></td>
+                                    <td>&nbsp;</td>
+                                    <td class="input-group addon-input">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" style="border: none;" id="balance">
+                                            {% if result["currency"]== "INR"%}
+                                            Rs.
+                                            {% elif result["currency"]== "USD"%}
+                                            $
+                                            {% elif result["currency"]== "EUR"%}
+                                            &euro;
+                                            {% elif result["currency"]== "YEN"%}
+                                            &#165;
+                                            {% elif result["currency"]== "GBP"%}
+                                            &#163;
+                                            {% elif result["currency"]== "AUD"%}
+                                            A$
+                                            {% else %}
+                                            C$
+                                            {% endif %}
+                                            </span>
+                                        </div>
+                                        <input type="text" name="balance_due" value="{{result["balance_due"]}}"
+                                            
+                                            class="form-control" style="border: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="99"><button class="row-add"
+                                            style="border-radius: 10px; background-color: #007CC7; color: white; border: none;">Add
+                                            Row</button></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- End of Items Table -->
+
+                        
+
+                        <!-- Lower Section -->
+                        <div class="two-col clearfix">
+                            <div style="display: flex; flex-direction: row;">
+                                <div class="col col-6">
+                                    {% if "notespresent" in result %}
+                                    <div class="notes-holder" style="margin-top: 20px; display:block;" 
+                                        id="notes-holder">
+                                        <div class="field">
+                                            <input type="text" class="input-label form-control" name="notes_title"
+                                                value="Notes" />
+                                        </div>
+                                        <div class="value">
+                                          <input type="text" class="notes form-control"
+                                          placeholder="Notes - any relevant information not already covered"
+                                          name="notes" value="{{result["notes"]}}"
+                                          style="background-color: #EEFBFB; border: none;">
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    <div class="terms-holder">
+                                        <div class="field">
+                                            <input type="text" class="input-label form-control" name="terms_title"
+                                                value="Terms" />
+                                        </div>
+                                        <div class="value">
+                                            <textarea class="terms form-control"
+                                                placeholder="Terms and conditions - late fees, payment methods, delivery schedule"
+                                                name="terms"
+                                                style="background-color: #EEFBFB; border: none;"></textarea>
+                                        </div>
+                                    </div>
+                                    {% if "fees" in result %} 
+                                    <div class="latefees-holder" style="display:block;" id="fees-holder">
+                                        <div class="field">
+                                            <input type="text" class="input-label form-control" name="latefees_title"
+                                                value="Late Fees" />
+                                        </div>
+                                        <div class="value">
+                                            <input type="text" class="latefees form-control"
+                                                placeholder="Penalty Details and Amount" name="latefees" value="{{result["latefees"]}}"
+                                                style="background-color: #EEFBFB; border: none;">
+                                        </div>
+                                    </div>
+                                    {% endif %} 
+                                </div>
+
+                                
+                               
+
+                        </div>
+                        <!-- End of Lower Section -->
+
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="ng-cloak">
+            <div ng-view></div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jautocalc@1.3.1/dist/jautocalc.js"></script>
+    <script src="{{url_for('static',filename='javascript/script.js')}}"></script>
+    <script src="{{url_for('static',filename='javascript/currency.js')}}"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            function autoCalcSetup() {
+                $('#cart').jAutoCalc('destroy');
+                $('#cart tr.line_items').jAutoCalc({ keyEventsFire: true, decimalPlaces: 2, emptyAsZero: true });
+                $('#cart').jAutoCalc({ decimalPlaces: 2 });
+            }
+            autoCalcSetup();
+
+
+            $('button.row-remove').on("click", function (e) {
+                e.preventDefault();
+
+                var form = $(this).parents('form')
+                $(this).parents('tr').remove();
+                autoCalcSetup();
+
+            });
+
+            $('button.row-add').on("click", function (e) {
+                e.preventDefault();
+
+                var $table = $(this).parents('table');
+                var $top = $table.find('tr.line_items').first();
+                var $new = $top.clone(true);
+
+                $new.jAutoCalc('destroy');
+                $new.insertBefore($top);
+                $new.find('input[type=text]').val('');
+                autoCalcSetup();
+
+            });
+
+        });
+    </script>
+    <script>
+
+        function checkFunction() {
+            var notes = document.getElementById("notes");
+            var notesHolder = document.getElementById("notes-holder");
+
+            if (notes.checked == true) {
+                notesHolder.style.display = "block";
+            } else {
+                notesHolder.style.display = "none";
+            }
+
+            var fees = document.getElementById("fees");
+            var feesHolder = document.getElementById("fees-holder");
+
+            if (fees.checked == true) {
+                feesHolder.style.display = "block";
+            } else {
+                feesHolder.style.display = "none";
+            }
+        }
+    </script>
+   
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<html>
+<head>
+</head>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> 
+<body>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <div class="container">
+        <div class="header">
+            <h2>Create account</h2>
+        </div>
+        <form class="form" id="form">
+            <div class="form-control ">
+               <label>Username</label>
+               <input type="text" placeholder="username" id="username">
+               <i class="fas fa-check-circle"></i>
+               <i class="fas fa-exclamation-circle"></i>
+               <small>Error message</small>   
+            </div>
+            <div class="form-control ">
+                <label>Email</label>
+                <input type="text" placeholder="email" id="email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>   
+             </div>
+             <div class="form-control">
+                <label>Password</label>
+                <input type="text" placeholder="Password" id="Password">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>   
+             </div>
+             <div class="form-control">
+                <label>Password check</label>
+                <input type="text" placeholder="Password check" id="Password2">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>   
+             </div>
+             <button>Submit</button>
+        </form>
+    </div>
+    <script>
+        const form=document.getElementById('form');
+        const username=document.getElementById('username');
+        const email=document.getElementById('email');
+        const Password=document.getElementById('Password');
+        const Password2=document.getElementById('Password2');
+
+        form.addEventListener('submit',(e)=> {
+            e.preventDefault();
+
+            checkInputs();
+
+        });
+
+        function checkInputs() {
+            const usernameValue =username.value.trim();
+            const emailValue=email.value.trim();
+            const PasswordValue=Password.value.trim();
+            const Password2Value=Password2.value.trim();
+
+            if(usernameValue === '') {
+                setErrorFor(username, 'Username cannot be blank');
+               alert('username cannot be blank');
+            } else {
+                setSuccessFor(username);
+            }
+
+            if(emailValue === '') {
+                setErrorFor(email, 'Email cannot be blank');
+               alert('email cannot be empty');
+            } else if(!isEmail(emailValue)) {
+                setErrorFor(email,'Email is not valid');
+                alert('email is not valid');
+            } else{
+                setSuccessFor(email);
+            }
+
+            if(PasswordValue === ''){
+                setErrorFor(Password, 'password cant be blank');
+               alert('pass can be blank');
+            } else {
+                setSuccessFor(Password);
+            }
+
+            if(Password2Value === ''){
+                setErrorFor(Password2, 'password cannot be blank');
+                alert('pass2 canot be blank');
+            } else if(PasswordValue != Password2Value) {
+                setErrorFor(Password2 ,'pass does not match');
+               alert('pass and pass2 hould be same');
+            } else {
+                setSuccessFor(Password2);
+            }
+        }
+
+        function setErrorFor(input,message){
+            const formControl= input.parentElement;
+            const small=formControl.querySelector('small');
+            small.innerText = message;
+            formControl.className=' form-control error';
+        }
+
+        function setSuccessFor(input) {
+            const formControl =input.parentElement;
+            formControl.className='form-control success';
+        }
+
+        function isEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); 
+        }
+
+
+    </script>
+
+
+</body>    
+</html>

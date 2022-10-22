@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+{% block body %}
+
+        <div class = "container-fluid " id = "hero" style="background-color:#203647; " >
+            <div class = row>
+                <div class = "col-8" >
+                    <img src="{{url_for('static',filename='images/20944159 1.svg')}}" class="img-fluid" >
+                </div>
+                <div class = "col-4 " style="margin-left: -5%; text-align: justify; margin-top: 7%;">
+                    <h2 class="display-1" style="color: white; 
+                    font-family: Mulish;
+                    font-size: 80px;
+                    font-weight: 400;
+                    line-height: 97px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin-left: 15%;
+                    padding: 20px;
+                    "><b style="color:white; font-family: Mulish;
+                    font-size: 80px;
+                    font-weight: 700;
+                    line-height: 97px;
+                    letter-spacing: 0em;
+                    text-align:left ;
+                    margin-left: -5%;
+                    padding: 15px;
+                    ">Invoicing</b> Guide</h2>
+                    
+                    <h5 style="color: #419BA7; font-family: Mulish;
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 50px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    padding: 5px;
+                   margin-left: -5%;
+                    ">Getting Paid</h5>
+                    <br>
+                </div>
+            </div>    
+        </div>
+
+
+        <br>
+
+        <div>
+          <div class = row>
+            <div class = "col" >
+              <img src="{{url_for('static',filename='images/Vector6.svg')}}" style="margin-top: 20%; margin-bottom: 10%;">
+              <img src="{{url_for('static',filename='images/image11.svg')}}" style="margin-left: 0%; margin-top: -140%;">
+            </div>
+
+            <div class="col">
+              <p style="font-family: Mulish;
+              font-size: 40px;
+              font-weight: 700;
+              margin-top: 13%;
+              line-height: 46px;
+              letter-spacing: 0.06em;
+              text-align: left;
+              ">
+                How do I get paid? <br>
+              </p>
+              <p style="font-family: Mulish;
+              font-size: 24px;
+              font-weight: 400;
+              line-height: 33px;
+              letter-spacing: 0.06em;
+              text-align: justify; ">
+                 <br> <br>
+                There are myriad ways to receive payments. You may choose to accept checks, wire transfers, ACH payments, or online providers such as Paypal, Venmo, or Square Cash. Make sure you decide on payment methods you’ll accept before invoicing your customers. If your customers prefer online payments that incur extra fees, you might consider increasing your rates to cover the cost of those fees.<br><br>
+
+                Once you’ve decided on payment methods to offer clients, you have a couple of options. When you use the "Send Invoice" function on the Invoice Generator, there’s already language in the email template with links to pay you on PayPal, Venmo, or Square Cash. You can customize this email to include whatever payment format you prefer. You can attach the invoice to your own email and write a message indicating the payment methods you accept.
+              </p>
+            </div>
+            <div class="row">
+              <div class="col">
+                <img src="{{url_for('static',filename='images/arrowLeft.svg')}}" style=" margin-left:10%; margin-top: -1%; ">
+                <a href="{{url_for('send_invoice')}}" style="font-family: Mulish;
+                color: #203647;
+                font-size: 25px;
+                font-weight: 400;
+                margin-left: 2%;
+                line-height: 40px;
+                letter-spacing: 0em;
+                text-align: left;
+                text-decoration: none;
+                " >Send Invoices</a>
+              </div>
+              <div class="col">
+                <img src="{{url_for('static',filename='images/arrowRight.svg')}}" style=" float: right; margin-right:10%; margin-top: 1%;">
+                <a href="{{url_for('best_practises')" style="float: right; 
+                margin-right:2% ;
+                margin-bottom:5%;
+                font-family: Mulish;
+                color: #203647;
+                font-size: 25px;
+                font-weight: 400;
+                line-height: 40px;
+                letter-spacing: 0em;
+                text-align: left;
+                text-decoration: none;
+                ">Best Practices</a>
+              </div>
+            </div>
+              
+          </div>
+        </div>
+        
+        
+
+{% endblock %}

@@ -1,0 +1,105 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.pink{
+	height: 100vh;
+	width: 100%;
+	background: #12232E;
+}
+
+.blue{
+	height: 100vh;
+	width: 100%;
+	background: #F0EFEF;
+}
+
+.form{
+	padding-top: 60px;
+}
+
+.btn{
+	background: #0B4870;
+}
+
+.orange{
+	background: orange;
+}
+
+.yellow{
+	background: yellow;
+}
+
+.green{
+	background: green;
+}
+
+.font{
+	font-size: 38px;
+}
+
+
+.hero{
+	position: absolute;
+	top: 630px;
+	left: 160px;
+}
+
+.hero2{
+	position: absolute;
+	right: 230px;
+}
+
+.hero3{
+	position: absolute;
+	top: 530px;
+	right: 0;
+	width: 420px;
+}
+
+.hero4{
+	padding-top: 140px;
+}
+
+hr {
+  position: relative;
+    border: none;
+    height: 1px;
+    background: #999;
+}
+
+hr::before {
+    content: attr(data-content);
+    display: inline-block;
+    background: #F0EFEF;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #999;
+    border-radius: 30rem;
+    padding: 0.2rem 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.sign2{
+	position: absolute;
+	top: 500px;
+	left: 0;
+	width: 500px;
+}
+
+.sign1{
+	position: absolute;
+	right: 0;
+}
+
+.sign3{
+	position: absolute;
+	top: 610px;
+	left: 0;
+	width: 490px;
+}

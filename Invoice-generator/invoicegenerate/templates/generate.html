@@ -1,0 +1,302 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/logo.css')}}">
+
+
+<div class="papers">
+
+    <!-- header -->
+    <div class="same-line">
+        <div class="input-group addon-input same-line" style="justify-content: left;">
+            Date:
+            <div class="input-group-addon">
+                <input id="invoiceDate" class="form-control" type="date" type="text" name="date"
+                    style="background-color: #EEFBFB;  border: none;">
+            </div>
+        </div>
+        <div class="input-group addon-input same-line" style="justify-content: right;">
+            Due Date:
+            <div class="input-group-addon">
+                <input id="invoiceDueDate" class="form-control date" type="date" name="due_date"
+                    style="background-color: #EEFBFB;  border: none;">
+            </div>
+        </div>
+    </div>
+    <!-- End of Header -->
+
+    <div class="invoice">
+
+        <!-- Heading -->
+        <div class="title same-line">
+            <h1 class="input-label">INVOICE</h1>
+            <input style="width: 15%; background-color: #EEFBFB" type="text"
+                class="form-control input-label" name="header" value="#001" />
+        </div>
+        <!-- End of Heading -->
+
+        <hr>
+
+        <!-- Top section -->
+        <div class="two-col clearfix">
+            <div class="col">
+                <div class="drop-zone">
+                    <span class="drop-zone__prompt">+ Add your Logo</span>
+                    <input type="image" name="myFile" class="drop-zone__input">
+                </div>
+                <div class="contact_to ">
+                    <div class="field">
+                        <input type="text" class="input-label form-control" name="from_title"
+                            value="Bill From" />
+                    </div>
+                    <div class="value">
+                        <input type="text" style="background-color: #EEFBFB;  border: none;"
+                            class="form-control" name="email" id="emailFrom" cols="10" rows="1"
+                            placeholder="Email"></textarea>
+                        <br>
+                        <input type="text" style="background-color: #EEFBFB;  border: none;"
+                            class="form-control" placeholder="Who is this invoice from?" name="from"
+                            cols="10" rows="5"></textarea>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col">
+
+                <div class="input-group addon-input">
+                    <input class="input-label form-control" type="text" name="payment_methods_title"
+                        value="Payment Methods" />
+                    <select style="width: 100px; background-color: #EEFBFB;  border: none;"
+                        class="custom-select" name="paymentmethod" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="Cash">Cash</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Bank">Bank Transaction</option>
+                    </select>
+                </div>
+
+                <div class="input-group addon-input">
+                    <input class="input-label form-control" type="text" name="date_title"
+                        value="Order Number">
+                    <input style="width: 100px; background-color: #EEFBFB; border: none;" type="text"
+                        class="form-control" name="orderno" aria-label="order_number"
+                        aria-describedby="basic-addon1">
+                </div>
+
+                <div class="contact_to">
+                    <div class="field">
+                        <input type="text" class="input-label form-control" name="to_title"
+                            value="Bill To" />
+                    </div>
+
+                    <div class="value">
+                        <input type="email" style="background-color: #EEFBFB; border: none;"
+                            class="form-control" name="emailto" id="emailTo" cols="5" rows="1"
+                            placeholder="Email">
+                        <br>
+                        <input type="text" style="background-color: #EEFBFB;  border: none;"
+                            class="form-control" placeholder="Who is this invoice to?" name="to" cols="10"
+                            rows="5">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cart">
+            <table name="cart">
+                <tr style="background-color: black; color: white;">
+                    <th></th>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>&nbsp;</th>
+                    <th>Item Total</th>
+                </tr>
+                <tr class="line_items">
+                    <td>
+                        <button class="row-remove"
+                            style="border-radius: 10px; background-color: #007CC7; color: white; border: none;">-</button>
+                    </td>
+                    <td>
+                        <input type="text" name="item" placeholder="item" class="form-control"
+                            style="background-color: #EEFBFB; border: none;">
+                    </td>
+                    <td>
+                        <input type="text" name="qty" placeholder='0' class="form-control"
+                            style="background-color: #EEFBFB; border: none;">
+                    </td>
+                    <td class="input-group addon-input">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="background-color: #EEFBFB; border: none;"
+                                id="rate">Rs.</span>
+                        </div>
+                        <input type="text" name="price" placeholder="0" class="form-control"
+                            style="background-color: #EEFBFB; border: none;">
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <span id="amount">Rs.</span>
+                        <input type="text" name="item_total" value="" jAutoCalc="{qty} * {price}"
+                            style="border: none;" disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                            value="Subtotal"></td>
+                    <td>&nbsp;</td>
+                    <td class="input-group addon-input">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="border: none;" id="subtotal">Rs.</span>
+                        </div>
+                        <input type="text" name="sub_total" value="0" jAutoCalc="SUM({item_total})"
+                            class="form-control" style=" border: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                            value="Tax(in %)"></td>
+                    <td>&nbsp;</td>
+                    <td class="input-group addon-input">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="background-color: #EEFBFB; border: none;"
+                                id="tax"></span>
+                        </div>
+                        <input type="text" name="tax_total" value="0" class="form-control"
+                            style="background-color: #EEFBFB; border: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                            value="Discount(in %)"></td>
+                    <td>&nbsp;</td>
+                    <td class="input-group addon-input">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="background-color: #EEFBFB; border: none;"
+                                id="discount"></span>
+                        </div>
+                        <input type="text" name="discount_total" value="0" class="form-control"
+                            style="background-color: #EEFBFB; border: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                            value="Shipping"></td>
+                    <td>&nbsp;</td>
+                    <td class="input-group addon-input">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="background-color: #EEFBFB; border: none;"
+                                id="shipping">Rs.</span>
+                        </div>
+                        <input type="text" name="shipping_total" value="0" class="form-control"
+                            style="background-color: #EEFBFB; border: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                            value="Total"></td>
+                    <td>&nbsp;</td>
+                    <td class="input-group addon-input">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="border: none;" id="total">Rs.</span>
+                        </div>
+                        <input type="text" name="grand_total" value="0"
+                            jAutoCalc="{sub_total} + {tax_total} + {shipping_total} - {discount_total}"
+                            class="form-control" style="border: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                            value="Amount paid"></td>
+                    <td>&nbsp;</td>
+                    <td class="input-group addon-input">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="background-color: #EEFBFB; border: none;"
+                                id="amountPaid">Rs.</span>
+                        </div>
+                        <input type="text" name="amount_paid" value="0" class="form-control"
+                            style="background-color: #EEFBFB; border: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                    <td><input class="input-label form-control" type="text" name="discounts_title"
+                            value="Balance Due"></td>
+                    <td>&nbsp;</td>
+                    <td class="input-group addon-input">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="border: none;" id="balance">Rs.</span>
+                        </div>
+                        <input type="text" name="balance_due" value="0"
+                            jAutoCalc="{grand_total} - {amount_paid}" class="form-control"
+                            style="border: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="99"><button class="row-add" name="add_item"
+                            style="border-radius: 10px; background-color: #007CC7; color: white; border: none;">Add
+                            Row</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- End of Items Table -->
+
+        <!-- Lower Section -->
+        <div class="clearfix">
+            <div style="display: flex; flex-direction: row;">
+                <div class="col col-12">
+                    <div class="notes-holder" style="margin-top: 20px; display: none;" id="notes-holder">
+                        <div class="field">
+                            <input type="text" class="input-label form-control" name="notes_title"
+                                value="Notes" />
+                        </div>
+                        <div class="value">
+                            <textarea class="notes form-control"
+                                placeholder="Notes - any relevant information not already covered"
+                                name="notes" style="background-color: #EEFBFB; border: none;"></textarea>
+                        </div>
+                    </div>
+                    <div class="terms-holder">
+                        <div class="field">
+                            <input type="text" class="input-label form-control" name="terms_title"
+                                value="Terms" />
+                        </div>
+                        <div class="value">
+                            <textarea class="terms form-control"
+                                placeholder="Terms and conditions - late fees, payment methods, delivery schedule"
+                                name="terms" style="background-color: #EEFBFB; border: none;"></textarea>
+                        </div>
+                    </div>
+                    <div class="latefees-holder" style="display: none;" id="fees-holder">
+                        <div class="field">
+                            <input type="text" class="input-label form-control" name="latefees_title"
+                                value="Late Fees" />
+                        </div>
+                        <div class="value">
+                            <textarea class="latefees form-control" placeholder="Penalty Details and Amount"
+                                name="latefees" style="background-color: #EEFBFB; border: none;"></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="text-primary" type="button" href="{{url_for('generate')}}"> generate
+                            Invoice
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- <p><input type = "submit" value = "submit" /></p> -->
+</div>

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap');
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+}
+
+.container
+{
+    height: 439px;
+    background-color: #203647
+    ;
+    display: flex;
+    flex-direction: row;
+}
+
+.first-img
+{
+    width: 60%;
+}
+
+.heading-info
+{
+    width: 40%;
+    font-size: 2.8rem;
+    text-align: left;
+    margin: auto;
+    color: white;
+    letter-spacing: 3px;
+    /* justify-content: left; */
+    margin-top: 10rem;
+    /* line-height: 97px; */
+}
+
+.heading-info > h2
+{
+    font-weight: 100;
+    margin: 0;
+}
+strong
+{
+    font-weight: 900;
+}
+.heading-info > p
+{
+    margin: 0;
+    margin-top: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #419BA7;
+}
+
+.vector
+{
+    position: absolute;
+    right: 0;
+}
+
+.img
+{
+    position: absolute;
+    right: 0;
+    top: 45rem;
+
+}
+.info-container
+{
+    margin: 10rem 0;
+    width: 60%;
+    /* letter-spacing: 2px; */
+    /* padding-bottom: 8rem; */
+}
+
+.content-1
+{
+    margin-top: 5rem;
+}
+.content-1>.answer
+{
+    width: 75%;
+}
+.content-2
+{
+    margin-top: 5rem;
+}
+.content-3
+{
+    margin-top: 5rem;
+}
+
+
+.ques
+{
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0rem 5rem;
+    
+    
+}
+.answer
+{
+    margin: 2rem 5rem;
+    font-size: 1.25rem;
+    
+}
+
+.toggle
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.toggle a
+{
+    color: black;
+    text-decoration: none;
+    /* display: inline-block; */
+    /* flex-direction: row; */
+    margin: 2rem 10rem 2rem 6rem;
+    font-size: 1.35rem;
+    /* justify-content: space-between; */
+}
+
+.arrow
+{
+    width: 15px;
+    padding-top: 55px;
+
+}

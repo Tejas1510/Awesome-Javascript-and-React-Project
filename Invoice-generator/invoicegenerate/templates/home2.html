@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% block body %}
+          
+
+
+<div class = "container-fluid" id = "hero" style="background-color:#203647;padding-top: 60px; padding-bottom: 30px; height: 550px; " >
+           
+  <h2 style="font-size: 68px; font-family: Marmelad;">A new way to generate and send Invoice</h2>
+  <br>
+  <h5 style="color: #A9FBD7 ; font-size: 26px; font-weight: 100; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif  ;">Make beautiful inovices with one click!</h5>
+  <br>
+  <center>
+  <a href="{{url_for('sign_up')}}" class = "btn btn-radius" style="height: 40px; width: 130px; background: #A9FBD7; border-radius: 23px;">
+  Sign Up</a>
+
+  <a href="{{url_for('invoice_generator')}}" class="btn btn-radius" style="height: 40px; width: 170px; border-color:#A9FBD7; color: #76D9AD; border-radius: 23px;">
+    Generate Invoice ->
+  </a>
+  <div class = "container-fluid" style="padding-top:10px; padding-bottom: 20px;">
+    <img src="{{ url_for('static', filename='images/hero.png')}}" style="width: 70%;">
+  </div>
+</center>
+</div>
+
+            <br><br>
+            <div class ="container-fluid" style="margin-top:300px; " id="aboutus" > 
+              <h2 style="text-align: center; color: #203647; font-size: 50px; padding-bottom: 30px; font-weight: 400">Why E-invoicing?</h2>
+              <div class = row>
+                <div class = "col" style="margin: 5%;">
+              <h5 style="color: #54C598; font-size: 43px">Better than Email</h5>
+              <p style="text-align: center ; padding-top: 25px; font-weight: 200; font-size: 27px;">With e-invoicing your invoices no longer get lost in someone's email box</p>
+            </div>
+            <div class = "col" style="text-align: center;">
+              <img src="{{ url_for('static', filename='images/W1.png')}}">
+            </div>
+            </div>
+
+            <div class = "row">
+              <div class = "col" style="text-align: center;">
+                <img src = "{{ url_for('static', filename='images/W2.png')}}">
+              </div>
+
+              <div class="col" style="margin: 5%;">
+                <h5 style="color: #54C598;  font-size: 43px" >Fastest Way to get Paid</h5>
+                <p style="text-align: center ; padding-top: 25px; font-weight: 200; font-size: 27px;" >E-invoicing is the fastest, most accurate, and cost-effective way to send, process, and validate invoices.</p>
+              </div>
+            </div>
+
+            <div class = row>
+              <div class = "col" style="margin: 5%;">
+            <h5 style="color: #54C598;  font-size: 43px">Invoice status Updates</h5>
+            <p style="text-align: center ; padding-top: 25px; font-weight: 200; font-size: 27px;"> Both buyer and seller have real-time visibility into the status of invoices.</p>
+          </div>
+          <div  class = "col" style="text-align: center;">
+            <img src="{{ url_for('static', filename='images/W3.png')}}">
+          </div>
+          </div>
+            </div>
+        
+        <br> 
+        <div class="container-fluid" style=" background-color: #203647; color: white; padding-top: 30px; padding-bottom: 30px;" >
+          <div style="float:left;">
+            <img style="width: 50px ; margin-top: 50%;" src="{{ url_for('static', filename='images/design.png')}}">
+          </div>
+          <div style="float: right;">
+            <img style="width: 50px; margin-top: 50%;" src="{{ url_for('static', filename='images/design.png')}}">
+          </div>
+
+          <div class="row">
+            <div class="col" style="text-align: end;">
+              <h3 style="color: #FFBE55; 
+              font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+               padding-bottom: 20px; font-size: 40px; font-weight: 400; text-align: end;">Level up your Invoicing</h3>
+              <p style="font-size: 21px; font-weight: 100; 
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Want to join the network?</p>
+              <p style="font-size: 21px;font-weight: 100; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Start sending e-invoices in minutes.</p>
+            </div>
+
+            <div class="col" style="text-align: center;">
+              <a style="margin: 7%; text-align: center; border-radius: 25px; background-color: #76D9AD
+              ; font-weight: bold; color: white ;
+              padding: 2%; padding-left: 3%; padding-right: 3% ; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" 
+              class="btn btn-radius" href = "{{url_for('sign_up')}}" >Create your free account! <i style="color: white; margin-left: 3px;" class="bi bi-person-circle"></i></a>
+            </div>
+          </div>
+           
+        </div>
+
+
+       
+
+{% endblock %}       

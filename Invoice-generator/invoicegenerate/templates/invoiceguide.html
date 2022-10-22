@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+        
+    <div class = "container-fluid " id = "hero" style="background-color:#203647; " >
+            <div class = row>
+                <div class = "col-8" >
+                    <img src="{{url_for('static',filename='images/4.svg')}}" class="img-fluid" >
+                </div>
+                <div class = "col-4 "  text-align: justify; margin-top: 7%;">
+                    <h2 class="display-1" style="
+                    font-family: Inter;
+                    font-size: 80px;
+                    font-weight: 400;
+                    line-height: 97px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: white;
+                    
+                    "><b style="font-family: Inter;
+                    font-size: 80px;
+                    font-weight: 700;
+                    line-height: 97px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: white;
+                    ">Invoicing</b> Guide</h2>
+                    
+                    <br>
+                </div>
+            </div>    
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="{{url_for('static',filename='images/1leftvector.svg')}}">
+                <img src="{{url_for('static',filename='images/1.png')}}" style="margin-left:-65%;">
+            </div>
+            <div class="col" style="margin-right:5%">
+              <p style="font-family: Mulish;
+              font-size: 40px;
+              font-weight: 400;
+              line-height: 33px;
+              letter-spacing: 0.06em;
+              text-align: left;
+              margin-top: 25%; 
+              margin-left:-65%;">
+               <h4 style="color:#12232E ;"> <b>Welcome to Invoice Generator by <br> techmihirnaik </b></h4>
+             </p>
+                <p style="font-family: Mulish;
+                font-size: 24px;
+                font-weight: 400, Regular;
+                line-height: 44px;
+                letter-spacing: 0.06em;
+                text-align: left;
+                color: background: #12232E;">
+                If you are just getting started with invoicing, use our free and secure invoice
+                template to create professional invoices in one click and just follow this guide
+              </p>
+            
+        </div>
+    </div>
+    
+         <div class="row">
+            
+            <div class="col" style="margin-left:5%">
+              <p style="font-family: Mulish;
+              font-size: 40px;
+              font-weight: 400;
+              line-height: 33px;
+              letter-spacing: 0.06em;
+              text-align: left;
+              margin-top: 20%;
+              margin-left: -25%;
+              ">
+               <h4 style="color:#12232E ;"> <b>So what is an invoice, anyway? </b></h4>
+             </p>
+             <p style="font-family: Mulish;
+                font-size: 24px;
+                font-weight: 400, Regular;
+                line-height: 44px;
+                letter-spacing: 0.06em;
+                text-align: left;
+                color:  #12232E;">
+                An invoice is a bill that records the fact that you provided a product or service and someone owes you payment for it.
+                Want to learn more about invoices before moving forward? Check out our blog post titled "What is An Invoice?".
+              </p>   
+        </div>
+        <div class="col">
+            <img src="{{url_for('static',filename='images/2rightvector.svg')}}" style="float: right; ">
+            <img src="{{url_for('static',filename='images/2.png')}}" style="margin-top: -60%; margin-left:43%" >
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <img src="{{url_for('static',filename='images/1leftvector.svg')}}">
+            <img src="{{url_for('static',filename='images/3.png')}}" style="margin-left:-55%;">
+        </div>
+        <div class="col" style="margin-right:5%">
+          <p style="font-family: Mulish;
+          font-size: 40px;
+          font-weight: 400;
+          line-height: 33px;
+          letter-spacing: 0.06em;
+          text-align: left;
+          margin-top: 25%; 
+          margin-left:-65%;">
+           <h4 style="color:#12232E ;"> <b>Why do I need invoices? </b></h4>
+         </p>
+            <p style="font-family: Mulish;
+            font-size: 24px;
+            font-weight: 400, Regular;
+            line-height: 44px;
+            letter-spacing: 0.06em;
+            text-align: left;
+            color: background: #12232E;;">
+
+            If the product or service you’re selling isn’t paid in full up front, you need a formal way to request payment or to keep track of payments from customers. Invoices meet both these business needs.
+          </p>
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <img src="{{url_for('static',filename='images/arrowRight.svg')}}" style=" float: right; margin-right:10%; margin-top: 0.5%;">
+        <a href="{{url_for('creating_invoice')}}" style="float: right; 
+        margin-right:4%;
+        margin-left: 0.5%;
+        color: #12232E;
+        font-family: Mulish;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0em;
+        text-align: left;
+        
+        text-decoration: none;
+        ">Creating Invoice</a>
+      </div>
+</div>
+<br><br>
+
+{% endblock %}

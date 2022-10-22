@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+  <div class="container-fluid" id="hero" style="background-color:#203647; overflow-x: hidden;">
+    <div class=row>
+      <div class="col-8">
+        <img src="{{url_for('static',filename='images/firstimg.svg')}}" class="img-fluid" style="margin-left: -12px;">
+      </div>
+      <div class="col-4 " style="margin-left: -10%; text-align: justify; margin-top: 7%; ">
+        <h2 class="display-1" style="
+                    font-family: Mulish;
+                    font-size: 80px;
+                    font-weight: 400;
+                    line-height: 97px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    
+                    "><b style="font-family: Mulish;
+                    font-size: 80px;
+                    font-weight: 700;
+                    line-height: 97px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    ">Invoicing</b> Guide</h2>
+
+        <h5 style="color: #419BA7; font-family: Mulish;
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 50px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    ">Sending Invoices</h5>
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+
+  <div style="overflow-x: hidden; font-size: large ; font-family: serif; margin-left: 2%; margin-top: 20px;">
+    <div class=row>
+
+      <div style="width: 60%; text-align: justify ; margin-top: 5%; font-family: mulish;">
+
+        <div class="content-1">
+          <div class="ques" style="font-size:xx-large ; font-weight: 700;">
+            How do I send the invoice to my customer?
+          </div>
+          <div class="answer" style="font: weight 400px; font-size :1.5rem ;">
+            Once you’ve filled out the appropriate fields, you have two options to send the invoice to your
+            customer:
+          </div>
+        </div>
+        <br><br>
+
+        <div class="content-2">
+          <div class="ques" style="font-size:xx-large ; font-weight: 700;">
+            Send through Invoice Generator
+          </div>
+          <div class="answer" style="font: weight 400px; font-size :1.5rem ;">
+            Click Send Invoice, and send the invoice using our secure email client. The invoice will be tied back to
+            your email address, and you can use our links to PayPal, Venmo, or Square Cash for online payments.
+            We’ve also provided standard language in the body of the email. All you have to do is review and send.
+          </div>
+        </div>
+        <br><br>
+        <div class="content-3">
+          <div class="ques" style="font-size:xx-large ; font-weight: 700;">
+            Send through your email client
+          </div>
+          <div class="answer" style="font: weight 400px; font-size :1.5rem ;">
+            Click Download Invoice. A copy of the invoice will be saved to your device. You can attach it to an
+            email to send to your customer, or print a copy and pop it in the mail.
+          </div>
+        </div>
+      </div>
+
+      <div class="col" style="margin-bottom: 0%; overflow-x: hidden;">
+        <img  src="{{url_for('static',filename='images/Vectorsend.svg')}}" style="margin-top: 20%; margin-left: 20%;">
+        <img src="{{url_for('static',filename='images/image 10.svg')}}" style="margin-top: -157%
+        ; margin-left: 22%;">
+      </div>
+    </div>
+  </div>
+
+  <div class="toggle" style="margin-bottom: 4%; font-family: mulish; font-size: x-large;" >
+    <a class="btn"  href="{{url_for('creating_invoice')}}" style="color: #203647; margin-bottom: 2%; margin-left: 1%; float: left; font-size: x-large;"> <img src="left-arrow.svg" class="arrow"> Creating Invoices </a>
+    <a class="btn" href="{{url_for('getting_paid')}}"style="color: #203647; margin-bottom: 2%; margin-right: 1%; float:right; font-size: x-large; " > Getting Paid <img style="margin-bottom: 2%;" src="right-arrow.svg" class="arrow"> </a>
+</div>
+
+
+{% endblock %}

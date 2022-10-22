@@ -1,0 +1,193 @@
+.drop-zone {
+    max-width: 200px;
+    height: 80px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    cursor: pointer;
+    color: #5c5c5c;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    background-color: #EEFBFB;
+  }
+  
+  .drop-zone--over {
+    border-style: solid;
+  }
+  
+  .drop-zone__input {
+    display: none;
+  }
+  
+  .drop-zone__thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #cccccc;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .drop-zone__thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
+  }
+
+
+/*** Import Fonts ***/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+/*** Variables ***/
+html, body {
+font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin: 50px 0 0;
+  letter-spacing: 0.025em;
+  color: #5b85c0;
+  background-image: -webkit-linear-gradient(90deg, #a558d4 0%, #34619e 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+/* p {
+  margin: 0;
+  position: relative;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 0.025em;
+  background-image: -webkit-linear-gradient(90deg, #a558d4 0%, #34619e 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 60s infinite linear;
+} */
+
+.button-row-container {
+  width: 250px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto 0;
+  border: 1px solid #a6a6a6;
+  padding: 1em;
+}
+
+.button-container {
+  display: inline-block;
+  margin: 10px 10px;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 2px;
+  height: 45px;
+  width: 200px;
+  -webkit-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+
+/* -------------------------------- 
+			Switch
+-------------------------------- */
+.switch-container1 {
+  display: inline-block;
+  margin: 10px 10px;
+}
+
+input.ios {
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+}
+input.ios + label {
+  position: relative;
+  box-shadow: inset 0 0 0px 2px black;
+  text-indent: -5000px;
+  height: 20px;
+  width: 40px;
+  top: 14px;
+  border-radius: 15px;
+}
+input.ios + label:before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 40px;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  background: transparent;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+input.ios + label:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  top: 0;
+  left: 0px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+input.ios:checked + label:before {
+  width: 40px;
+  background: #144564;
+}
+input.ios:checked + label:after {
+  left: 20px;
+  box-shadow: inset 0 0 0 1px #144564, 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dot {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+  height: 90px;
+  width: 90px;
+  margin-right: 139px;
+  background-color: #203647;
+  border-radius: 50%;
+  display: inline-block;
+  color: white;
+}
+
+.dot1 {
+  color: #203647;
+  font-size: 1.5rem;
+  margin-right: 120px;
+  margin-bottom: 50px;
+}

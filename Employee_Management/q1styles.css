@@ -1,6 +1,11 @@
     * {
         margin: 0px;
+        font-family: 'Roboto', sans-serif;
         padding: 0px;
+        
+      }
+      body {
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
       }
 
       .data {
@@ -11,12 +16,15 @@
         margin-top: 50px;
         padding: 20px;
         display: inline-block;
+        background-color: lightcyan;
       }
 
       .table {
         width: 100%;
         margin-top: 20px;
         font-family: calibri; 
+        background-color: lightblue;
+
       }
       th,
       td {
@@ -32,8 +40,19 @@
 
       button {
         padding: 10px;
+        
+        
+      }
+      button:hover {
+        transform: scale(1.1);
+        transition: 1s;
       }
 
       .search{
         padding: 10px;
       }
+    input {
+      width: 17rem;
+    }
+
+   
